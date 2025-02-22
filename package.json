@@ -1,0 +1,1898 @@
+{
+  "name": "block-all-shortcuts",
+  "displayName": "Block All Shortcuts",
+  "description": "Block all shortcut keys.",
+  "version": "0.0.1",
+  "publisher": "mouyase",
+  "repository": "https://github.com/mouyase/BlockAllShortcuts",
+  "scripts": {
+    "build": "node tools/MakeKeyMap.js",
+    "package": "npm run build && npx @vscode/vsce package"
+  },
+  "engines": {
+    "vscode": "^1.96.2"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "escape escape",
+        "command": ""
+      },
+      {
+        "key": "shift+escape",
+        "command": ""
+      },
+      {
+        "key": "escape",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+j",
+        "command": ""
+      },
+      {
+        "key": "cmd+down",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+pagedown",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+pageup",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "ctrl+n",
+        "command": ""
+      },
+      {
+        "key": "down",
+        "command": ""
+      },
+      {
+        "key": "shift+down",
+        "command": ""
+      },
+      {
+        "key": "cmd+right",
+        "command": ""
+      },
+      {
+        "key": "end",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "shift+end",
+        "command": ""
+      },
+      {
+        "key": "cmd+left",
+        "command": ""
+      },
+      {
+        "key": "home",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "shift+home",
+        "command": ""
+      },
+      {
+        "key": "ctrl+b",
+        "command": ""
+      },
+      {
+        "key": "left",
+        "command": ""
+      },
+      {
+        "key": "shift+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+e",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+e",
+        "command": ""
+      },
+      {
+        "key": "ctrl+a",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+a",
+        "command": ""
+      },
+      {
+        "key": "pagedown",
+        "command": ""
+      },
+      {
+        "key": "shift+pagedown",
+        "command": ""
+      },
+      {
+        "key": "pageup",
+        "command": ""
+      },
+      {
+        "key": "shift+pageup",
+        "command": ""
+      },
+      {
+        "key": "ctrl+f",
+        "command": ""
+      },
+      {
+        "key": "right",
+        "command": ""
+      },
+      {
+        "key": "shift+right",
+        "command": ""
+      },
+      {
+        "key": "cmd+up",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "ctrl+p",
+        "command": ""
+      },
+      {
+        "key": "up",
+        "command": ""
+      },
+      {
+        "key": "shift+up",
+        "command": ""
+      },
+      {
+        "key": "ctrl+backspace",
+        "command": ""
+      },
+      {
+        "key": "ctrl+h",
+        "command": ""
+      },
+      {
+        "key": "shift+backspace",
+        "command": ""
+      },
+      {
+        "key": "backspace",
+        "command": ""
+      },
+      {
+        "key": "ctrl+delete",
+        "command": ""
+      },
+      {
+        "key": "ctrl+d",
+        "command": ""
+      },
+      {
+        "key": "delete",
+        "command": ""
+      },
+      {
+        "key": "cmd+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+x",
+        "command": ""
+      },
+      {
+        "key": "cmd+v",
+        "command": ""
+      },
+      {
+        "key": "cmd+p",
+        "command": ""
+      },
+      {
+        "key": "ctrl+o",
+        "command": ""
+      },
+      {
+        "key": "shift+tab",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+z",
+        "command": ""
+      },
+      {
+        "key": "ctrl+pagedown",
+        "command": ""
+      },
+      {
+        "key": "ctrl+pageup",
+        "command": ""
+      },
+      {
+        "key": "cmd+pagedown",
+        "command": ""
+      },
+      {
+        "key": "cmd+pageup",
+        "command": ""
+      },
+      {
+        "key": "tab",
+        "command": ""
+      },
+      {
+        "key": "cmd+z",
+        "command": ""
+      },
+      {
+        "key": "f12",
+        "command": ""
+      },
+      {
+        "key": "f4",
+        "command": ""
+      },
+      {
+        "key": "shift+f12",
+        "command": ""
+      },
+      {
+        "key": "shift+f4",
+        "command": ""
+      },
+      {
+        "key": "cmd+enter",
+        "command": ""
+      },
+      {
+        "key": "alt+enter",
+        "command": ""
+      },
+      {
+        "key": "ctrl+enter",
+        "command": ""
+      },
+      {
+        "key": "cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+e",
+        "command": ""
+      },
+      {
+        "key": "enter",
+        "command": ""
+      },
+      {
+        "key": "alt+f5",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f5",
+        "command": ""
+      },
+      {
+        "key": "cmd+u",
+        "command": ""
+      },
+      {
+        "key": "alt+right",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+right",
+        "command": ""
+      },
+      {
+        "key": "alt+left",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+alt+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+alt+right",
+        "command": ""
+      },
+      {
+        "key": "cmd+backspace",
+        "command": ""
+      },
+      {
+        "key": "cmd+delete",
+        "command": ""
+      },
+      {
+        "key": "ctrl+k",
+        "command": ""
+      },
+      {
+        "key": "alt+backspace",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+backspace",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+delete",
+        "command": ""
+      },
+      {
+        "key": "alt+delete",
+        "command": ""
+      },
+      {
+        "key": "f7",
+        "command": ""
+      },
+      {
+        "key": "shift+f7",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+d",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+.",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+f2",
+        "command": ""
+      },
+      {
+        "key": "cmd+/",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+down",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+up",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+k",
+        "command": ""
+      },
+      {
+        "key": "alt+f3",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f3",
+        "command": ""
+      },
+      {
+        "key": "shift+enter",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+f12",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+.",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+,",
+        "command": ""
+      },
+      {
+        "key": "cmd+]",
+        "command": ""
+      },
+      {
+        "key": "alt+j",
+        "command": ""
+      },
+      {
+        "key": "alt+k",
+        "command": ""
+      },
+      {
+        "key": "alt+]",
+        "command": ""
+      },
+      {
+        "key": "alt+[",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+i",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+enter",
+        "command": ""
+      },
+      {
+        "key": "ctrl+j",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+\\",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f2",
+        "command": ""
+      },
+      {
+        "key": "alt+f8",
+        "command": ""
+      },
+      {
+        "key": "f8",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f8",
+        "command": ""
+      },
+      {
+        "key": "shift+f8",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+f8",
+        "command": ""
+      },
+      {
+        "key": "alt+down",
+        "command": ""
+      },
+      {
+        "key": "alt+up",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+d",
+        "command": ""
+      },
+      {
+        "key": "alt+f9",
+        "command": ""
+      },
+      {
+        "key": "alt+f10",
+        "command": ""
+      },
+      {
+        "key": "cmd+r alt+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "f3",
+        "command": ""
+      },
+      {
+        "key": "cmd+g",
+        "command": ""
+      },
+      {
+        "key": "cmd+f3",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+o",
+        "command": ""
+      },
+      {
+        "key": "cmd+[",
+        "command": ""
+      },
+      {
+        "key": "alt+f12",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f12",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f9",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f10",
+        "command": ""
+      },
+      {
+        "key": "cmd+r alt+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "shift+f3",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+g",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f3",
+        "command": ""
+      },
+      {
+        "key": "cmd+.",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+r",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+backspace",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+u",
+        "command": ""
+      },
+      {
+        "key": "f2",
+        "command": ""
+      },
+      {
+        "key": "cmd+r f12",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+f12",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+k",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+b",
+        "command": ""
+      },
+      {
+        "key": "shift+f10",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+i",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+f",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+m",
+        "command": ""
+      },
+      {
+        "key": "alt+z",
+        "command": ""
+      },
+      {
+        "key": "ctrl+t",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+space",
+        "command": ""
+      },
+      {
+        "key": "cmd+i",
+        "command": ""
+      },
+      {
+        "key": "alt+escape",
+        "command": ""
+      },
+      {
+        "key": "ctrl+space",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+x",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+,",
+        "command": ""
+      },
+      {
+        "key": "f9",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+[",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+0",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+/",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+-",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+8",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+1",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+2",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+3",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+4",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+5",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+6",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+7",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+[",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+.",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+l",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+]",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+j",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+=",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+9",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+]",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+v",
+        "command": ""
+      },
+      {
+        "key": "alt+end alt+end",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+r",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+backspace",
+        "command": ""
+      },
+      {
+        "key": "cmd+r f2",
+        "command": ""
+      },
+      {
+        "key": "cmd+r alt+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+enter",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+enter",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+enter",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+1",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+l",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+r",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+w",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+p",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+space",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+g",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+;",
+        "command": ""
+      },
+      {
+        "key": "space",
+        "command": ""
+      },
+      {
+        "key": "cmd+s",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+alt+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+f5",
+        "command": ""
+      },
+      {
+        "key": "f5",
+        "command": ""
+      },
+      {
+        "key": "alt+-",
+        "command": ""
+      },
+      {
+        "key": "alt+f1",
+        "command": ""
+      },
+      {
+        "key": "alt+a",
+        "command": ""
+      },
+      {
+        "key": "alt+h",
+        "command": ""
+      },
+      {
+        "key": "alt+f2",
+        "command": ""
+      },
+      {
+        "key": "ctrl+/",
+        "command": ""
+      },
+      {
+        "key": "alt+f6",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+pagedown",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+pageup",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+o",
+        "command": ""
+      },
+      {
+        "key": "shift+f9",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+d",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+h",
+        "command": ""
+      },
+      {
+        "key": "alt+=",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+e",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+k",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+n",
+        "command": ""
+      },
+      {
+        "key": "alt+home",
+        "command": ""
+      },
+      {
+        "key": "alt+end",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+p",
+        "command": ""
+      },
+      {
+        "key": "y",
+        "command": ""
+      },
+      {
+        "key": "m",
+        "command": ""
+      },
+      {
+        "key": "cmd+r i",
+        "command": ""
+      },
+      {
+        "key": "cmd+r t",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+alt+j",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+j",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+\\",
+        "command": ""
+      },
+      {
+        "key": "cmd+r y",
+        "command": ""
+      },
+      {
+        "key": "ctrl+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+end",
+        "command": ""
+      },
+      {
+        "key": "cmd+home",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+n",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+home",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+home",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+home",
+        "command": ""
+      },
+      {
+        "key": "ctrl+home",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+end",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+end",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+end",
+        "command": ""
+      },
+      {
+        "key": "ctrl+end",
+        "command": ""
+      },
+      {
+        "key": "ctrl+down",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+down",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+pagedown",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+pagedown",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+pagedown",
+        "command": ""
+      },
+      {
+        "key": "alt+pagedown",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+pageup",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+pageup",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+pageup",
+        "command": ""
+      },
+      {
+        "key": "alt+pageup",
+        "command": ""
+      },
+      {
+        "key": "ctrl+up",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+up",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+s",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+x",
+        "command": ""
+      },
+      {
+        "key": "cmd+; shift+cmd+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+; shift+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+; shift+cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+; shift+cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+a",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+c",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+e",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+m",
+        "command": ""
+      },
+      {
+        "key": "cmd+; e",
+        "command": ""
+      },
+      {
+        "key": "cmd+; l",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+r",
+        "command": ""
+      },
+      {
+        "key": "cmd+; a",
+        "command": ""
+      },
+      {
+        "key": "cmd+; c",
+        "command": ""
+      },
+      {
+        "key": "cmd+; f",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+o",
+        "command": ""
+      },
+      {
+        "key": "cmd+; shift+cmd+i",
+        "command": ""
+      },
+      {
+        "key": "cmd+; cmd+i",
+        "command": ""
+      },
+      {
+        "key": "cmd+escape",
+        "command": ""
+      },
+      {
+        "key": "cmd+f9",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+i",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+i",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f9",
+        "command": ""
+      },
+      {
+        "key": "cmd+w",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+w",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+w",
+        "command": ""
+      },
+      {
+        "key": "cmd+r w",
+        "command": ""
+      },
+      {
+        "key": "cmd+r f",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+t",
+        "command": ""
+      },
+      {
+        "key": "cmd+r u",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+w",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+o",
+        "command": ""
+      },
+      {
+        "key": "cmd+r o",
+        "command": ""
+      },
+      {
+        "key": "shift+f5",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f5",
+        "command": ""
+      },
+      {
+        "key": "ctrl+f5",
+        "command": ""
+      },
+      {
+        "key": "cmd+f11",
+        "command": ""
+      },
+      {
+        "key": "shift+f11",
+        "command": ""
+      },
+      {
+        "key": "f10",
+        "command": ""
+      },
+      {
+        "key": "cmd+r m",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+v",
+        "command": ""
+      },
+      {
+        "key": "cmd+r p",
+        "command": ""
+      },
+      {
+        "key": "cmd+n",
+        "command": ""
+      },
+      {
+        "key": "cmd+o",
+        "command": ""
+      },
+      {
+        "key": "cmd+r r",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+s",
+        "command": ""
+      },
+      {
+        "key": "cmd+r s",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+up",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+down",
+        "command": ""
+      },
+      {
+        "key": "cmd+8",
+        "command": ""
+      },
+      {
+        "key": "cmd+5",
+        "command": ""
+      },
+      {
+        "key": "cmd+1",
+        "command": ""
+      },
+      {
+        "key": "cmd+4",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+left",
+        "command": ""
+      },
+      {
+        "key": "f6",
+        "command": ""
+      },
+      {
+        "key": "shift+f6",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+right",
+        "command": ""
+      },
+      {
+        "key": "cmd+2",
+        "command": ""
+      },
+      {
+        "key": "cmd+7",
+        "command": ""
+      },
+      {
+        "key": "cmd+0",
+        "command": ""
+      },
+      {
+        "key": "cmd+6",
+        "command": ""
+      },
+      {
+        "key": "cmd+3",
+        "command": ""
+      },
+      {
+        "key": "ctrl+g",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+o",
+        "command": ""
+      },
+      {
+        "key": "cmd+r enter",
+        "command": ""
+      },
+      {
+        "key": "cmd+r",
+        "command": ""
+      },
+      {
+        "key": "cmd+9",
+        "command": ""
+      },
+      {
+        "key": "ctrl+0",
+        "command": ""
+      },
+      {
+        "key": "cmd+r down",
+        "command": ""
+      },
+      {
+        "key": "cmd+r left",
+        "command": ""
+      },
+      {
+        "key": "cmd+r right",
+        "command": ""
+      },
+      {
+        "key": "cmd+r up",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+1",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+9",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+-",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+-",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+q",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+n",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+]",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "cmd+r alt+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+1",
+        "command": ""
+      },
+      {
+        "key": "ctrl+2",
+        "command": ""
+      },
+      {
+        "key": "ctrl+3",
+        "command": ""
+      },
+      {
+        "key": "ctrl+4",
+        "command": ""
+      },
+      {
+        "key": "ctrl+5",
+        "command": ""
+      },
+      {
+        "key": "ctrl+6",
+        "command": ""
+      },
+      {
+        "key": "ctrl+7",
+        "command": ""
+      },
+      {
+        "key": "ctrl+8",
+        "command": ""
+      },
+      {
+        "key": "ctrl+9",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+s",
+        "command": ""
+      },
+      {
+        "key": "ctrl+r",
+        "command": ""
+      },
+      {
+        "key": "cmd+,",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+u",
+        "command": ""
+      },
+      {
+        "key": "cmd+r shift+enter",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+[",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "cmd+r alt+cmd+left",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+tab",
+        "command": ""
+      },
+      {
+        "key": "ctrl+tab",
+        "command": ""
+      },
+      {
+        "key": "ctrl+q",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+q",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+t",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+h",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+t",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+tab",
+        "command": ""
+      },
+      {
+        "key": "cmd+t",
+        "command": ""
+      },
+      {
+        "key": "f1",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+p",
+        "command": ""
+      },
+      {
+        "key": "cmd+\\",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+\\",
+        "command": ""
+      },
+      {
+        "key": "ctrl+w",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+b",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+`",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+c",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+r",
+        "command": ""
+      },
+      {
+        "key": "alt+space",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+g",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+2",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+6",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+5",
+        "command": ""
+      },
+      {
+        "key": "ctrl+`",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+b",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+0",
+        "command": ""
+      },
+      {
+        "key": "ctrl+cmd+f",
+        "command": ""
+      },
+      {
+        "key": "cmd+r cmd+m",
+        "command": ""
+      },
+      {
+        "key": "cmd+j",
+        "command": ""
+      },
+      {
+        "key": "cmd+b",
+        "command": ""
+      },
+      {
+        "key": "cmd+r z",
+        "command": ""
+      },
+      {
+        "key": "cmd+numpad_add",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+=",
+        "command": ""
+      },
+      {
+        "key": "cmd+=",
+        "command": ""
+      },
+      {
+        "key": "cmd+numpad_subtract",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+-",
+        "command": ""
+      },
+      {
+        "key": "cmd+-",
+        "command": ""
+      },
+      {
+        "key": "cmd+numpad0",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+m",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+cmd+y",
+        "command": ""
+      },
+      {
+        "key": "cmd+r c",
+        "command": ""
+      },
+      {
+        "key": "cmd+r d",
+        "command": ""
+      },
+      {
+        "key": "cmd+r e",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+d",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+e",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+x",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+g",
+        "command": ""
+      },
+      {
+        "key": "cmd+k",
+        "command": ""
+      },
+      {
+        "key": "alt+home alt+home",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f1",
+        "command": ""
+      },
+      {
+        "key": "f11",
+        "command": ""
+      },
+      {
+        "key": "ctrl+alt+cmd+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+right",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+q",
+        "command": ""
+      },
+      {
+        "key": "alt+cmd+i",
+        "command": ""
+      },
+      {
+        "key": "cmd+k alt+cmd+s",
+        "command": ""
+      },
+      {
+        "key": "f",
+        "command": ""
+      },
+      {
+        "key": "shift+alt+f12",
+        "command": ""
+      },
+      {
+        "key": "cmd+k cmd+n",
+        "command": ""
+      },
+      {
+        "key": "k",
+        "command": ""
+      },
+      {
+        "key": "cmd+k v",
+        "command": ""
+      },
+      {
+        "key": "cmd+k cmd+r",
+        "command": ""
+      },
+      {
+        "key": "j",
+        "command": ""
+      },
+      {
+        "key": "a",
+        "command": ""
+      },
+      {
+        "key": "b",
+        "command": ""
+      },
+      {
+        "key": "d d",
+        "command": ""
+      },
+      {
+        "key": "z",
+        "command": ""
+      },
+      {
+        "key": "s",
+        "command": ""
+      },
+      {
+        "key": "c",
+        "command": ""
+      },
+      {
+        "key": "x",
+        "command": ""
+      },
+      {
+        "key": "v",
+        "command": ""
+      },
+      {
+        "key": "shift+l",
+        "command": ""
+      },
+      {
+        "key": "o",
+        "command": ""
+      },
+      {
+        "key": "l",
+        "command": ""
+      },
+      {
+        "key": "shift+cmd+0",
+        "command": ""
+      },
+      {
+        "key": "ctrl+.",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+z",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+n",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+w",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+.",
+        "command": ""
+      },
+      {
+        "key": "ctrl+shift+1",
+        "command": ""
+      },
+      {
+        "key": "cmd+y",
+        "command": ""
+      },
+      {
+        "key": "alt+d",
+        "command": ""
+      },
+      {
+        "key": "cmd+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+pausebreak",
+        "command": ""
+      },
+      {
+        "key": "cmd+ctrl",
+        "command": ""
+      },
+      {
+        "key": "alt+l",
+        "command": ""
+      },
+      {
+        "key": "cmd+h",
+        "command": ""
+      }
+    ]
+  }
+}
