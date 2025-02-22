@@ -35,29 +35,44 @@ const loadAllKeybindings = () => {
 };
 
 /**
- * 创建新的键位配置数组，保留key和when字段，command设为空
- * @param {Array} keybindings 原始键位配置数组
- * @returns {Array} 处理后的键位配置数组
+ * 创建新的键位配置数组，保留原始键位上下文(when)并去重
+ * - 基于键位组合(key)和生效条件(when)进行去重
+ * - 保留原始生效条件上下文
+ * - 清空命令(command)以实现禁用
+ * 
+ * @param {Array<Object>} keybindings 原始键位配置数组，需包含key和when字段
+ * @returns {Array<Object>} 处理后的键位配置数组，结构为：
+ *   [
+ *     { 
+ *       key: "<快捷键组合>", 
+ *       command: "",
+ *       when?: "<生效条件>" 
+ *     },
+ *     ...
+ *   ]
  */
 const createEmptyKeybindings = (keybindings) => {
-    // 使用Map来去重，key+when的组合作为唯一键
-    const keyMap = new Map();
+    // 使用复合键进行去重：key + when 的组合作为唯一标识
+    const uniqueKeyMap = new Map();
     
-    keybindings.forEach(binding => {
-        const identifier = `${binding.key}_${binding.when || ''}`;
-        if (!keyMap.has(identifier)) {
-            keyMap.set(identifier, {
-                key: binding.key,
-                command: '',
-                // 保留原始when字段（如果存在）
-                ...(binding.when && { when: binding.when })
+    keybindings.forEach(original => {
+        // 生成唯一标识符：组合键和生效条件
+        const uniqueId = `${original.key}_${original.when || 'no_when'}`;
+        
+        // 保留首次出现的配置
+        if (!uniqueKeyMap.has(uniqueId)) {
+            uniqueKeyMap.set(uniqueId, {
+                key: original.key,
+                command: '', // 清空命令以禁用快捷键
+                // 保留生效条件上下文（如果存在）
+                ...(original.when && { when: original.when })
             });
         }
     });
 
-    const newBindings = Array.from(keyMap.values());
-    console.log(`处理后的唯一键位数量：${newBindings.length}`);
-    return newBindings;
+    const processed = Array.from(uniqueKeyMap.values());
+    console.log(`原始键位: ${keybindings.length} → 唯一键位: ${processed.length}`);
+    return processed;
 };
 
 /**
