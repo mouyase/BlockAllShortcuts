@@ -35,19 +35,27 @@ const loadAllKeybindings = () => {
 };
 
 /**
- * 创建新的键位配置数组，只保留key字段并去重，command设为空
+ * 创建新的键位配置数组，保留key和when字段，command设为空
  * @param {Array} keybindings 原始键位配置数组
  * @returns {Array} 处理后的键位配置数组
  */
 const createEmptyKeybindings = (keybindings) => {
-    // 提取所有key并去重
-    const uniqueKeys = [...new Set(keybindings.map(item => item.key))];
-    // 创建新的配置对象，只包含key和空command
-    const newBindings = uniqueKeys.map(key => ({
-        key: key,
-        command: ''
-    }));
+    // 使用Map来去重，key+when的组合作为唯一键
+    const keyMap = new Map();
     
+    keybindings.forEach(binding => {
+        const identifier = `${binding.key}_${binding.when || ''}`;
+        if (!keyMap.has(identifier)) {
+            keyMap.set(identifier, {
+                key: binding.key,
+                command: '',
+                // 保留原始when字段（如果存在）
+                ...(binding.when && { when: binding.when })
+            });
+        }
+    });
+
+    const newBindings = Array.from(keyMap.values());
     console.log(`处理后的唯一键位数量：${newBindings.length}`);
     return newBindings;
 };
