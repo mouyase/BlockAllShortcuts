@@ -743,12 +743,12 @@
       {
         "key": "alt+j",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "alt+k",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "escape",
@@ -5304,13 +5304,12 @@
       },
       {
         "key": "cmd+enter",
-        "command": "",
-        "when": "(arbitrary function)"
+        "command": ""
       },
       {
         "key": "cmd+u",
         "command": "",
-        "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view' || (arbitrary function) && (arbitrary function)"
+        "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view'"
       },
       {
         "key": "cmd+l",
@@ -5333,7 +5332,7 @@
       {
         "key": "cmd+enter",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "cmd+pausebreak",
@@ -5343,12 +5342,12 @@
       {
         "key": "cmd+y",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "cmd+backspace",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "cmd+ctrl",
@@ -5358,7 +5357,7 @@
       {
         "key": "cmd+n",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "cmd+backspace",
@@ -5388,12 +5387,12 @@
       {
         "key": "alt+l",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "alt+h",
         "command": "",
-        "when": "editorTextFocus && (arbitrary function)"
+        "when": "editorTextFocus"
       },
       {
         "key": "cmd+n",
@@ -5457,13 +5456,11 @@
       },
       {
         "key": "shift+cmd+e",
-        "command": "",
-        "when": "(arbitrary function)"
+        "command": ""
       },
       {
         "key": "shift+cmd+d",
-        "command": "",
-        "when": "(arbitrary function)"
+        "command": ""
       },
       {
         "key": "shift+cmd+k",
@@ -5502,12 +5499,12 @@
       {
         "key": "cmd+enter",
         "command": "",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported"
       },
       {
         "key": "cmd+backspace",
         "command": "",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported"
       },
       {
         "key": "cmd+k",
@@ -5517,7 +5514,7 @@
       {
         "key": "escape",
         "command": "",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported"
       }
     ]
   }

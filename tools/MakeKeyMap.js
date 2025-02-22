@@ -36,35 +36,41 @@ const loadAllKeybindings = () => {
 
 /**
  * 创建新的键位配置数组，保留原始键位上下文(when)并去重
- * - 基于键位组合(key)和生效条件(when)进行去重
- * - 保留原始生效条件上下文
- * - 清空命令(command)以实现禁用
- * 
- * @param {Array<Object>} keybindings 原始键位配置数组，需包含key和when字段
- * @returns {Array<Object>} 处理后的键位配置数组，结构为：
- *   [
- *     { 
- *       key: "<快捷键组合>", 
- *       command: "",
- *       when?: "<生效条件>" 
- *     },
- *     ...
- *   ]
+ * @param {Array<Object>} keybindings 原始键位配置数组
+ * @returns {Array<Object>} 处理后的键位配置数组
  */
 const createEmptyKeybindings = (keybindings) => {
-    // 使用复合键进行去重：key + when 的组合作为唯一标识
     const uniqueKeyMap = new Map();
     
     keybindings.forEach(original => {
-        // 生成唯一标识符：组合键和生效条件
+        // 处理 when 子句，移除 "(arbitrary function)"
+        let whenClause = original.when;
+        if (whenClause) {
+            whenClause = whenClause
+                .replace(/\(arbitrary function\)/g, '')
+                // 清理逻辑运算符
+                .replace(/(\|\||&&)(\s*(\|\||&&)\s*)+/g, '$1')
+                // 统一运算符格式
+                .replace(/([^\s])(&&|\|\|)([^\s])/g, '$1 $2 $3') 
+                // 合并多余空格
+                .replace(/\s+/g, ' ')
+                // 去除首尾空格和运算符
+                .replace(/^\s*(&&|\|\|)\s*|\s*(&&|\|\|)\s*$/g, '')
+                .trim();
+            // 如果 when 子句为空，则不添加
+            if (!whenClause) {
+                delete original.when;
+            } else {
+                original.when = whenClause;
+            }
+        }
+
         const uniqueId = `${original.key}_${original.when || 'no_when'}`;
         
-        // 保留首次出现的配置
         if (!uniqueKeyMap.has(uniqueId)) {
             uniqueKeyMap.set(uniqueId, {
                 key: original.key,
-                command: '', // 清空命令以禁用快捷键
-                // 保留生效条件上下文（如果存在）
+                command: '',
                 ...(original.when && { when: original.when })
             });
         }
