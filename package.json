@@ -6,6 +6,7 @@
   "publisher": "mouyase",
   "repository": "https://github.com/mouyase/BlockAllShortcuts",
   "scripts": {
+    "show": "node tools/ShowKeySet.js",
     "build": "node tools/MakeKeyMap.js",
     "package": "npm run build && npx @vscode/vsce package"
   },
@@ -5309,7 +5310,7 @@
       {
         "key": "cmd+u",
         "command": "",
-        "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view'"
+        "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view' ||"
       },
       {
         "key": "cmd+l",
