@@ -5318,6 +5318,11 @@
         "command": "aiSettings.usingOpenAIKey.toggle"
     },
     {
+        "key": "alt+,",
+        "command": "gitlens.key.alt+,",
+        "when": "gitlens:key:,"
+    },
+    {
         "key": "ctrl+enter",
         "command": "workbench.action.chat.applyInEditor",
         "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
@@ -5326,10 +5331,6 @@
         "key": "ctrl+enter",
         "command": "workbench.action.chat.insertCodeBlock",
         "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
-    },
-    {
-        "key": "ctrl+.",
-        "command": "workbench.action.showCommands"
     },
     {
         "key": "cmd+i",
@@ -5342,36 +5343,44 @@
         "when": "chatAttachmentResource"
     },
     {
-        "key": "ctrl+w",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "alt+.",
+        "command": "gitlens.key.alt+.",
+        "when": "gitlens:key:."
     },
     {
-        "key": "ctrl+n",
-        "command": "workbench.action.files.newUntitledFile"
+        "key": "alt+enter",
+        "command": "gitlens.key.alt+enter",
+        "when": "gitlens:key:alt+enter"
     },
     {
-        "key": "ctrl+shift+z",
-        "command": "workbench.action.terminal.runSelectedText",
-        "when": "terminalProcessSupported"
+        "key": "alt+left",
+        "command": "gitlens.key.alt+left",
+        "when": "gitlens:key:alt+left"
     },
     {
-        "key": "ctrl+shift+n",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalHasBeenCreated || terminalProcessSupported"
+        "key": "alt+right",
+        "command": "gitlens.key.alt+right",
+        "when": "gitlens:key:alt+right"
     },
     {
-        "key": "ctrl+shift+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalHasBeenCreated || terminalIsOpen || terminalProcessSupported"
+        "key": "ctrl+enter",
+        "command": "gitlens.key.ctrl+enter",
+        "when": "gitlens:key:ctrl+enter"
     },
     {
-        "key": "ctrl+shift+.",
-        "command": "editor.action.toggleRenderWhitespace"
+        "key": "cmd+left",
+        "command": "gitlens.key.ctrl+left",
+        "when": "gitlens:key:ctrl+left"
     },
     {
-        "key": "ctrl+shift+1",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "panelAlignment == 'center' || panelPosition != 'bottom' && panelPosition != 'top'"
+        "key": "cmd+right",
+        "command": "gitlens.key.ctrl+right",
+        "when": "gitlens:key:ctrl+right"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
     },
     {
         "key": "shift+cmd+l",
@@ -5417,6 +5426,291 @@
         "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view' || (arbitrary function) && (arbitrary function)"
     },
     {
+        "key": "escape",
+        "command": "gitlens.key.escape",
+        "when": "editorTextFocus && gitlens:key:escape && !codeActionMenuVisible && !findWidgetVisible && !isInEmbeddedEditor && !parameterHintsVisible && !quickFixWidgetVisible && !referenceSearchVisible && !renameInputVisible && !suggestWidgetVisible"
+    },
+    {
+        "key": "left",
+        "command": "gitlens.key.left",
+        "when": "gitlens:key:left"
+    },
+    {
+        "key": "right",
+        "command": "gitlens.key.right",
+        "when": "gitlens:key:right"
+    },
+    {
+        "key": "alt+cmd+g shift+,",
+        "command": "gitlens.diffLineWithPrevious",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "shift+alt+,",
+        "command": "gitlens.diffLineWithPrevious",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+.",
+        "command": "gitlens.diffWithNext",
+        "when": "editorTextFocus && gitlens:enabled && !isInDiffEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+cmd+g .",
+        "command": "gitlens.diffWithNext",
+        "when": "editorTextFocus && gitlens:enabled && !isInDiffEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+.",
+        "command": "gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+cmd+g .",
+        "command": "gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+.",
+        "command": "gitlens.diffWithNextInDiffRight",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+cmd+g .",
+        "command": "gitlens.diffWithNextInDiffRight",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+,",
+        "command": "gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+cmd+g ,",
+        "command": "gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+,",
+        "command": "gitlens.diffWithPreviousInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+cmd+g ,",
+        "command": "gitlens.diffWithPreviousInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+,",
+        "command": "gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+cmd+g ,",
+        "command": "gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+    },
+    {
+        "key": "alt+cmd+g shift+.",
+        "command": "gitlens.diffWithWorking",
+        "when": "editorTextFocus && gitlens:enabled && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "shift+alt+.",
+        "command": "gitlens.diffWithWorking",
+        "when": "editorTextFocus && gitlens:enabled && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+    },
+    {
+        "key": "alt+/",
+        "command": "gitlens.gitCommands",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+cmd+g /",
+        "command": "gitlens.gitCommands",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "alt+c",
+        "command": "gitlens.showQuickCommitFileDetails",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+cmd+g c",
+        "command": "gitlens.showQuickCommitFileDetails",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "alt+h",
+        "command": "gitlens.showQuickFileHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+cmd+g h",
+        "command": "gitlens.showQuickFileHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "alt+cmd+g shift+h",
+        "command": "gitlens.showQuickRepoHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "gitlens.showQuickRepoHistory",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+s",
+        "command": "gitlens.showQuickRepoStatus",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+cmd+g s",
+        "command": "gitlens.showQuickRepoStatus",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "alt+cmd+g shift+b",
+        "command": "gitlens.toggleCodeLens",
+        "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "shift+alt+b",
+        "command": "gitlens.toggleCodeLens",
+        "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:blameable'"
+    },
+    {
+        "key": "alt+cmd+g b",
+        "command": "gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:blameable'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.branches.copy",
+        "when": "focusedView == 'gitlens.views.branches'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.commits.copy",
+        "when": "focusedView == 'gitlens.views.commits'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.contributors.copy",
+        "when": "focusedView == 'gitlens.views.contributors'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.drafts.copy",
+        "when": "focusedView == 'gitlens.views.drafts'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.fileHistory.copy",
+        "when": "focusedView == 'gitlens.views.fileHistory'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.lineHistory.copy",
+        "when": "focusedView == 'gitlens.views.lineHistory'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.pullRequest.copy",
+        "when": "focusedView == 'gitlens.views.pullRequest'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.remotes.copy",
+        "when": "focusedView == 'gitlens.views.remotes'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.repositories.copy",
+        "when": "focusedView == 'gitlens.views.repositories'"
+    },
+    {
+        "key": "2",
+        "command": "gitlens.views.scm.grouped.branches",
+        "when": "config.gitlens.views.scm.grouped.views.branches && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "1",
+        "command": "gitlens.views.scm.grouped.commits",
+        "when": "config.gitlens.views.scm.grouped.views.commits && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "7",
+        "command": "gitlens.views.scm.grouped.contributors",
+        "when": "config.gitlens.views.scm.grouped.views.contributors && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "0",
+        "command": "gitlens.views.scm.grouped.launchpad",
+        "when": "config.gitlens.views.scm.grouped.views.launchpad && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "3",
+        "command": "gitlens.views.scm.grouped.remotes",
+        "when": "config.gitlens.views.scm.grouped.views.remotes && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "8",
+        "command": "gitlens.views.scm.grouped.repositories",
+        "when": "config.gitlens.views.scm.grouped.views.repositories && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "9",
+        "command": "gitlens.views.scm.grouped.searchAndCompare",
+        "when": "config.gitlens.views.scm.grouped.views.searchAndCompare && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "4",
+        "command": "gitlens.views.scm.grouped.stashes",
+        "when": "config.gitlens.views.scm.grouped.views.stashes && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "5",
+        "command": "gitlens.views.scm.grouped.tags",
+        "when": "config.gitlens.views.scm.grouped.views.tags && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "6",
+        "command": "gitlens.views.scm.grouped.worktrees",
+        "when": "config.gitlens.views.scm.grouped.views.worktrees && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.searchAndCompare.copy",
+        "when": "focusedView == 'gitlens.views.searchAndCompare'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.stashes.copy",
+        "when": "focusedView == 'gitlens.views.stashes'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.tags.copy",
+        "when": "focusedView == 'gitlens.views.tags'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.workspaces.copy",
+        "when": "focusedView == 'gitlens.views.workspaces'"
+    },
+    {
+        "key": "cmd+c",
+        "command": "gitlens.views.worktrees.copy",
+        "when": "focusedView == 'gitlens.views.worktrees'"
+    },
+    {
         "key": "cmd+l",
         "command": "aichat.newchataction"
     },
@@ -5433,6 +5727,11 @@
     {
         "key": "alt+cmd+l",
         "command": "composer.showComposerHistory"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab"
     },
     {
         "key": "cmd+enter",
@@ -5586,10 +5885,6 @@
     },
     {
         "key": "shift+cmd+k",
-        "command": "composer.openAsBar"
-    },
-    {
-        "key": "shift+cmd+k",
         "command": "aipopup.action.modal.generate",
         "when": "editorFocus && !composerBarIsVisible",
         "args": {
@@ -5605,9 +5900,12 @@
         }
     },
     {
+        "key": "shift+cmd+i",
+        "command": "composer.newAgentChat"
+    },
+    {
         "key": "cmd+i",
-        "command": "composer.startComposerPrompt",
-        "when": "composerIsEnabled"
+        "command": "composer.startComposerPrompt"
     },
     {
         "key": "cmd+backspace",
@@ -5698,7 +5996,7 @@
 // - bugbot.runNewBugBot
 // - callStack.collapse
 // - callStackWidget.goToFile
-// - changeEditorIndentation1
+// - changeEditorIndentation2
 // - chat.inlineResourceAnchor.addFileToChat
 // - chat.inlineSymbolAnchor.goToDefinition
 // - chat.inlineSymbolAnchor.goToImplementations
@@ -5729,12 +6027,16 @@
 // - composer.addfilestonnewcomposerchat
 // - composer.addsymbolstocomposer
 // - composer.addsymbolstonewcomposer
+// - composer.cancelChat
 // - composer.copyRequestId
 // - composer.newcomposeraction
 // - composer.openAsEditor
 // - composer.openAsPane
 // - composer.openChatAsEditor
 // - composer.openComposerFromCurrentChat
+// - composer.reapplyCodeblock
+// - composer.reportFeedback
+// - composer.resumeCurrentChat
 // - composer.showComposerChatHistory
 // - composer.startComposerPromptFromSelection
 // - compositionEnd
@@ -5780,7 +6082,6 @@
 // - cursorai.action.reportGoodAIAction
 // - cursorai.action.reportGoodCmdK
 // - cursorai.action.showAddFastRequestsModal
-// - cursorai.action.showTurboModeModal
 // - cursorai.action.showUsagePricingModal
 // - cursorai.action.startIndexingListener
 // - cursorai.action.switchToModel
@@ -5838,9 +6139,7 @@
 // - editor.action.addCursorsToTop
 // - editor.action.addSelectionToPreviousFindMatch
 // - editor.action.addSymbolToChat
-// - editor.action.addSymbolToComposer
 // - editor.action.addSymbolToNewChat
-// - editor.action.addSymbolToNewComposer
 // - editor.action.changeTabDisplaySize
 // - editor.action.clipboardCopyWithSyntaxHighlightingAction
 // - editor.action.configureCppDiffPeekView
@@ -5922,6 +6221,7 @@
 // - editor.action.toggleColumnSelection
 // - editor.action.toggleMinimap
 // - editor.action.toggleRenderControlCharacter
+// - editor.action.toggleRenderWhitespace
 // - editor.action.toggleStickyScroll
 // - editor.action.transformToCamelcase
 // - editor.action.transformToKebabcase
@@ -5947,6 +6247,7 @@
 // - editor.cpp.openPro
 // - editor.cpp.snooze
 // - editor.cpp.toggle
+// - editor.cpp.unsnooze
 // - editor.debug.action.addLogPoint
 // - editor.debug.action.conditionalBreakpoint
 // - editor.debug.action.editBreakpoint
@@ -5986,6 +6287,19 @@
 // - editor.showTypeHierarchy
 // - editor.toggleImportFold
 // - emmet.expandAbbreviation
+// - eslint.applyAllFixes
+// - eslint.applyDisableFile
+// - eslint.applyDisableLine
+// - eslint.applySameFixes
+// - eslint.applySingleFix
+// - eslint.applySuggestion
+// - eslint.createConfig
+// - eslint.executeAutofix
+// - eslint.migrateSettings
+// - eslint.openRuleDoc
+// - eslint.restart
+// - eslint.revalidate
+// - eslint.showOutputChannel
 // - explorer.download
 // - explorer.newFile
 // - explorer.newFolder
@@ -5994,6 +6308,7 @@
 // - extension.bisect.next
 // - extension.bisect.start
 // - extension.bisect.stop
+// - extension.colorHighlight
 // - extension.js-debug.addCustomBreakpoints
 // - extension.js-debug.addXHRBreakpoints
 // - extension.js-debug.callers.add
@@ -6049,9 +6364,7 @@
 // - extensions.actions.searchByCategory.Visualization
 // - extensions.filter.featured
 // - extensions.recommendedList.focus
-// - extensions.recommendedList.removeView
 // - extensions.recommendedList.resetViewLocation
-// - extensions.recommendedList.toggleVisibility
 // - extensions.sort.installs
 // - extensions.sort.name
 // - extensions.sort.publishedDate
@@ -6212,10 +6525,890 @@
 // - github.copyVscodeDevLinkWithoutRange
 // - github.openOnVscodeDev
 // - github.publish
+// - gitlens.action.createPullRequest
+// - gitlens.action.hover.commands
+// - gitlens.action.openPullRequest
+// - gitlens.addAuthors
+// - gitlens.annotations.nextChange
+// - gitlens.annotations.previousChange
+// - gitlens.applyPatchFromClipboard
+// - gitlens.associateIssueWithBranch
+// - gitlens.browseRepoAtRevision
+// - gitlens.browseRepoAtRevisionInNewWindow
+// - gitlens.browseRepoBeforeRevision
+// - gitlens.browseRepoBeforeRevisionInNewWindow
+// - gitlens.clearFileAnnotations
+// - gitlens.closeUnchangedFiles
+// - gitlens.compareHeadWith
+// - gitlens.compareWith
+// - gitlens.compareWorkingWith
+// - gitlens.computingFileAnnotations
+// - gitlens.connectRemoteProvider
+// - gitlens.copyCurrentBranch
+// - gitlens.copyDeepLinkToBranch
+// - gitlens.copyDeepLinkToCommit
+// - gitlens.copyDeepLinkToComparison
+// - gitlens.copyDeepLinkToFile
+// - gitlens.copyDeepLinkToFileAtRevision
+// - gitlens.copyDeepLinkToLines
+// - gitlens.copyDeepLinkToRepo
+// - gitlens.copyDeepLinkToTag
+// - gitlens.copyDeepLinkToWorkspace
+// - gitlens.copyMessageToClipboard
+// - gitlens.copyPatchToClipboard
+// - gitlens.copyRelativePathToClipboard
+// - gitlens.copyRemoteBranchUrl
+// - gitlens.copyRemoteBranchesUrl
+// - gitlens.copyRemoteCommitUrl
+// - gitlens.copyRemoteComparisonUrl
+// - gitlens.copyRemoteFileUrlFrom
+// - gitlens.copyRemoteFileUrlToClipboard
+// - gitlens.copyRemoteFileUrlWithoutRange
+// - gitlens.copyRemotePullRequestUrl
+// - gitlens.copyRemoteRepositoryUrl
+// - gitlens.copyShaToClipboard
+// - gitlens.copyWorkingChangesToWorktree
+// - gitlens.createCloudPatch
+// - gitlens.createPatch
+// - gitlens.createPullRequestOnRemote
+// - gitlens.diffDirectory
+// - gitlens.diffDirectoryWithHead
+// - gitlens.diffFolderWithRevision
+// - gitlens.diffFolderWithRevisionFrom
+// - gitlens.diffHeadWith
+// - gitlens.diffLineWithWorking
+// - gitlens.diffWith
+// - gitlens.diffWithRevision
+// - gitlens.diffWithRevisionFrom
+// - gitlens.diffWithWorkingInDiffLeft
+// - gitlens.diffWithWorkingInDiffRight
+// - gitlens.diffWorkingWith
+// - gitlens.disableDebugLogging
+// - gitlens.disableRebaseEditor
+// - gitlens.disconnectRemoteProvider
+// - gitlens.enableDebugLogging
+// - gitlens.enableRebaseEditor
+// - gitlens.externalDiff
+// - gitlens.externalDiffAll
+// - gitlens.fetchRepositories
+// - gitlens.generateCommitMessage
+// - gitlens.getStarted
+// - gitlens.ghpr.views.openOrCreateWorktree
+// - gitlens.gitCommands.branch
+// - gitlens.gitCommands.branch.create
+// - gitlens.gitCommands.branch.delete
+// - gitlens.gitCommands.branch.prune
+// - gitlens.gitCommands.branch.rename
+// - gitlens.gitCommands.checkout
+// - gitlens.gitCommands.cherryPick
+// - gitlens.gitCommands.history
+// - gitlens.gitCommands.merge
+// - gitlens.gitCommands.rebase
+// - gitlens.gitCommands.remote
+// - gitlens.gitCommands.remote.add
+// - gitlens.gitCommands.remote.prune
+// - gitlens.gitCommands.remote.remove
+// - gitlens.gitCommands.reset
+// - gitlens.gitCommands.revert
+// - gitlens.gitCommands.show
+// - gitlens.gitCommands.stash
+// - gitlens.gitCommands.stash.drop
+// - gitlens.gitCommands.stash.list
+// - gitlens.gitCommands.stash.pop
+// - gitlens.gitCommands.stash.push
+// - gitlens.gitCommands.stash.rename
+// - gitlens.gitCommands.status
+// - gitlens.gitCommands.switch
+// - gitlens.gitCommands.tag
+// - gitlens.gitCommands.tag.create
+// - gitlens.gitCommands.tag.delete
+// - gitlens.gitCommands.worktree
+// - gitlens.gitCommands.worktree.create
+// - gitlens.gitCommands.worktree.delete
+// - gitlens.gitCommands.worktree.open
+// - gitlens.gk.switchOrganization
+// - gitlens.graph.addAuthor
+// - gitlens.graph.associateIssueWithBranch
+// - gitlens.graph.cherryPick
+// - gitlens.graph.columnAuthorOff
+// - gitlens.graph.columnAuthorOn
+// - gitlens.graph.columnChangesOff
+// - gitlens.graph.columnChangesOn
+// - gitlens.graph.columnDateTimeOff
+// - gitlens.graph.columnDateTimeOn
+// - gitlens.graph.columnGraphCompact
+// - gitlens.graph.columnGraphDefault
+// - gitlens.graph.columnGraphOff
+// - gitlens.graph.columnGraphOn
+// - gitlens.graph.columnMessageOff
+// - gitlens.graph.columnMessageOn
+// - gitlens.graph.columnRefOff
+// - gitlens.graph.columnRefOn
+// - gitlens.graph.columnShaOff
+// - gitlens.graph.columnShaOn
+// - gitlens.graph.commitViaSCM
+// - gitlens.graph.compareAncestryWithWorking
+// - gitlens.graph.compareBranchWithHead
+// - gitlens.graph.compareSelectedCommits.multi
+// - gitlens.graph.compareWithHead
+// - gitlens.graph.compareWithMergeBase
+// - gitlens.graph.compareWithUpstream
+// - gitlens.graph.compareWithWorking
+// - gitlens.graph.copy
+// - gitlens.graph.copyDeepLinkToBranch
+// - gitlens.graph.copyDeepLinkToCommit
+// - gitlens.graph.copyDeepLinkToRepo
+// - gitlens.graph.copyDeepLinkToTag
+// - gitlens.graph.copyMessage
+// - gitlens.graph.copyRemoteBranchUrl
+// - gitlens.graph.copyRemoteCommitUrl
+// - gitlens.graph.copyRemoteCommitUrl.multi
+// - gitlens.graph.copySha
+// - gitlens.graph.copyWorkingChangesToWorktree
+// - gitlens.graph.createBranch
+// - gitlens.graph.createCloudPatch
+// - gitlens.graph.createPatch
+// - gitlens.graph.createPullRequest
+// - gitlens.graph.createTag
+// - gitlens.graph.createWorktree
+// - gitlens.graph.deleteBranch
+// - gitlens.graph.deleteTag
+// - gitlens.graph.fetch
+// - gitlens.graph.generateCommitMessage
+// - gitlens.graph.hideLocalBranch
+// - gitlens.graph.hideRefGroup
+// - gitlens.graph.hideRemote
+// - gitlens.graph.hideRemoteBranch
+// - gitlens.graph.hideTag
+// - gitlens.graph.mergeBranchInto
+// - gitlens.graph.openBranchOnRemote
+// - gitlens.graph.openChangedFileDiffs
+// - gitlens.graph.openChangedFileDiffsIndividually
+// - gitlens.graph.openChangedFileDiffsWithMergeBase
+// - gitlens.graph.openChangedFileDiffsWithWorking
+// - gitlens.graph.openChangedFileDiffsWithWorkingIndividually
+// - gitlens.graph.openChangedFileRevisions
+// - gitlens.graph.openChangedFiles
+// - gitlens.graph.openCommitOnRemote
+// - gitlens.graph.openCommitOnRemote.multi
+// - gitlens.graph.openInWorktree
+// - gitlens.graph.openOnlyChangedFiles
+// - gitlens.graph.openPullRequest
+// - gitlens.graph.openPullRequestChanges
+// - gitlens.graph.openPullRequestComparison
+// - gitlens.graph.openPullRequestOnRemote
+// - gitlens.graph.openWorktree
+// - gitlens.graph.openWorktreeInNewWindow
+// - gitlens.graph.publishBranch
+// - gitlens.graph.pull
+// - gitlens.graph.push
+// - gitlens.graph.pushWithForce
+// - gitlens.graph.rebaseOntoBranch
+// - gitlens.graph.rebaseOntoCommit
+// - gitlens.graph.rebaseOntoUpstream
+// - gitlens.graph.refresh
+// - gitlens.graph.renameBranch
+// - gitlens.graph.resetColumnsCompact
+// - gitlens.graph.resetColumnsDefault
+// - gitlens.graph.resetCommit
+// - gitlens.graph.resetToCommit
+// - gitlens.graph.resetToTag
+// - gitlens.graph.resetToTip
+// - gitlens.graph.revert
+// - gitlens.graph.scrollMarkerLocalBranchOff
+// - gitlens.graph.scrollMarkerLocalBranchOn
+// - gitlens.graph.scrollMarkerPullRequestOff
+// - gitlens.graph.scrollMarkerPullRequestOn
+// - gitlens.graph.scrollMarkerRemoteBranchOff
+// - gitlens.graph.scrollMarkerRemoteBranchOn
+// - gitlens.graph.scrollMarkerStashOff
+// - gitlens.graph.scrollMarkerStashOn
+// - gitlens.graph.scrollMarkerTagOff
+// - gitlens.graph.scrollMarkerTagOn
+// - gitlens.graph.shareAsCloudPatch
+// - gitlens.graph.showInDetailsView
+// - gitlens.graph.split
+// - gitlens.graph.stash.apply
+// - gitlens.graph.stash.delete
+// - gitlens.graph.stash.rename
+// - gitlens.graph.stash.save
+// - gitlens.graph.switchToAnotherBranch
+// - gitlens.graph.switchToBranch
+// - gitlens.graph.switchToCommit
+// - gitlens.graph.switchToEditorLayout
+// - gitlens.graph.switchToPanelLayout
+// - gitlens.graph.switchToTag
+// - gitlens.graph.undoCommit
+// - gitlens.inviteToLiveShare
+// - gitlens.launchpad.indicator.action
+// - gitlens.launchpad.indicator.toggle
+// - gitlens.openAssociatedPullRequestOnRemote
+// - gitlens.openBlamePriorToChange
+// - gitlens.openBranchInRemote
+// - gitlens.openBranchOnRemote
+// - gitlens.openBranchesInRemote
+// - gitlens.openBranchesOnRemote
+// - gitlens.openChangedFiles
+// - gitlens.openCloudPatch
+// - gitlens.openCommitInRemote
+// - gitlens.openCommitOnRemote
+// - gitlens.openComparisonOnRemote
+// - gitlens.openCurrentBranchOnRemote
+// - gitlens.openFileFromRemote
+// - gitlens.openFileHistory
+// - gitlens.openFileInRemote
+// - gitlens.openFileOnRemote
+// - gitlens.openFileOnRemoteFrom
+// - gitlens.openFileRevision
+// - gitlens.openFileRevisionFrom
+// - gitlens.openFolderHistory
+// - gitlens.openInRemote
+// - gitlens.openOnRemote
+// - gitlens.openOnlyChangedFiles
+// - gitlens.openPatch
+// - gitlens.openPullRequestOnRemote
+// - gitlens.openRepoInRemote
+// - gitlens.openRepoOnRemote
+// - gitlens.openRevisionFile
+// - gitlens.openRevisionFileInDiffLeft
+// - gitlens.openRevisionFileInDiffRight
+// - gitlens.openWalkthrough
+// - gitlens.openWorkingFile
+// - gitlens.openWorkingFileInDiffLeft
+// - gitlens.openWorkingFileInDiffRight
+// - gitlens.pastePatchFromClipboard
+// - gitlens.plus.cloudIntegrations.connect
+// - gitlens.plus.cloudIntegrations.manage
+// - gitlens.plus.continueFeaturePreview
+// - gitlens.plus.hide
+// - gitlens.plus.login
+// - gitlens.plus.logout
+// - gitlens.plus.manage
+// - gitlens.plus.reactivateProTrial
+// - gitlens.plus.refreshRepositoryAccess
+// - gitlens.plus.resendVerification
+// - gitlens.plus.restore
+// - gitlens.plus.showPlans
+// - gitlens.plus.signUp
+// - gitlens.plus.simulateSubscription
+// - gitlens.plus.startPreviewTrial
+// - gitlens.plus.upgrade
+// - gitlens.plus.validate
+// - gitlens.pullRepositories
+// - gitlens.pushRepositories
+// - gitlens.quickOpenFileHistory
+// - gitlens.refreshHover
+// - gitlens.reset
+// - gitlens.resetAIKey
+// - gitlens.resetViewsLayout
+// - gitlens.revealCommitInView
+// - gitlens.scm.generateCommitMessage
+// - gitlens.shareAsCloudPatch
+// - gitlens.showAccountView
+// - gitlens.showBranchesView
+// - gitlens.showCommitDetailsView
+// - gitlens.showCommitInView
+// - gitlens.showCommitSearch
+// - gitlens.showCommitsInView
+// - gitlens.showCommitsView
+// - gitlens.showContributorsView
+// - gitlens.showDraftsView
+// - gitlens.showFileHistoryInView
+// - gitlens.showFileHistoryView
+// - gitlens.showFileInTimeline
+// - gitlens.showFolderInTimeline
+// - gitlens.showGraph
+// - gitlens.showGraphPage
+// - gitlens.showGraphView
+// - gitlens.showHomeView
+// - gitlens.showInCommitGraph
+// - gitlens.showInCommitGraphView
+// - gitlens.showInDetailsView
+// - gitlens.showLastQuickPick
+// - gitlens.showLaunchpad
+// - gitlens.showLaunchpadView
+// - gitlens.showLineCommitInView
+// - gitlens.showLineHistoryView
+// - gitlens.showPatchDetailsPage
+// - gitlens.showQuickBranchHistory
+// - gitlens.showQuickCommitDetails
+// - gitlens.showQuickRevisionDetails
+// - gitlens.showQuickRevisionDetailsInDiffLeft
+// - gitlens.showQuickRevisionDetailsInDiffRight
+// - gitlens.showQuickStashList
+// - gitlens.showRemotesView
+// - gitlens.showRepositoriesView
+// - gitlens.showSearchAndCompareView
+// - gitlens.showSettingsPage
+// - gitlens.showSettingsPage!autolinks
+// - gitlens.showSettingsPage!branches-view
+// - gitlens.showSettingsPage!commit-graph
+// - gitlens.showSettingsPage!commits-view
+// - gitlens.showSettingsPage!contributors-view
+// - gitlens.showSettingsPage!file-annotations
+// - gitlens.showSettingsPage!file-history-view
+// - gitlens.showSettingsPage!line-history-view
+// - gitlens.showSettingsPage!remotes-view
+// - gitlens.showSettingsPage!repositories-view
+// - gitlens.showSettingsPage!search-compare-view
+// - gitlens.showSettingsPage!stashes-view
+// - gitlens.showSettingsPage!tags-view
+// - gitlens.showSettingsPage!views
+// - gitlens.showSettingsPage!worktrees-view
+// - gitlens.showStashesView
+// - gitlens.showTagsView
+// - gitlens.showTimelinePage
+// - gitlens.showTimelineView
+// - gitlens.showWorkspacesView
+// - gitlens.showWorktreesView
+// - gitlens.startWork
+// - gitlens.stashApply
+// - gitlens.stashSave
+// - gitlens.stashSaveFiles
+// - gitlens.switchAIModel
+// - gitlens.switchMode
+// - gitlens.timeline.refresh
+// - gitlens.timeline.split
+// - gitlens.toggleFileBlameInDiffLeft
+// - gitlens.toggleFileBlameInDiffRight
+// - gitlens.toggleFileChanges
+// - gitlens.toggleFileChangesOnly
+// - gitlens.toggleFileHeatmap
+// - gitlens.toggleFileHeatmapInDiffLeft
+// - gitlens.toggleFileHeatmapInDiffRight
+// - gitlens.toggleGraph
+// - gitlens.toggleLineBlame
+// - gitlens.toggleMaximizedGraph
+// - gitlens.toggleReviewMode
+// - gitlens.toggleZenMode
+// - gitlens.views.abortPausedOperation
+// - gitlens.views.addAuthor
+// - gitlens.views.addAuthor.multi
+// - gitlens.views.addAuthors
+// - gitlens.views.addRemote
+// - gitlens.views.applyChanges
+// - gitlens.views.associateIssueWithBranch
+// - gitlens.views.branches.focus
+// - gitlens.views.branches.refresh
+// - gitlens.views.branches.regroup
+// - gitlens.views.branches.resetViewLocation
+// - gitlens.views.branches.setFilesLayoutToAuto
+// - gitlens.views.branches.setFilesLayoutToList
+// - gitlens.views.branches.setFilesLayoutToTree
+// - gitlens.views.branches.setLayoutToList
+// - gitlens.views.branches.setLayoutToTree
+// - gitlens.views.branches.setShowAvatarsOff
+// - gitlens.views.branches.setShowAvatarsOn
+// - gitlens.views.branches.setShowBranchComparisonOff
+// - gitlens.views.branches.setShowBranchComparisonOn
+// - gitlens.views.branches.setShowBranchPullRequestOff
+// - gitlens.views.branches.setShowBranchPullRequestOn
+// - gitlens.views.branches.setShowRemoteBranchesOff
+// - gitlens.views.branches.setShowRemoteBranchesOn
+// - gitlens.views.branches.setShowStashesOff
+// - gitlens.views.branches.setShowStashesOn
+// - gitlens.views.browseRepoAtRevision
+// - gitlens.views.browseRepoAtRevisionInNewWindow
+// - gitlens.views.browseRepoBeforeRevision
+// - gitlens.views.browseRepoBeforeRevisionInNewWindow
+// - gitlens.views.cherryPick
+// - gitlens.views.cherryPick.multi
+// - gitlens.views.clearComparison
+// - gitlens.views.clearReviewed
+// - gitlens.views.closeRepository
+// - gitlens.views.collapseNode
+// - gitlens.views.commitDetails.focus
+// - gitlens.views.commitDetails.refresh
+// - gitlens.views.commitDetails.removeView
+// - gitlens.views.commitDetails.resetViewLocation
+// - gitlens.views.commitDetails.toggleVisibility
+// - gitlens.views.commits.focus
+// - gitlens.views.commits.refresh
+// - gitlens.views.commits.regroup
+// - gitlens.views.commits.resetViewLocation
+// - gitlens.views.commits.setCommitsFilterAuthors
+// - gitlens.views.commits.setCommitsFilterOff
+// - gitlens.views.commits.setFilesLayoutToAuto
+// - gitlens.views.commits.setFilesLayoutToList
+// - gitlens.views.commits.setFilesLayoutToTree
+// - gitlens.views.commits.setShowAvatarsOff
+// - gitlens.views.commits.setShowAvatarsOn
+// - gitlens.views.commits.setShowBranchComparisonOff
+// - gitlens.views.commits.setShowBranchComparisonOn
+// - gitlens.views.commits.setShowBranchPullRequestOff
+// - gitlens.views.commits.setShowBranchPullRequestOn
+// - gitlens.views.commits.setShowMergeCommitsOff
+// - gitlens.views.commits.setShowMergeCommitsOn
+// - gitlens.views.commits.setShowStashesOff
+// - gitlens.views.commits.setShowStashesOn
+// - gitlens.views.compareAncestryWithWorking
+// - gitlens.views.compareBranchWithHead
+// - gitlens.views.compareFileWithSelected
+// - gitlens.views.compareWithHead
+// - gitlens.views.compareWithMergeBase
+// - gitlens.views.compareWithSelected
+// - gitlens.views.compareWithUpstream
+// - gitlens.views.compareWithWorking
+// - gitlens.views.continuePausedOperation
+// - gitlens.views.contributors.focus
+// - gitlens.views.contributors.refresh
+// - gitlens.views.contributors.regroup
+// - gitlens.views.contributors.resetViewLocation
+// - gitlens.views.contributors.setFilesLayoutToAuto
+// - gitlens.views.contributors.setFilesLayoutToList
+// - gitlens.views.contributors.setFilesLayoutToTree
+// - gitlens.views.contributors.setShowAllBranchesOff
+// - gitlens.views.contributors.setShowAllBranchesOn
+// - gitlens.views.contributors.setShowAvatarsOff
+// - gitlens.views.contributors.setShowAvatarsOn
+// - gitlens.views.contributors.setShowMergeCommitsOff
+// - gitlens.views.contributors.setShowMergeCommitsOn
+// - gitlens.views.contributors.setShowStatisticsOff
+// - gitlens.views.contributors.setShowStatisticsOn
+// - gitlens.views.copy
+// - gitlens.views.copyAsMarkdown
+// - gitlens.views.copyRemoteCommitUrl
+// - gitlens.views.copyRemoteCommitUrl.multi
+// - gitlens.views.copyUrl
+// - gitlens.views.copyUrl.multi
+// - gitlens.views.createBranch
+// - gitlens.views.createPullRequest
+// - gitlens.views.createTag
+// - gitlens.views.createWorktree
+// - gitlens.views.deleteBranch
+// - gitlens.views.deleteBranch.multi
+// - gitlens.views.deleteTag
+// - gitlens.views.deleteTag.multi
+// - gitlens.views.deleteWorktree
+// - gitlens.views.deleteWorktree.multi
+// - gitlens.views.dismissNode
+// - gitlens.views.draft.open
+// - gitlens.views.draft.openOnWeb
+// - gitlens.views.drafts.create
+// - gitlens.views.drafts.delete
+// - gitlens.views.drafts.focus
+// - gitlens.views.drafts.info
+// - gitlens.views.drafts.refresh
+// - gitlens.views.drafts.removeView
+// - gitlens.views.drafts.resetViewLocation
+// - gitlens.views.drafts.setShowAvatarsOff
+// - gitlens.views.drafts.setShowAvatarsOn
+// - gitlens.views.drafts.toggleVisibility
+// - gitlens.views.editNode
+// - gitlens.views.expandNode
+// - gitlens.views.fetch
+// - gitlens.views.fileHistory.changeBase
+// - gitlens.views.fileHistory.focus
+// - gitlens.views.fileHistory.refresh
+// - gitlens.views.fileHistory.removeView
+// - gitlens.views.fileHistory.resetViewLocation
+// - gitlens.views.fileHistory.setCursorFollowingOff
+// - gitlens.views.fileHistory.setCursorFollowingOn
+// - gitlens.views.fileHistory.setEditorFollowingOff
+// - gitlens.views.fileHistory.setEditorFollowingOn
+// - gitlens.views.fileHistory.setRenameFollowingOff
+// - gitlens.views.fileHistory.setRenameFollowingOn
+// - gitlens.views.fileHistory.setShowAllBranchesOff
+// - gitlens.views.fileHistory.setShowAllBranchesOn
+// - gitlens.views.fileHistory.setShowAvatarsOff
+// - gitlens.views.fileHistory.setShowAvatarsOn
+// - gitlens.views.fileHistory.setShowMergeCommitsOff
+// - gitlens.views.fileHistory.setShowMergeCommitsOn
+// - gitlens.views.fileHistory.toggleVisibility
+// - gitlens.views.graph.focus
+// - gitlens.views.graph.openInTab
+// - gitlens.views.graph.refresh
+// - gitlens.views.graph.removeView
+// - gitlens.views.graph.resetViewLocation
+// - gitlens.views.graph.toggleVisibility
+// - gitlens.views.graphDetails.focus
+// - gitlens.views.graphDetails.refresh
+// - gitlens.views.graphDetails.removeView
+// - gitlens.views.graphDetails.resetViewLocation
+// - gitlens.views.graphDetails.toggleVisibility
+// - gitlens.views.highlightChanges
+// - gitlens.views.highlightRevisionChanges
+// - gitlens.views.home.disablePreview
+// - gitlens.views.home.discussions
+// - gitlens.views.home.enablePreview
+// - gitlens.views.home.focus
+// - gitlens.views.home.help
+// - gitlens.views.home.info
+// - gitlens.views.home.issues
+// - gitlens.views.home.previewFeedback
+// - gitlens.views.home.refresh
+// - gitlens.views.home.removeView
+// - gitlens.views.home.resetViewLocation
+// - gitlens.views.home.toggleVisibility
+// - gitlens.views.home.whatsNew
+// - gitlens.views.launchpad.copy
+// - gitlens.views.launchpad.focus
+// - gitlens.views.launchpad.info
+// - gitlens.views.launchpad.refresh
+// - gitlens.views.launchpad.regroup
+// - gitlens.views.launchpad.removeView
+// - gitlens.views.launchpad.resetViewLocation
+// - gitlens.views.launchpad.setFilesLayoutToAuto
+// - gitlens.views.launchpad.setFilesLayoutToList
+// - gitlens.views.launchpad.setFilesLayoutToTree
+// - gitlens.views.launchpad.setShowAvatarsOff
+// - gitlens.views.launchpad.setShowAvatarsOn
+// - gitlens.views.launchpad.toggleVisibility
+// - gitlens.views.lineHistory.changeBase
+// - gitlens.views.lineHistory.focus
+// - gitlens.views.lineHistory.refresh
+// - gitlens.views.lineHistory.removeView
+// - gitlens.views.lineHistory.resetViewLocation
+// - gitlens.views.lineHistory.setEditorFollowingOff
+// - gitlens.views.lineHistory.setEditorFollowingOn
+// - gitlens.views.lineHistory.setShowAvatarsOff
+// - gitlens.views.lineHistory.setShowAvatarsOn
+// - gitlens.views.lineHistory.toggleVisibility
+// - gitlens.views.loadAllChildren
+// - gitlens.views.loadMoreChildren
+// - gitlens.views.mergeBranchInto
+// - gitlens.views.openBranchOnRemote
+// - gitlens.views.openBranchOnRemote.multi
+// - gitlens.views.openChangedFileDiffs
+// - gitlens.views.openChangedFileDiffsIndividually
+// - gitlens.views.openChangedFileDiffsWithMergeBase
+// - gitlens.views.openChangedFileDiffsWithWorking
+// - gitlens.views.openChangedFileDiffsWithWorkingIndividually
+// - gitlens.views.openChangedFileRevisions
+// - gitlens.views.openChangedFiles
+// - gitlens.views.openChanges
+// - gitlens.views.openChangesWithWorking
+// - gitlens.views.openCommitOnRemote
+// - gitlens.views.openCommitOnRemote.multi
+// - gitlens.views.openDirectoryDiff
+// - gitlens.views.openDirectoryDiffWithWorking
+// - gitlens.views.openFile
+// - gitlens.views.openFileRevision
+// - gitlens.views.openInIntegratedTerminal
+// - gitlens.views.openInTerminal
+// - gitlens.views.openInWorktree
+// - gitlens.views.openOnlyChangedFiles
+// - gitlens.views.openPausedOperationInRebaseEditor
+// - gitlens.views.openPreviousChangesWithWorking
+// - gitlens.views.openPullRequest
+// - gitlens.views.openPullRequestChanges
+// - gitlens.views.openPullRequestComparison
+// - gitlens.views.openUrl
+// - gitlens.views.openUrl.multi
+// - gitlens.views.openWorktree
+// - gitlens.views.openWorktreeInNewWindow
+// - gitlens.views.openWorktreeInNewWindow.multi
+// - gitlens.views.patchDetails.close
+// - gitlens.views.patchDetails.focus
+// - gitlens.views.patchDetails.refresh
+// - gitlens.views.patchDetails.resetViewLocation
+// - gitlens.views.pruneRemote
+// - gitlens.views.publishBranch
+// - gitlens.views.publishRepository
+// - gitlens.views.pull
+// - gitlens.views.pullRequest.close
+// - gitlens.views.pullRequest.focus
+// - gitlens.views.pullRequest.refresh
+// - gitlens.views.pullRequest.resetViewLocation
+// - gitlens.views.pullRequest.setFilesLayoutToAuto
+// - gitlens.views.pullRequest.setFilesLayoutToList
+// - gitlens.views.pullRequest.setFilesLayoutToTree
+// - gitlens.views.pullRequest.setShowAvatarsOff
+// - gitlens.views.pullRequest.setShowAvatarsOn
+// - gitlens.views.push
+// - gitlens.views.pushToCommit
+// - gitlens.views.pushWithForce
+// - gitlens.views.rebaseOntoBranch
+// - gitlens.views.rebaseOntoCommit
+// - gitlens.views.rebaseOntoUpstream
+// - gitlens.views.refreshNode
+// - gitlens.views.remotes.focus
+// - gitlens.views.remotes.refresh
+// - gitlens.views.remotes.regroup
+// - gitlens.views.remotes.resetViewLocation
+// - gitlens.views.remotes.setFilesLayoutToAuto
+// - gitlens.views.remotes.setFilesLayoutToList
+// - gitlens.views.remotes.setFilesLayoutToTree
+// - gitlens.views.remotes.setLayoutToList
+// - gitlens.views.remotes.setLayoutToTree
+// - gitlens.views.remotes.setShowAvatarsOff
+// - gitlens.views.remotes.setShowAvatarsOn
+// - gitlens.views.remotes.setShowBranchPullRequestOff
+// - gitlens.views.remotes.setShowBranchPullRequestOn
+// - gitlens.views.removeRemote
+// - gitlens.views.renameBranch
+// - gitlens.views.repositories.focus
+// - gitlens.views.repositories.refresh
+// - gitlens.views.repositories.regroup
+// - gitlens.views.repositories.removeView
+// - gitlens.views.repositories.resetViewLocation
+// - gitlens.views.repositories.setAutoRefreshToOff
+// - gitlens.views.repositories.setAutoRefreshToOn
+// - gitlens.views.repositories.setBranchesLayoutToList
+// - gitlens.views.repositories.setBranchesLayoutToTree
+// - gitlens.views.repositories.setBranchesShowBranchComparisonOff
+// - gitlens.views.repositories.setBranchesShowBranchComparisonOn
+// - gitlens.views.repositories.setFilesLayoutToAuto
+// - gitlens.views.repositories.setFilesLayoutToList
+// - gitlens.views.repositories.setFilesLayoutToTree
+// - gitlens.views.repositories.setShowAvatarsOff
+// - gitlens.views.repositories.setShowAvatarsOn
+// - gitlens.views.repositories.setShowBranchComparisonOff
+// - gitlens.views.repositories.setShowBranchComparisonOn
+// - gitlens.views.repositories.setShowBranchesOff
+// - gitlens.views.repositories.setShowBranchesOn
+// - gitlens.views.repositories.setShowCommitsOff
+// - gitlens.views.repositories.setShowCommitsOn
+// - gitlens.views.repositories.setShowContributorsOff
+// - gitlens.views.repositories.setShowContributorsOn
+// - gitlens.views.repositories.setShowRemotesOff
+// - gitlens.views.repositories.setShowRemotesOn
+// - gitlens.views.repositories.setShowSectionOff
+// - gitlens.views.repositories.setShowStashesOff
+// - gitlens.views.repositories.setShowStashesOn
+// - gitlens.views.repositories.setShowTagsOff
+// - gitlens.views.repositories.setShowTagsOn
+// - gitlens.views.repositories.setShowUpstreamStatusOff
+// - gitlens.views.repositories.setShowUpstreamStatusOn
+// - gitlens.views.repositories.setShowWorktreesOff
+// - gitlens.views.repositories.setShowWorktreesOn
+// - gitlens.views.repositories.toggleVisibility
+// - gitlens.views.resetCommit
+// - gitlens.views.resetToCommit
+// - gitlens.views.resetToTip
+// - gitlens.views.restore
+// - gitlens.views.revealRepositoryInExplorer
+// - gitlens.views.revealWorktreeInExplorer
+// - gitlens.views.revert
+// - gitlens.views.scm.grouped.branches.detach
+// - gitlens.views.scm.grouped.branches.regroup
+// - gitlens.views.scm.grouped.branches.setAsDefault
+// - gitlens.views.scm.grouped.commits.detach
+// - gitlens.views.scm.grouped.commits.regroup
+// - gitlens.views.scm.grouped.commits.setAsDefault
+// - gitlens.views.scm.grouped.contributors.detach
+// - gitlens.views.scm.grouped.contributors.regroup
+// - gitlens.views.scm.grouped.contributors.setAsDefault
+// - gitlens.views.scm.grouped.detachAll
+// - gitlens.views.scm.grouped.focus
+// - gitlens.views.scm.grouped.launchpad.detach
+// - gitlens.views.scm.grouped.launchpad.regroup
+// - gitlens.views.scm.grouped.launchpad.setAsDefault
+// - gitlens.views.scm.grouped.refresh
+// - gitlens.views.scm.grouped.regroupAll
+// - gitlens.views.scm.grouped.remotes.detach
+// - gitlens.views.scm.grouped.remotes.regroup
+// - gitlens.views.scm.grouped.remotes.setAsDefault
+// - gitlens.views.scm.grouped.removeView
+// - gitlens.views.scm.grouped.repositories.detach
+// - gitlens.views.scm.grouped.repositories.regroup
+// - gitlens.views.scm.grouped.repositories.setAsDefault
+// - gitlens.views.scm.grouped.resetViewLocation
+// - gitlens.views.scm.grouped.searchAndCompare.detach
+// - gitlens.views.scm.grouped.searchAndCompare.regroup
+// - gitlens.views.scm.grouped.searchAndCompare.setAsDefault
+// - gitlens.views.scm.grouped.stashes.detach
+// - gitlens.views.scm.grouped.stashes.regroup
+// - gitlens.views.scm.grouped.stashes.setAsDefault
+// - gitlens.views.scm.grouped.tags.detach
+// - gitlens.views.scm.grouped.tags.regroup
+// - gitlens.views.scm.grouped.tags.setAsDefault
+// - gitlens.views.scm.grouped.toggleVisibility
+// - gitlens.views.scm.grouped.welcome.dismiss
+// - gitlens.views.scm.grouped.welcome.restore
+// - gitlens.views.scm.grouped.worktrees.detach
+// - gitlens.views.scm.grouped.worktrees.regroup
+// - gitlens.views.scm.grouped.worktrees.setAsDefault
+// - gitlens.views.searchAndCompare.clear
+// - gitlens.views.searchAndCompare.compareWithSelected
+// - gitlens.views.searchAndCompare.focus
+// - gitlens.views.searchAndCompare.refresh
+// - gitlens.views.searchAndCompare.regroup
+// - gitlens.views.searchAndCompare.removeView
+// - gitlens.views.searchAndCompare.resetViewLocation
+// - gitlens.views.searchAndCompare.searchCommits
+// - gitlens.views.searchAndCompare.selectForCompare
+// - gitlens.views.searchAndCompare.setFilesLayoutToAuto
+// - gitlens.views.searchAndCompare.setFilesLayoutToList
+// - gitlens.views.searchAndCompare.setFilesLayoutToTree
+// - gitlens.views.searchAndCompare.setShowAvatarsOff
+// - gitlens.views.searchAndCompare.setShowAvatarsOn
+// - gitlens.views.searchAndCompare.swapComparison
+// - gitlens.views.searchAndCompare.toggleVisibility
+// - gitlens.views.selectFileForCompare
+// - gitlens.views.selectForCompare
+// - gitlens.views.setAsDefault
+// - gitlens.views.setBranchComparisonToBranch
+// - gitlens.views.setBranchComparisonToWorking
+// - gitlens.views.setContributorsStatisticsOff
+// - gitlens.views.setContributorsStatisticsOn
+// - gitlens.views.setResultsCommitsFilterAuthors
+// - gitlens.views.setResultsCommitsFilterOff
+// - gitlens.views.setResultsFilesFilterOff
+// - gitlens.views.setResultsFilesFilterOnLeft
+// - gitlens.views.setResultsFilesFilterOnRight
+// - gitlens.views.setShowRelativeDateMarkersOff
+// - gitlens.views.setShowRelativeDateMarkersOn
+// - gitlens.views.skipPausedOperation
+// - gitlens.views.stageDirectory
+// - gitlens.views.stageFile
+// - gitlens.views.star
+// - gitlens.views.star.multi
+// - gitlens.views.stash.apply
+// - gitlens.views.stash.delete
+// - gitlens.views.stash.delete.multi
+// - gitlens.views.stash.rename
+// - gitlens.views.stashes.focus
+// - gitlens.views.stashes.refresh
+// - gitlens.views.stashes.regroup
+// - gitlens.views.stashes.resetViewLocation
+// - gitlens.views.stashes.setFilesLayoutToAuto
+// - gitlens.views.stashes.setFilesLayoutToList
+// - gitlens.views.stashes.setFilesLayoutToTree
+// - gitlens.views.switchToAnotherBranch
+// - gitlens.views.switchToBranch
+// - gitlens.views.switchToCommit
+// - gitlens.views.switchToTag
+// - gitlens.views.tags.focus
+// - gitlens.views.tags.refresh
+// - gitlens.views.tags.regroup
+// - gitlens.views.tags.resetViewLocation
+// - gitlens.views.tags.setFilesLayoutToAuto
+// - gitlens.views.tags.setFilesLayoutToList
+// - gitlens.views.tags.setFilesLayoutToTree
+// - gitlens.views.tags.setLayoutToList
+// - gitlens.views.tags.setLayoutToTree
+// - gitlens.views.tags.setShowAvatarsOff
+// - gitlens.views.tags.setShowAvatarsOn
+// - gitlens.views.timeline.focus
+// - gitlens.views.timeline.refresh
+// - gitlens.views.timeline.removeView
+// - gitlens.views.timeline.resetViewLocation
+// - gitlens.views.timeline.toggleVisibility
+// - gitlens.views.title.createBranch
+// - gitlens.views.title.createTag
+// - gitlens.views.title.createWorktree
+// - gitlens.views.undoCommit
+// - gitlens.views.unsetAsDefault
+// - gitlens.views.unstageDirectory
+// - gitlens.views.unstageFile
+// - gitlens.views.unstar
+// - gitlens.views.unstar.multi
+// - gitlens.views.workspaces.addRepos
+// - gitlens.views.workspaces.addReposFromLinked
+// - gitlens.views.workspaces.changeAutoAddSetting
+// - gitlens.views.workspaces.convert
+// - gitlens.views.workspaces.create
+// - gitlens.views.workspaces.createLocal
+// - gitlens.views.workspaces.delete
+// - gitlens.views.workspaces.focus
+// - gitlens.views.workspaces.info
+// - gitlens.views.workspaces.locateAllRepos
+// - gitlens.views.workspaces.openLocal
+// - gitlens.views.workspaces.openLocalNewWindow
+// - gitlens.views.workspaces.refresh
+// - gitlens.views.workspaces.removeView
+// - gitlens.views.workspaces.repo.addToWindow
+// - gitlens.views.workspaces.repo.locate
+// - gitlens.views.workspaces.repo.open
+// - gitlens.views.workspaces.repo.openInNewWindow
+// - gitlens.views.workspaces.repo.remove
+// - gitlens.views.workspaces.resetViewLocation
+// - gitlens.views.workspaces.toggleVisibility
+// - gitlens.views.worktrees.focus
+// - gitlens.views.worktrees.refresh
+// - gitlens.views.worktrees.regroup
+// - gitlens.views.worktrees.resetViewLocation
+// - gitlens.views.worktrees.setFilesLayoutToAuto
+// - gitlens.views.worktrees.setFilesLayoutToList
+// - gitlens.views.worktrees.setFilesLayoutToTree
+// - gitlens.views.worktrees.setShowAvatarsOff
+// - gitlens.views.worktrees.setShowAvatarsOn
+// - gitlens.views.worktrees.setShowBranchComparisonOff
+// - gitlens.views.worktrees.setShowBranchComparisonOn
+// - gitlens.views.worktrees.setShowBranchPullRequestOff
+// - gitlens.views.worktrees.setShowBranchPullRequestOn
+// - gitlens.views.worktrees.setShowStashesOff
+// - gitlens.views.worktrees.setShowStashesOn
+// - gitlens.walkthrough.connectIntegrations
+// - gitlens.walkthrough.gitlensInspect
+// - gitlens.walkthrough.openAcceleratePrReviews
+// - gitlens.walkthrough.openCommunityVsPro
+// - gitlens.walkthrough.openDevExPlatform
+// - gitlens.walkthrough.openHelpCenter
+// - gitlens.walkthrough.openInteractiveCodeHistory
+// - gitlens.walkthrough.openStartIntegrations
+// - gitlens.walkthrough.openStreamlineCollaboration
+// - gitlens.walkthrough.openWalkthrough
+// - gitlens.walkthrough.plus.reactivate
+// - gitlens.walkthrough.plus.signUp
+// - gitlens.walkthrough.plus.upgrade
+// - gitlens.walkthrough.showAutolinks
+// - gitlens.walkthrough.showDraftsView
+// - gitlens.walkthrough.showGraph
+// - gitlens.walkthrough.showLaunchpad
+// - gitlens.walkthrough.worktree.create
 // - goToNextReferenceFromEmbeddedEditor
 // - goToPreviousReferenceFromEmbeddedEditor
 // - hideCustomTitleBar
 // - hideCustomTitleBarInFullScreen
+// - i18n-ally-help-feedback.focus
+// - i18n-ally-help-feedback.resetViewLocation
+// - i18n-ally-locales-file-explorer.focus
+// - i18n-ally-locales-file-explorer.resetViewLocation
+// - i18n-ally-locales-progress.focus
+// - i18n-ally-locales-progress.resetViewLocation
+// - i18n-ally-locales-sidebar-file.focus
+// - i18n-ally-locales-sidebar-file.resetViewLocation
+// - i18n-ally-locales-tree.focus
+// - i18n-ally-locales-tree.resetViewLocation
+// - i18n-ally-locales-usage.focus
+// - i18n-ally-locales-usage.resetViewLocation
+// - i18n-ally.config-display-language
+// - i18n-ally.config-locales
+// - i18n-ally.config-locales-auto
+// - i18n-ally.config-source-language
+// - i18n-ally.copy-key
+// - i18n-ally.deepl-usage
+// - i18n-ally.delete-key
+// - i18n-ally.detect_hard_strings
+// - i18n-ally.duplicate-key
+// - i18n-ally.edit-key
+// - i18n-ally.extract-disable-auto-detect
+// - i18n-ally.extract-enable-auto-detect
+// - i18n-ally.extract-hard-strings-batch
+// - i18n-ally.extract-ignore
+// - i18n-ally.extract-text
+// - i18n-ally.fulfill-keys
+// - i18n-ally.go-to-next-usage
+// - i18n-ally.go-to-prev-usage
+// - i18n-ally.go-to-range
+// - i18n-ally.insert-key
+// - i18n-ally.locale-visibility-hide
+// - i18n-ally.locale-visibility-show
+// - i18n-ally.locale-visibility-toggle
+// - i18n-ally.mark-key-as-in-use
+// - i18n-ally.new-key
+// - i18n-ally.open-docs-hard-string
+// - i18n-ally.open-editor
+// - i18n-ally.open-in-editor
+// - i18n-ally.open-key
+// - i18n-ally.open-url
+// - i18n-ally.refresh-usage
+// - i18n-ally.rename-key
+// - i18n-ally.replace-with
+// - i18n-ally.review.apply-suggestion
+// - i18n-ally.review.apply-translation
+// - i18n-ally.review.approve
+// - i18n-ally.review.comment
+// - i18n-ally.review.edit
+// - i18n-ally.review.request-change
+// - i18n-ally.review.resolve
+// - i18n-ally.review.resolve-thread
+// - i18n-ally.set-display-language
+// - i18n-ally.set-source-language
+// - i18n-ally.support
+// - i18n-ally.translate-key
 // - imagePreview.copyImage
 // - imagePreview.zoomIn
 // - imagePreview.zoomOut
@@ -6230,7 +7423,6 @@
 // - javascript.reloadProjects
 // - javascript.removeUnusedImports
 // - javascript.sortImports
-// - js.projectStatus.command
 // - jsBrowserBreakpoints.focus
 // - jsBrowserBreakpoints.resetViewLocation
 // - jsDebugNetworkTree.focus
@@ -6274,6 +7466,18 @@
 // - markdown.showLockedPreviewToSide
 // - markdown.showPreviewSecuritySelector
 // - markdown.showSource
+// - material-icon-theme.activateIcons
+// - material-icon-theme.changeFileColor
+// - material-icon-theme.changeFolderColor
+// - material-icon-theme.changeFolderTheme
+// - material-icon-theme.changeOpacity
+// - material-icon-theme.changeRootFolderColor
+// - material-icon-theme.changeSaturation
+// - material-icon-theme.restoreDefaultConfig
+// - material-icon-theme.toggleExplorerArrows
+// - material-icon-theme.toggleGrayscale
+// - material-icon-theme.toggleIconPacks
+// - mcp.crash
 // - menu.resetHiddenStates
 // - merge-conflict.accept.all-both
 // - merge-conflict.accept.all-current
@@ -6429,6 +7633,9 @@
 // - perf.insta.printAsyncCycles
 // - perf.insta.printTraces
 // - perfview.show
+// - prettier.createConfigFile
+// - prettier.forceFormatDocument
+// - prettier.openOutput
 // - problems.action.copyMessage
 // - problems.action.copyRelatedInformationMessage
 // - problems.action.showMultilineMessage
@@ -6511,6 +7718,7 @@
 // - showCustomTitleBar
 // - showEditorScreenReaderNotification
 // - signals.sounds.help
+// - simpleBrowser.api.open
 // - simpleBrowser.show
 // - switchToPrivateFTModels
 // - terminal.focus
@@ -6612,10 +7820,7 @@
 // - vscodeMarkdownLanguageservice.rename
 // - watch.collapse
 // - workbench.action.acceptSelectedQuickOpenItem
-// - workbench.action.activityBarLocation.bottom
 // - workbench.action.activityBarLocation.default
-// - workbench.action.activityBarLocation.hide
-// - workbench.action.activityBarLocation.top
 // - workbench.action.addRootFolder
 // - workbench.action.alignPanelCenter
 // - workbench.action.alignPanelJustify
@@ -6641,7 +7846,6 @@
 // - workbench.action.chat.done
 // - workbench.action.chat.editing.attachFiles
 // - workbench.action.chat.export
-// - workbench.action.chat.hideSetup
 // - workbench.action.chat.history
 // - workbench.action.chat.import
 // - workbench.action.chat.inlineVoiceChat
@@ -6667,9 +7871,7 @@
 // - workbench.action.chat.selectAndInsertSym
 // - workbench.action.chat.showExtensionsUsingCopilot
 // - workbench.action.chat.startEditing
-// - workbench.action.chat.triggerSetup
 // - workbench.action.chat.undoEdit
-// - workbench.action.chat.upgradePlan
 // - workbench.action.chat.voiceChatInChatView
 // - workbench.action.chatEditor.newChat
 // - workbench.action.clearCommandHistory
@@ -6770,6 +7972,7 @@
 // - workbench.action.focusBanner
 // - workbench.action.focusBelowGroupWithoutWrap
 // - workbench.action.focusCommentOnCurrentLine
+// - workbench.action.focusCommentsPanel
 // - workbench.action.focusFirstSideEditor
 // - workbench.action.focusLastEditorGroup
 // - workbench.action.focusLeftGroupWithoutWrap
@@ -6908,7 +8111,13 @@
 // - workbench.action.output.show.anysphere.cursor-always-local.Filesync
 // - workbench.action.output.show.anysphere.cursor-retrieval.Cursor Git Graph
 // - workbench.action.output.show.anysphere.cursor-retrieval.Cursor Indexing & Retrieval
+// - workbench.action.output.show.anysphere.cursor-retrieval.Cursor Puppeteer logs
+// - workbench.action.output.show.eamodio.gitlens.GitLens
+// - workbench.action.output.show.eamodio.gitlens.GitLens (Git)
 // - workbench.action.output.show.editSessions
+// - workbench.action.output.show.extension-output-dbaeumer.vscode-eslint-#1-ESLint
+// - workbench.action.output.show.extension-output-esbenp.prettier-vscode-#1-Prettier
+// - workbench.action.output.show.extension-output-lokalise.i18n-ally-#1-i18n Ally
 // - workbench.action.output.show.exthost
 // - workbench.action.output.show.main
 // - workbench.action.output.show.notebook.rendering
@@ -6923,7 +8132,6 @@
 // - workbench.action.output.show.vscode.github-authentication.GitHub Authentication
 // - workbench.action.output.show.vscode.github.GitHub
 // - workbench.action.output.show.vscode.json-language-features.JSON Language Server
-// - workbench.action.output.show.vscode.typescript-language-features.TypeScript
 // - workbench.action.pauseSocketWriting
 // - workbench.action.populateFileFromSnippet
 // - workbench.action.positionPanelBottom
@@ -6952,6 +8160,7 @@
 // - workbench.action.quickchat.launchInlineChat
 // - workbench.action.quickchat.openInChatView
 // - workbench.action.reloadWindowWithExtensionsDisabled
+// - workbench.action.reloadWindowWithHMR
 // - workbench.action.remote.close
 // - workbench.action.remote.extensions
 // - workbench.action.removeLargeStorageDatabaseEntries
@@ -7040,6 +8249,7 @@
 // - workbench.action.terminal.fontZoomReset
 // - workbench.action.terminal.join
 // - workbench.action.terminal.joinActiveTab
+// - workbench.action.terminal.kill
 // - workbench.action.terminal.killAll
 // - workbench.action.terminal.killViewOrEditor
 // - workbench.action.terminal.moveIntoNewWindow
@@ -7057,6 +8267,7 @@
 // - workbench.action.terminal.renameWithArg
 // - workbench.action.terminal.restartPtyHost
 // - workbench.action.terminal.runActiveFile
+// - workbench.action.terminal.runSelectedText
 // - workbench.action.terminal.selectDefaultShell
 // - workbench.action.terminal.selectToNextLine
 // - workbench.action.terminal.selectToPreviousLine
@@ -7081,6 +8292,7 @@
 // - workbench.action.toggleKeybindingsLog
 // - workbench.action.toggleLightDarkThemes
 // - workbench.action.toggleLockedScrolling
+// - workbench.action.toggleMaximizedPanel
 // - workbench.action.toggleMultiCursorModifier
 // - workbench.action.toggleNotebookClipboardLog
 // - workbench.action.toggleScreencastMode
@@ -7261,12 +8473,13 @@
 // - workbench.panel.chat.view.edits.focus
 // - workbench.panel.chat.view.edits.resetViewLocation
 // - workbench.panel.chatEditing.resetViewContainerLocation
+// - workbench.panel.comments
+// - workbench.panel.comments.removeView
+// - workbench.panel.comments.resetViewContainerLocation
+// - workbench.panel.comments.resetViewLocation
+// - workbench.panel.comments.toggleVisibility
 // - workbench.panel.composerViewPane2
 // - workbench.panel.composerViewPane2.resetViewContainerLocation
-// - workbench.panel.composerViewPane2.view.focus
-// - workbench.panel.composerViewPane2.view.removeView
-// - workbench.panel.composerViewPane2.view.resetViewLocation
-// - workbench.panel.composerViewPane2.view.toggleVisibility
 // - workbench.panel.markers.resetViewContainerLocation
 // - workbench.panel.markers.view.focus
 // - workbench.panel.markers.view.removeView
@@ -7334,8 +8547,20 @@
 // - workbench.trust.manage
 // - workbench.userData.actions.openSyncBackupsFolder
 // - workbench.userDataSync.actions.downloadSyncActivity
+// - workbench.view.bugbot
+// - workbench.view.bugbot.resetViewContainerLocation
 // - workbench.view.debug.resetViewContainerLocation
 // - workbench.view.explorer.resetViewContainerLocation
+// - workbench.view.extension.gitlens
+// - workbench.view.extension.gitlens.resetViewContainerLocation
+// - workbench.view.extension.gitlensInspect
+// - workbench.view.extension.gitlensInspect.resetViewContainerLocation
+// - workbench.view.extension.gitlensPanel
+// - workbench.view.extension.gitlensPanel.resetViewContainerLocation
+// - workbench.view.extension.gitlensPatch
+// - workbench.view.extension.gitlensPatch.resetViewContainerLocation
+// - workbench.view.extension.i18n-ally
+// - workbench.view.extension.i18n-ally.resetViewContainerLocation
 // - workbench.view.extension.references-view
 // - workbench.view.extension.references-view.resetViewContainerLocation
 // - workbench.view.extension.test
@@ -7353,6 +8578,10 @@
 // - workbench.view.testCoverage.resetViewLocation
 // - workbench.view.testing.focus
 // - workbench.view.testing.resetViewLocation
+// - workbench.views.bugbot.focus
+// - workbench.views.bugbot.removeView
+// - workbench.views.bugbot.resetViewLocation
+// - workbench.views.bugbot.toggleVisibility
 // - workbench.views.extensions.builtinFeatureExtensions.focus
 // - workbench.views.extensions.builtinFeatureExtensions.resetViewLocation
 // - workbench.views.extensions.builtinProgrammingLanguageExtensions.focus
@@ -7362,17 +8591,11 @@
 // - workbench.views.extensions.deprecatedExtensions.focus
 // - workbench.views.extensions.deprecatedExtensions.resetViewLocation
 // - workbench.views.extensions.disabled.focus
-// - workbench.views.extensions.disabled.removeView
 // - workbench.views.extensions.disabled.resetViewLocation
-// - workbench.views.extensions.disabled.toggleVisibility
 // - workbench.views.extensions.enabled.focus
-// - workbench.views.extensions.enabled.removeView
 // - workbench.views.extensions.enabled.resetViewLocation
-// - workbench.views.extensions.enabled.toggleVisibility
 // - workbench.views.extensions.installed.focus
-// - workbench.views.extensions.installed.removeView
 // - workbench.views.extensions.installed.resetViewLocation
-// - workbench.views.extensions.installed.toggleVisibility
 // - workbench.views.extensions.marketplace.focus
 // - workbench.views.extensions.marketplace.resetViewLocation
 // - workbench.views.extensions.otherRecommendations.focus
@@ -7384,7 +8607,9 @@
 // - workbench.views.extensions.searchDisabled.focus
 // - workbench.views.extensions.searchDisabled.resetViewLocation
 // - workbench.views.extensions.searchEnabled.focus
+// - workbench.views.extensions.searchEnabled.removeView
 // - workbench.views.extensions.searchEnabled.resetViewLocation
+// - workbench.views.extensions.searchEnabled.toggleVisibility
 // - workbench.views.extensions.searchInstalled.focus
 // - workbench.views.extensions.searchInstalled.resetViewLocation
 // - workbench.views.extensions.searchOutdated.focus

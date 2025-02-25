@@ -8159,6 +8159,349 @@
         "key": "ctrl+k",
         "command": "",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+      },
+      {
+        "key": "alt+,",
+        "command": "",
+        "when": "gitlens:key:,"
+      },
+      {
+        "key": "alt+.",
+        "command": "",
+        "when": "gitlens:key:."
+      },
+      {
+        "key": "alt+enter",
+        "command": "",
+        "when": "gitlens:key:alt+enter"
+      },
+      {
+        "key": "alt+left",
+        "command": "",
+        "when": "gitlens:key:alt+left"
+      },
+      {
+        "key": "alt+right",
+        "command": "",
+        "when": "gitlens:key:alt+right"
+      },
+      {
+        "key": "ctrl+enter",
+        "command": "",
+        "when": "gitlens:key:ctrl+enter"
+      },
+      {
+        "key": "cmd+left",
+        "command": "",
+        "when": "gitlens:key:ctrl+left"
+      },
+      {
+        "key": "cmd+right",
+        "command": "",
+        "when": "gitlens:key:ctrl+right"
+      },
+      {
+        "key": "ctrl+shift+g",
+        "command": "",
+        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "escape",
+        "command": "",
+        "when": "editorTextFocus && gitlens:key:escape && !codeActionMenuVisible && !findWidgetVisible && !isInEmbeddedEditor && !parameterHintsVisible && !quickFixWidgetVisible && !referenceSearchVisible && !renameInputVisible && !suggestWidgetVisible"
+      },
+      {
+        "key": "left",
+        "command": "",
+        "when": "gitlens:key:left"
+      },
+      {
+        "key": "right",
+        "command": "",
+        "when": "gitlens:key:right"
+      },
+      {
+        "key": "alt+cmd+g shift+,",
+        "command": "",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "shift+alt+,",
+        "command": "",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+.",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && !isInDiffEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+cmd+g .",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && !isInDiffEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+.",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+cmd+g .",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+.",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+cmd+g .",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+,",
+        "command": "",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+cmd+g ,",
+        "command": "",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+,",
+        "command": "",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+cmd+g ,",
+        "command": "",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+,",
+        "command": "",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+cmd+g ,",
+        "command": "",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:tracked'"
+      },
+      {
+        "key": "alt+cmd+g shift+.",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && config.gitlens.keymap == 'chorded' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "shift+alt+.",
+        "command": "",
+        "when": "editorTextFocus && gitlens:enabled && config.gitlens.keymap == 'alternate' && resourceScheme =~ /^(gitlens|git|pr)$/"
+      },
+      {
+        "key": "alt+/",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+cmd+g /",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "alt+c",
+        "command": "",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+cmd+g c",
+        "command": "",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "alt+h",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+cmd+g h",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "alt+cmd+g shift+h",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "shift+alt+h",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+s",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+cmd+g s",
+        "command": "",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "alt+cmd+g shift+b",
+        "command": "",
+        "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'chorded'"
+      },
+      {
+        "key": "shift+alt+b",
+        "command": "",
+        "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'alternate'"
+      },
+      {
+        "key": "alt+b",
+        "command": "",
+        "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && resource in 'gitlens:tabs:blameable'"
+      },
+      {
+        "key": "alt+cmd+g b",
+        "command": "",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && resource in 'gitlens:tabs:blameable'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.branches'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.commits'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.contributors'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.drafts'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.fileHistory'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.lineHistory'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.pullRequest'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.remotes'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.repositories'"
+      },
+      {
+        "key": "2",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.branches && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "1",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.commits && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "7",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.contributors && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "0",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.launchpad && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "3",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.remotes && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "8",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.repositories && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "9",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.searchAndCompare && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "4",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.stashes && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "5",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.tags && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "6",
+        "command": "",
+        "when": "config.gitlens.views.scm.grouped.views.worktrees && !gitlens:views:scm:grouped:welcome && focusedView == 'gitlens.views.scm.grouped'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.searchAndCompare'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.stashes'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.tags'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.workspaces'"
+      },
+      {
+        "key": "cmd+c",
+        "command": "",
+        "when": "focusedView == 'gitlens.views.worktrees'"
+      },
+      {
+        "key": "tab",
+        "command": "",
+        "when": "cpp.shouldAcceptTab"
+      },
+      {
+        "key": "shift+cmd+i",
+        "command": ""
+      },
+      {
+        "key": "cmd+i",
+        "command": ""
       }
     ]
   }
