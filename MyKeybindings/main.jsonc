@@ -1,1357 +1,1151 @@
 [
-  // 全选(Cmd)
   {
-    "key": "cmd+a",
-    "command": "editor.action.selectAll"
+    "command": "editor.action.selectAll",
+    "key": "cmd+a"
   },
-  // 全选(Alt)
   {
-    "key": "alt+a",
-    "command": "editor.action.selectAll"
+    "command": "editor.action.selectAll",
+    "key": "alt+a"
   },
-  // 向左删除
   {
-    "key": "backspace",
     "command": "deleteLeft",
+    "key": "backspace",
     "when": "textInputFocus"
   },
-  // 复制(Cmd)
   {
-    "key": "cmd+c",
-    "command": "execCopy"
+    "command": "execCopy",
+    "key": "cmd+c"
   },
-  // 复制(Alt)
   {
-    "key": "alt+c",
-    "command": "execCopy"
+    "command": "execCopy",
+    "key": "alt+c"
   },
-  // 注释行
   {
-    "key": "ctrl+/",
     "command": "editor.action.commentLine",
+    "key": "ctrl+/",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 光标向下移动
   {
-    "key": "down",
     "command": "cursorDown",
+    "key": "down",
     "when": "textInputFocus"
   },
-  // 查找(Cmd)
   {
+    "command": "actions.find",
     "key": "cmd+f",
-    "command": "actions.find",
     "when": "editorFocus"
   },
-  // 查找(Alt)
   {
+    "command": "actions.find",
     "key": "alt+f",
-    "command": "actions.find",
     "when": "editorFocus"
   },
-  // 光标向左移动
   {
-    "key": "left",
     "command": "cursorLeft",
+    "key": "left",
     "when": "textInputFocus"
   },
-  // 光标向右移动
   {
-    "key": "right",
     "command": "cursorRight",
+    "key": "right",
     "when": "textInputFocus"
   },
-  // 保存(Cmd)
   {
-    "key": "cmd+s",
-    "command": "workbench.action.files.save"
+    "command": "workbench.action.files.save",
+    "key": "cmd+s"
   },
-  // 保存(Alt)
   {
-    "key": "alt+s",
-    "command": "workbench.action.files.save"
+    "command": "workbench.action.files.save",
+    "key": "alt+s"
   },
-  // 在文件中查找(Cmd)
   {
-    "key": "cmd+shift+f",
-    "command": "workbench.action.findInFiles"
+    "command": "workbench.action.findInFiles",
+    "key": "cmd+shift+f"
   },
-  // 在文件中查找(Alt)
   {
-    "key": "alt+shift+f",
-    "command": "workbench.action.findInFiles"
+    "command": "workbench.action.findInFiles",
+    "key": "alt+shift+f"
   },
-  // 光标向上移动
   {
-    "key": "up",
     "command": "cursorUp",
+    "key": "up",
     "when": "textInputFocus"
   },
-  // 粘贴(Cmd)
   {
-    "key": "cmd+v",
-    "command": "execPaste"
+    "command": "execPaste",
+    "key": "cmd+v"
   },
-  // 粘贴(Alt)
   {
-    "key": "alt+v",
-    "command": "execPaste"
+    "command": "execPaste",
+    "key": "alt+v"
   },
-  // 剪切(Cmd)
   {
-    "key": "cmd+x",
-    "command": "execCut"
+    "command": "execCut",
+    "key": "cmd+x"
   },
-  // 剪切(Alt)
   {
-    "key": "alt+x",
-    "command": "execCut"
+    "command": "execCut",
+    "key": "alt+x"
   },
-  // 撤销(Cmd)
   {
-    "key": "cmd+z",
-    "command": "undo"
+    "command": "undo",
+    "key": "cmd+z"
   },
-  // 撤销(Alt)
   {
-    "key": "alt+z",
-    "command": "undo"
+    "command": "undo",
+    "key": "alt+z"
   },
-  // 重做(Cmd)
   {
-    "key": "shift+cmd+z",
-    "command": "redo"
+    "command": "redo",
+    "key": "shift+cmd+z"
   },
-  // 重做(Alt)
   {
-    "key": "shift+alt+z",
-    "command": "redo"
+    "command": "redo",
+    "key": "shift+alt+z"
   },
-  // 向右删除
   {
-    "key": "delete",
     "command": "deleteRight",
+    "key": "delete",
     "when": "textInputFocus"
   },
-  // 撤销(Cmd)
   {
-    "key": "cmd+z",
-    "command": "undo"
+    "command": "undo",
+    "key": "cmd+z"
   },
-  // 重做(Cmd)
   {
-    "key": "shift+cmd+z",
-    "command": "redo"
+    "command": "redo",
+    "key": "shift+cmd+z"
   },
-  // 在文件中查找(Cmd)
   {
-    "key": "cmd+shift+f",
-    "command": "workbench.action.findInFiles"
+    "command": "workbench.action.findInFiles",
+    "key": "cmd+shift+f"
   },
-  // 光标向左移动
   {
-    "key": "left",
     "command": "cursorLeft",
+    "key": "left",
     "when": "textInputFocus"
   },
-  // 光标向右移动
   {
-    "key": "right",
     "command": "cursorRight",
+    "key": "right",
     "when": "textInputFocus"
   },
-  // 光标向上移动
   {
-    "key": "up",
     "command": "cursorUp",
+    "key": "up",
     "when": "textInputFocus"
   },
-  // 光标向下移动
   {
-    "key": "down",
     "command": "cursorDown",
+    "key": "down",
     "when": "textInputFocus"
   },
-  // 注释行
   {
-    "key": "ctrl+/",
     "command": "editor.action.commentLine",
+    "key": "ctrl+/",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 唤起AI弹窗(Cmd)
   {
-    "key": "cmd+k",
-    "command": "aipopup.action.modal.generate",
-    "when": "editorFocus && !composerBarIsVisible",
     "args": {
       "invocationType": "new"
-    }
+    },
+    "command": "aipopup.action.modal.generate",
+    "key": "cmd+k",
+    "when": "editorFocus && !composerBarIsVisible"
   },
-  // 添加当前选中内容到AI对话窗口(Cmd)
   {
-    "key": "cmd+l",
-    "command": "aichat.insertselectionintochat"
+    "command": "aichat.insertselectionintochat",
+    "key": "cmd+l"
   },
-  // 重命名文件
   {
-    "key": "F2",
     "command": "renameFile",
+    "key": "F2",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  // 触发建议(Cmd)
   {
+    "command": "editor.action.triggerSuggest",
     "key": "cmd+/",
-    "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
   },
-  // 触发建议(Alt)
   {
+    "command": "editor.action.triggerSuggest",
     "key": "alt+/",
-    "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
   },
-  // 向上移动行(Cmd)
   {
+    "command": "editor.action.moveLinesUpAction",
     "key": "cmd+up",
-    "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 向下移动行(Cmd)
   {
+    "command": "editor.action.moveLinesDownAction",
     "key": "cmd+down",
-    "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 向上移动行(Alt)
   {
-    "key": "alt+up",
     "command": "editor.action.moveLinesUpAction",
+    "key": "alt+up",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 向下移动行(Alt)
   {
-    "key": "alt+down",
     "command": "editor.action.moveLinesDownAction",
+    "key": "alt+down",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 快速修复(Cmd)
   {
-    "key": "cmd+enter",
     "command": "editor.action.quickFix",
+    "key": "cmd+enter",
     "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
   },
-  // 显示快速修复
   {
-    "key": "cmd+enter",
     "command": "problems.action.showQuickFixes",
+    "key": "cmd+enter",
     "when": "problemFocus"
   },
-  // 预览选中的代码操作
   {
-    "key": "cmd+enter",
     "command": "previewSelectedCodeAction",
+    "key": "cmd+enter",
     "when": "codeActionMenuVisible"
   },
-  // 关闭当前窗口(Cmd)
   {
-    "key": "cmd+w",
-    "command": "workbench.action.closeActiveEditor"
+    "command": "workbench.action.closeActiveEditor",
+    "key": "cmd+w"
   },
-  // 关闭当前窗口(Alt)
   {
-    "key": "alt+w",
-    "command": "workbench.action.closeActiveEditor"
+    "command": "workbench.action.closeActiveEditor",
+    "key": "alt+w"
   },
-  // 切换终端(Cmd)
   {
+    "command": "workbench.action.terminal.toggleTerminal",
     "key": "cmd+t",
-    "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
-  // 切换终端(Alt)
   {
+    "command": "workbench.action.terminal.toggleTerminal",
     "key": "alt+t",
-    "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
-  // 整理导入(Cmd)
   {
+    "command": "editor.action.organizeImports",
     "key": "shift+cmd+o",
-    "command": "editor.action.organizeImports",
     "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
   },
-  // 整理导入(Alt)
   {
+    "command": "editor.action.organizeImports",
     "key": "shift+alt+o",
-    "command": "editor.action.organizeImports",
     "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
   },
-  // 格式化文档(Cmd)
   {
+    "command": "editor.action.formatDocument",
     "key": "ctrl+cmd+f",
-    "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
-  // 格式化文档(Alt)
   {
+    "command": "editor.action.formatDocument",
     "key": "ctrl+alt+f",
-    "command": "editor.action.formatDocument",
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
-  // 关闭引用搜索
   {
-    "key": "escape",
     "command": "closeReferenceSearch",
+    "key": "escape",
     "when": "inReferenceSearchEditor && !config.editor.stablePeek"
   },
-  // 关闭测试预览
   {
-    "key": "escape",
     "command": "editor.closeTestPeek",
+    "key": "escape",
     "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
   },
-  // 取消选择
   {
-    "key": "escape",
     "command": "cancelSelection",
+    "key": "escape",
     "when": "editorHasSelection && textInputFocus"
   },
-  // 移除次要光标
   {
-    "key": "escape",
     "command": "removeSecondaryCursors",
+    "key": "escape",
     "when": "editorHasMultipleSelections && textInputFocus"
   },
-  // 接受笔记本单元格聊天更改
   {
-    "key": "escape",
     "command": "notebook.cell.chat.acceptChanges",
+    "key": "escape",
     "when": "inlineChatFocused && notebookCellChatFocused && notebookChatUserDidEdit && !notebookCellEditorFocused"
   },
-  // 退出笔记本单元格编辑
   {
-    "key": "escape",
     "command": "notebook.cell.quitEdit",
+    "key": "escape",
     "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible && !inlineChatFocused"
   },
-  // 关闭断点小部件
   {
-    "key": "escape",
     "command": "closeBreakpointWidget",
+    "key": "escape",
     "when": "breakpointWidgetVisible && textInputFocus"
   },
-  // 取消选择锚点
   {
-    "key": "escape",
     "command": "editor.action.cancelSelectionAnchor",
+    "key": "escape",
     "when": "editorTextFocus && selectionAnchorSet"
   },
-  // 隐藏颜色选择器
   {
-    "key": "escape",
     "command": "editor.action.hideColorPicker",
+    "key": "escape",
     "when": "standaloneColorPickerVisible"
   },
-  // 隐藏内联建议
   {
-    "key": "escape",
     "command": "editor.action.inlineSuggest.hide",
+    "key": "escape",
     "when": "inlineEditIsVisible || inlineSuggestionVisible"
   },
-  // 选择编辑器
   {
-    "key": "escape",
     "command": "editor.action.selectEditor",
+    "key": "escape",
     "when": "stickyScrollFocused"
   },
-  // 隐藏网页视图编辑器查找
   {
-    "key": "escape",
     "command": "editor.action.webvieweditor.hideFind",
+    "key": "escape",
     "when": "webviewFindWidgetVisible && !editorFocus && activeEditor == 'WebviewEditor'"
   },
-  // 取消操作
   {
-    "key": "escape",
     "command": "editor.cancelOperation",
+    "key": "escape",
     "when": "cancellableOperation"
   },
-  // 关闭异常小部件
   {
-    "key": "escape",
     "command": "editor.debug.action.closeExceptionWidget",
+    "key": "escape",
     "when": "exceptionWidgetVisible"
   },
-  // 取消转到下一个符号结果
   {
-    "key": "escape",
     "command": "editor.gotoNextSymbolFromResult.cancel",
+    "key": "escape",
     "when": "hasSymbols"
   },
-  // 隐藏拖放小部件
   {
-    "key": "escape",
     "command": "editor.hideDropWidget",
+    "key": "escape",
     "when": "dropWidgetVisible"
   },
-  // 隐藏粘贴小部件
   {
-    "key": "escape",
     "command": "editor.hidePasteWidget",
+    "key": "escape",
     "when": "pasteWidgetVisible"
   },
-  // 停止读取带有提示的行
   {
-    "key": "escape",
     "command": "inlayHints.stopReadingLineWithHint",
+    "key": "escape",
     "when": "isReadingLineWithInlayHints"
   },
-  // 放弃笔记本单元格聊天
   {
-    "key": "escape",
     "command": "notebook.cell.chat.discard",
+    "key": "escape",
     "when": "inlineChatFocused && notebookCellChatFocused && !notebookCellEditorFocused && !notebookChatUserDidEdit"
   },
-  // 聚焦搜索编辑器小部件
   {
-    "key": "escape",
     "command": "search.action.focusQueryEditorWidget",
+    "key": "escape",
     "when": "inSearchEditor"
   },
-  // 清除设置搜索结果
   {
-    "key": "escape",
     "command": "settings.action.clearSearchResults",
+    "key": "escape",
     "when": "inSettingsEditor && inSettingsSearch"
   },
-  // 隐藏评论
   {
-    "key": "escape",
     "command": "workbench.action.hideComment",
+    "key": "escape",
     "when": "commentEditorFocused || commentFocused"
   },
-  // 关闭查找小部件
   {
-    "key": "escape",
     "command": "closeFindWidget",
+    "key": "escape",
     "when": "editorFocus && findWidgetVisible && !isComposing"
   },
-  // 离开编辑器消息
   {
-    "key": "escape",
     "command": "leaveEditorMessage",
+    "key": "escape",
     "when": "messageVisible"
   },
-  // 离开代码片段
   {
-    "key": "escape",
     "command": "leaveSnippet",
+    "key": "escape",
     "when": "inSnippetMode && textInputFocus"
   },
-  // 关闭脏差异
   {
-    "key": "escape",
     "command": "closeDirtyDiff",
+    "key": "escape",
     "when": "dirtyDiffVisible"
   },
-  // 关闭标记导航
   {
-    "key": "escape",
     "command": "closeMarkersNavigation",
+    "key": "escape",
     "when": "editorFocus && markersNavigationVisible"
   },
-  // 隐藏通知提示
   {
-    "key": "escape",
     "command": "notifications.hideToasts",
+    "key": "escape",
     "when": "notificationToastsVisible"
   },
-  // 关闭参数提示
   {
-    "key": "escape",
     "command": "closeParameterHints",
+    "key": "escape",
     "when": "editorFocus && parameterHintsVisible"
   },
-  // 隐藏建议小部件
   {
-    "key": "escape",
     "command": "hideSuggestWidget",
+    "key": "escape",
     "when": "suggestWidgetVisible && textInputFocus"
   },
-  // 取消链接编辑输入
   {
-    "key": "escape",
     "command": "cancelLinkedEditingInput",
+    "key": "escape",
     "when": "LinkedEditingInputVisible && editorTextFocus"
   },
-  // 取消重命名输入
   {
-    "key": "escape",
     "command": "cancelRenameInput",
+    "key": "escape",
     "when": "editorFocus && renameInputVisible"
   },
-  // 关闭替换文件小部件
   {
-    "key": "escape",
     "command": "closeReplaceInFilesWidget",
+    "key": "escape",
     "when": "replaceInputBoxFocus && searchViewletVisible"
   },
-  // 清除评论过滤文本
   {
-    "key": "escape",
     "command": "commentsClearFilterText",
+    "key": "escape",
     "when": "commentsFilterFocus"
   },
-  // 清除键盘绑定搜索结果
   {
-    "key": "escape",
     "command": "keybindings.editor.clearSearchResults",
+    "key": "escape",
     "when": "inKeybindings && inKeybindingsSearch"
   },
-  // 拒绝键盘绑定when表达式
   {
-    "key": "escape",
     "command": "keybindings.editor.rejectWhenExpression",
+    "key": "escape",
     "when": "inKeybindings && whenFocus && !suggestWidgetVisible"
   },
-  // 清除列表
   {
-    "key": "escape",
     "command": "list.clear",
+    "key": "escape",
     "when": "listFocus && listHasSelectionOrFocus && !inputFocus && !treestickyScrollFocused"
   },
-  // 关闭列表查找
   {
-    "key": "escape",
     "command": "list.closeFind",
+    "key": "escape",
     "when": "listFocus && treeFindOpen"
   },
-  // 退出笔记本多光标
   {
-    "key": "escape",
     "command": "noteMultiCursor.exit",
+    "key": "escape",
     "when": "config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook'"
   },
-  // 隐藏笔记本查找
   {
-    "key": "escape",
     "command": "notebook.hideFind",
+    "key": "escape",
     "when": "notebookEditorFocused && notebookFindWidgetFocused"
   },
-  // 清除问题过滤文本
   {
-    "key": "escape",
     "command": "problems.action.clearFilterText",
+    "key": "escape",
     "when": "problemsFilterFocus"
   },
-  // 清除源代码管理输入
   {
-    "key": "escape",
     "command": "scm.clearInput",
+    "key": "escape",
     "when": "scmRepository && !suggestWidgetVisible"
   },
-  // 取消搜索
   {
-    "key": "escape",
     "command": "search.action.cancel",
+    "key": "escape",
     "when": "listFocus && searchViewletVisible && !inputFocus && !treestickyScrollFocused && searchState != '0'"
   },
-  // 聚焦设置上一级
   {
-    "key": "escape",
     "command": "settings.action.focusLevelUp",
+    "key": "escape",
     "when": "inSettingsEditor && !inSettingsJSONEditor && !inSettingsSearch"
   },
-  // 关闭快速打开
   {
-    "key": "escape",
     "command": "workbench.action.closeQuickOpen",
+    "key": "escape",
     "when": "inQuickOpen"
   },
-  // 关闭终端聊天
   {
-    "key": "escape",
     "command": "workbench.action.terminal.chat.close",
+    "key": "escape",
     "when": "terminalChatFocus && terminalChatVisible || terminalChatVisible && terminalFocus"
   },
-  // 清除终端选择
   {
-    "key": "escape",
     "command": "workbench.action.terminal.clearSelection",
+    "key": "escape",
     "when": "terminalFocusInAny && terminalHasBeenCreated && terminalTextSelected && !terminalFindVisible || terminalFocusInAny && terminalProcessSupported && terminalTextSelected && !terminalFindVisible"
   },
-  // 隐藏终端查找
   {
-    "key": "escape",
     "command": "workbench.action.terminal.hideFind",
+    "key": "escape",
     "when": "terminalFindVisible && terminalFocusInAny && terminalHasBeenCreated || terminalFindVisible && terminalFocusInAny && terminalProcessSupported"
   },
-  // 聚焦横幅
   {
-    "key": "escape",
     "command": "workbench.banner.focusBanner",
+    "key": "escape",
     "when": "bannerFocused"
   },
-  // 清除状态栏焦点
   {
-    "key": "escape",
     "command": "workbench.statusBar.clearFocus",
+    "key": "escape",
     "when": "statusBarFocused"
   },
-  // 选择面包屑编辑器
   {
-    "key": "escape",
     "command": "breadcrumbs.selectEditor",
+    "key": "escape",
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
-  // 隐藏终端建议小部件
   {
-    "key": "escape",
     "command": "workbench.action.terminal.hideSuggestWidget",
+    "key": "escape",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
-  // 退出笔记本单元格编辑
   {
-    "key": "escape",
     "command": "notebook.cell.quitEdit",
+    "key": "escape",
     "when": "notebookEditorFocused && notebookOutputFocused"
   },
-  // 关闭调用层次结构
   {
-    "key": "escape",
     "command": "editor.closeCallHierarchy",
+    "key": "escape",
     "when": "callHierarchyVisible && !config.editor.stablePeek"
   },
-  // 关闭类型层次结构
   {
-    "key": "escape",
     "command": "editor.closeTypeHierarchy",
+    "key": "escape",
     "when": "typeHierarchyVisible && !config.editor.stablePeek"
   },
-  // 取消文件资源管理器剪切
   {
-    "key": "escape",
     "command": "filesExplorer.cancelCut",
+    "key": "escape",
     "when": "explorerResourceCut && filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
-  // 关闭引用搜索
   {
-    "key": "escape",
     "command": "closeReferenceSearch",
+    "key": "escape",
     "when": "editorTextFocus && referenceSearchVisible && !config.editor.stablePeek || referenceSearchVisible && !config.editor.stablePeek && !inputFocus"
   },
-  // 隐藏通知列表
   {
-    "key": "escape",
     "command": "notifications.hideList",
+    "key": "escape",
     "when": "notificationCenterVisible"
   },
-  // 隐藏通知提示
   {
-    "key": "escape",
     "command": "notifications.hideToasts",
+    "key": "escape",
     "when": "notificationFocus && notificationToastsVisible"
   },
-  // 停止聊天语音
   {
-    "key": "escape",
     "command": "workbench.action.chat.stopListening",
+    "key": "escape",
     "when": "voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
   },
-  // 停止朗读聊天项
   {
-    "key": "escape",
     "command": "workbench.action.chat.stopReadChatItemAloud",
+    "key": "escape",
     "when": "scopedChatSynthesisInProgress"
   },
-  // 停止编辑器听写
   {
-    "key": "escape",
     "command": "workbench.action.editorDictation.stop",
+    "key": "escape",
     "when": "editorDictation.inProgress"
   },
-  // 停止朗读
   {
-    "key": "escape",
     "command": "workbench.action.speech.stopReadAloud",
+    "key": "escape",
     "when": "scopedChatSynthesisInProgress && textToSpeechInProgress"
   },
-  // 取消GPT4命令删除
   {
-    "key": "escape",
     "command": "editor.action.cancelGPT4WithCmdDelete",
+    "key": "escape",
     "when": "hadGPT4InlineCompletionRunning"
   },
-  // 隐藏代码操作小部件
   {
-    "key": "escape",
     "command": "hideCodeActionWidget",
+    "key": "escape",
     "when": "codeActionMenuVisible"
   },
-  // 关闭提示栏
   {
-    "key": "escape",
     "command": "aipopup.action.closePromptBar",
+    "key": "escape",
     "when": "editorHasPromptBar && editorPromptBarFocused && editorTextFocus"
   },
-  // 退出比较移动
   {
-    "key": "escape",
     "command": "diffEditor.exitCompareMove",
+    "key": "escape",
     "when": "comparingMovedCode"
   },
-  // 隐藏终端生成
   {
-    "key": "escape",
     "command": "cursorai.action.hideGenerateInTerminal",
+    "key": "escape",
     "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
   },
   {
-    "key": "tab",
     "command": "tab",
+    "key": "tab",
     "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
   },
   {
-    "key": "tab",
     "command": "editor.action.acceptGPT4",
+    "key": "tab",
     "when": "hasGPT4Diff"
   },
   {
-    "key": "tab",
     "command": "editor.emmet.action.expandAbbreviation",
+    "key": "tab",
     "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
   },
   {
-    "key": "tab",
     "command": "insertSnippet",
+    "key": "tab",
     "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
   },
   {
-    "key": "tab",
     "command": "jumpToNextSnippetPlaceholder",
+    "key": "tab",
     "when": "hasNextTabstop && inSnippetMode && textInputFocus"
   },
   {
-    "key": "tab",
     "command": "acceptSelectedSuggestion",
+    "key": "tab",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "tab",
     "command": "insertBestCompletion",
+    "key": "tab",
     "when": "atEndOfWord && textInputFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
   },
   {
-    "key": "tab",
     "command": "insertNextSuggestion",
+    "key": "tab",
     "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
   },
   {
-    "key": "tab",
     "command": "editor.action.inlineSuggest.commit",
+    "key": "tab",
     "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
   },
   {
-    "key": "tab",
     "command": "editor.action.inlineSuggest.jump",
+    "key": "tab",
     "when": "inlineEditIsVisible && tabShouldJumpToInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
   },
   {
-    "key": "tab",
     "command": "workbench.action.terminal.acceptSelectedSuggestion",
+    "key": "tab",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
   {
-    "key": "tab",
     "command": "editor.action.acceptCursorTabSuggestion",
+    "key": "tab",
     "when": "cpp.shouldAcceptTab"
   },
-  // 笔记本单元格聊天历史记录向上
   {
-    "key": "up",
     "command": "notebook.cell.chat.previousFromHistory",
+    "key": "up",
     "when": "inlineChatFocused && notebookCellChatFocused"
   },
-  // 悬停框向上滚动
   {
-    "key": "up",
     "command": "editor.action.scrollUpHover",
+    "key": "up",
     "when": "editorHoverFocused"
   },
-  // 选择上一个粘性滚动行
   {
-    "key": "up",
     "command": "editor.action.selectPreviousStickyScrollLine",
+    "key": "up",
     "when": "stickyScrollFocused"
   },
-  // 聚焦上一个编辑器
   {
-    "key": "up",
     "command": "notebook.focusPreviousEditor",
+    "key": "up",
     "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
   },
-  // 显示上一个参数提示
   {
-    "key": "up",
     "command": "showPrevParameterHint",
+    "key": "up",
     "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
   },
-  // 选择上一个建议
   {
-    "key": "up",
     "command": "selectPrevSuggestion",
+    "key": "up",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
-  // 聚焦上一个重命名建议
   {
-    "key": "up",
     "command": "focusPreviousRenameSuggestion",
+    "key": "up",
     "when": "renameInputVisible"
   },
-  // 显示历史记录上一项
   {
-    "key": "up",
     "command": "history.showPrevious",
+    "key": "up",
     "when": "historyNavigationBackwardsEnabled && historyNavigationWidgetFocus && !isComposing && !suggestWidgetVisible"
   },
-  // 图标选择框向上聚焦
   {
-    "key": "up",
     "command": "iconSelectBox.focusUp",
+    "key": "up",
     "when": "iconSelectBoxFocus"
   },
-  // 交互式历史记录上一项
   {
-    "key": "up",
     "command": "interactive.history.previous",
+    "key": "up",
     "when": "isCompositeNotebook && !notebookEditorFocused && !suggestWidgetVisible && interactiveInputCursorAtBoundary != 'bottom' && interactiveInputCursorAtBoundary != 'none'"
   },
-  // 列表向上聚焦
   {
-    "key": "up",
     "command": "list.focusUp",
+    "key": "up",
     "when": "listFocus && !inputFocus && !treestickyScrollFocused"
   },
-  // 聚焦上一个编辑器
   {
-    "key": "up",
     "command": "notebook.focusPreviousEditor",
+    "key": "up",
     "when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && !notebookCellMarkdownEditMode && notebookCellType == 'markup'"
   },
-  // 聚焦上一个通知提示
   {
-    "key": "up",
     "command": "notifications.focusPreviousToast",
+    "key": "up",
     "when": "notificationFocus && notificationToastsVisible"
   },
-  // 快速输入上一项
   {
-    "key": "up",
     "command": "quickInput.previous",
+    "key": "up",
     "when": "inQuickInput && quickInputType == 'quickPick'"
   },
-  // 查看上一个提交
   {
-    "key": "up",
     "command": "scm.viewPreviousCommit",
+    "key": "up",
     "when": "scmInputIsInFirstPosition && scmRepository && !suggestWidgetVisible"
   },
-  // 交互式操场向上
   {
-    "key": "up",
     "command": "workbench.action.interactivePlayground.arrowUp",
+    "key": "up",
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
-  // 横幅聚焦上一个操作
   {
-    "key": "up",
     "command": "workbench.banner.focusPreviousAction",
+    "key": "up",
     "when": "bannerFocused"
   },
-  // 状态栏聚焦上一个
   {
-    "key": "up",
     "command": "workbench.statusBar.focusPrevious",
+    "key": "up",
     "when": "statusBarFocused"
   },
-  // 笔记本单元格空操作
   {
-    "key": "up",
     "command": "notebook.cell.nullAction",
+    "key": "up",
     "when": "notebookOutputInputFocused"
   },
-  // 终端选择上一个建议
   {
-    "key": "up",
     "command": "workbench.action.terminal.selectPrevSuggestion",
+    "key": "up",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
-  // 选择上一个代码操作
   {
-    "key": "up",
     "command": "selectPrevCodeAction",
+    "key": "up",
     "when": "codeActionMenuVisible"
   },
-  // 笔记本单元格聊天历史记录向下
   {
-    "key": "down",
     "command": "notebook.cell.chat.nextFromHistory",
+    "key": "down",
     "when": "inlineChatFocused && notebookCellChatFocused"
   },
-  // 悬停框向下滚动
   {
-    "key": "down",
     "command": "editor.action.scrollDownHover",
+    "key": "down",
     "when": "editorHoverFocused"
   },
-  // 选择下一个粘性滚动行
   {
-    "key": "down",
     "command": "editor.action.selectNextStickyScrollLine",
+    "key": "down",
     "when": "stickyScrollFocused"
   },
-  // 聚焦下一个编辑器
   {
-    "key": "down",
     "command": "notebook.focusNextEditor",
+    "key": "down",
     "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
   },
-  // 聚焦设置文件
   {
-    "key": "down",
     "command": "settings.action.focusSettingsFile",
+    "key": "down",
     "when": "inSettingsSearch && !suggestWidgetVisible"
   },
-  // 显示下一个参数提示
   {
-    "key": "down",
     "command": "showNextParameterHint",
+    "key": "down",
     "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
   },
-  // 选择下一个建议
   {
-    "key": "down",
     "command": "selectNextSuggestion",
+    "key": "down",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
   },
-  // 聚焦下一个重命名建议
   {
-    "key": "down",
     "command": "focusNextRenameSuggestion",
+    "key": "down",
     "when": "renameInputVisible"
   },
-  // 选择面包屑导航
   {
-    "key": "down",
     "command": "breadcrumbs.selectFocused",
+    "key": "down",
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
-  // 显示历史记录下一项
   {
-    "key": "down",
     "command": "history.showNext",
+    "key": "down",
     "when": "historyNavigationForwardsEnabled && historyNavigationWidgetFocus && !isComposing && !suggestWidgetVisible"
   },
-  // 图标选择框向下聚焦
   {
-    "key": "down",
     "command": "iconSelectBox.focusDown",
+    "key": "down",
     "when": "iconSelectBoxFocus"
   },
-  // 交互式历史记录下一项
   {
-    "key": "down",
     "command": "interactive.history.next",
+    "key": "down",
     "when": "isCompositeNotebook && !notebookEditorFocused && !suggestWidgetVisible && interactiveInputCursorAtBoundary != 'none' && interactiveInputCursorAtBoundary != 'top'"
   },
-  // 列表向下聚焦
   {
-    "key": "down",
     "command": "list.focusDown",
+    "key": "down",
     "when": "listFocus && !inputFocus && !treestickyScrollFocused"
   },
-  // 聚焦下一个编辑器
   {
-    "key": "down",
     "command": "notebook.focusNextEditor",
+    "key": "down",
     "when": "config.notebook.navigation.allowNavigateToSurroundingCells && notebookCursorNavigationMode && notebookEditorFocused && !accessibilityModeEnabled && !isEmbeddedDiffEditor && !notebookCellMarkdownEditMode && notebookCellType == 'markup'"
   },
-  // 聚焦下一个通知提示
   {
-    "key": "down",
     "command": "notifications.focusNextToast",
+    "key": "down",
     "when": "notificationFocus && notificationToastsVisible"
   },
-  // 快速输入下一项
   {
-    "key": "down",
     "command": "quickInput.next",
+    "key": "down",
     "when": "inQuickInput && quickInputType == 'quickPick'"
   },
-  // 查看下一个提交
   {
-    "key": "down",
     "command": "scm.viewNextCommit",
+    "key": "down",
     "when": "scmInputIsInLastPosition && scmRepository && !suggestWidgetVisible"
   },
-  // 交互式操场向下
   {
-    "key": "down",
     "command": "workbench.action.interactivePlayground.arrowDown",
+    "key": "down",
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
-  // 横幅聚焦下一个操作
   {
-    "key": "down",
     "command": "workbench.banner.focusNextAction",
+    "key": "down",
     "when": "bannerFocused"
   },
-  // 状态栏聚焦下一个
   {
-    "key": "down",
     "command": "workbench.statusBar.focusNext",
+    "key": "down",
     "when": "statusBarFocused"
   },
-  // 笔记本单元格空操作
   {
-    "key": "down",
     "command": "notebook.cell.nullAction",
+    "key": "down",
     "when": "notebookOutputInputFocused"
   },
-  // 终端选择下一个建议
   {
-    "key": "down",
     "command": "workbench.action.terminal.selectNextSuggestion",
+    "key": "down",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
-  // 选择下一个代码操作
   {
-    "key": "down",
     "command": "selectNextCodeAction",
+    "key": "down",
     "when": "codeActionMenuVisible"
   },
-  // 接受断点小部件输入
   {
-    "key": "enter",
     "command": "breakpointWidget.action.acceptInput",
+    "key": "enter",
     "when": "breakpointWidgetVisible && inBreakpointWidget"
   },
-  // 扩展编辑器查找下一个
   {
-    "key": "enter",
     "command": "editor.action.extensioneditor.findNext",
+    "key": "enter",
     "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'workbench.editor.extension'"
   },
-  // 跳转到聚焦的粘性滚动行
   {
-    "key": "enter",
     "command": "editor.action.goToFocusedStickyScrollLine",
+    "key": "enter",
     "when": "stickyScrollFocused"
   },
-  // 使用独立颜色选择器插入颜色
   {
-    "key": "enter",
     "command": "editor.action.insertColorWithStandaloneColorPicker",
+    "key": "enter",
     "when": "standaloneColorPickerFocused"
   },
-  // 查找下一个匹配项
   {
-    "key": "enter",
     "command": "editor.action.nextMatchFindAction",
+    "key": "enter",
     "when": "editorFocus && findInputFocussed"
   },
-  // Webview编辑器查找下一个
   {
-    "key": "enter",
     "command": "editor.action.webvieweditor.findNext",
+    "key": "enter",
     "when": "webviewFindWidgetFocused && !editorFocus && activeEditor == 'WebviewEditor'"
   },
-  // 执行交互式命令
   {
-    "key": "enter",
     "command": "interactive.execute",
+    "key": "enter",
     "when": "isCompositeNotebook && !config.interactiveWindow.executeWithShiftEnter && activeEditor == 'workbench.editor.interactive'"
   },
-  // 接受调试REPL输入
   {
-    "key": "enter",
     "command": "repl.action.acceptInput",
+    "key": "enter",
     "when": "inDebugRepl && textInputFocus"
   },
-  // 执行REPL命令
   {
-    "key": "enter",
     "command": "repl.execute",
+    "key": "enter",
     "when": "isCompositeNotebook && !config.interactiveWindow.executeWithShiftEnter && activeEditor == 'workbench.editor.repl'"
   },
-  // 提交聊天
   {
-    "key": "enter",
     "command": "workbench.action.chat.submit",
+    "key": "enter",
     "when": "chatInputHasText && inChatInput && !chatSessionRequestInProgress && chatLocation != 'editing-session'"
   },
-  // 提交编辑
   {
-    "key": "enter",
     "command": "workbench.action.edits.submit",
+    "key": "enter",
     "when": "chatInputHasText && inChatInput && !chatSessionRequestInProgress && !isApplyingChatEdits && chatLocation == 'editing-session'"
   },
-  // 替换一个
   {
-    "key": "enter",
     "command": "editor.action.replaceOne",
+    "key": "enter",
     "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
   },
-  // 接受选中的建议
   {
-    "key": "enter",
     "command": "acceptSelectedSuggestion",
+    "key": "enter",
     "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
-  // 接受重命名输入
   {
-    "key": "enter",
     "command": "acceptRenameInput",
+    "key": "enter",
     "when": "editorFocus && renameInputVisible && !isComposing"
   },
-  // 选择面包屑导航
   {
-    "key": "enter",
     "command": "breadcrumbs.selectFocused",
+    "key": "enter",
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
-  // 选择聚焦的图标
   {
-    "key": "enter",
     "command": "iconSelectBox.selectFocused",
+    "key": "enter",
     "when": "iconSelectBoxFocus"
   },
-  // 接受快捷键编辑器When表达式
   {
-    "key": "enter",
     "command": "keybindings.editor.acceptWhenExpression",
+    "key": "enter",
     "when": "inKeybindings && whenFocus && !suggestWidgetVisible"
   },
-  // 定义快捷键
   {
-    "key": "enter",
     "command": "keybindings.editor.defineKeybinding",
+    "key": "enter",
     "when": "inKeybindings && keybindingFocus && !whenFocus"
   },
-  // 选择列表项
   {
-    "key": "enter",
     "command": "list.select",
+    "key": "enter",
     "when": "listFocus && !inputFocus && !treestickyScrollFocused"
   },
-  // 接受笔记本单元格聊天
   {
-    "key": "enter",
     "command": "notebook.cell.chat.accept",
+    "key": "enter",
     "when": "inlineChatFocused && notebookCellChatFocused && !notebookCellEditorFocused"
   },
-  // 编辑笔记本单元格
   {
-    "key": "enter",
     "command": "notebook.cell.edit",
+    "key": "enter",
     "when": "notebookCellListFocused && !editorHoverFocused && !inputFocus && !notebookOutputInputFocused"
   },
-  // 切换通知
   {
-    "key": "enter",
     "command": "notification.toggle",
+    "key": "enter",
     "when": "notificationFocus"
   },
-  // 打开问题
   {
-    "key": "enter",
     "command": "problems.action.open",
+    "key": "enter",
     "when": "problemFocus"
   },
-  // 显示引用
   {
-    "key": "enter",
     "command": "revealReference",
+    "key": "enter",
     "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand && !treestickyScrollFocused"
   },
-  // 打开搜索结果
   {
-    "key": "enter",
     "command": "search.action.openResult",
+    "key": "enter",
     "when": "fileMatchOrMatchFocus && searchViewletVisible"
   },
-  // 聚焦设置控件
   {
-    "key": "enter",
     "command": "settings.action.focusSettingControl",
+    "key": "enter",
     "when": "inSettingsEditor && settingRowFocus"
   },
-  // 聚焦设置列表
   {
-    "key": "enter",
     "command": "settings.action.focusSettingsList",
+    "key": "enter",
     "when": "inSettingsEditor && settingsTocRowFocus"
   },
-  // 查找上一个
   {
-    "key": "enter",
     "command": "workbench.action.terminal.findPrevious",
+    "key": "enter",
     "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
   },
-  // 重命名活动终端标签
   {
-    "key": "f2",
     "command": "workbench.action.terminal.renameActiveTab",
+    "key": "f2",
     "when": "terminalHasBeenCreated && terminalTabsFocus && terminalTabsSingularSelection || terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
   },
-  // 使用Enter接受选中的终端建议
   {
-    "key": "enter",
     "command": "workbench.action.terminal.acceptSelectedSuggestionEnter",
+    "key": "enter",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible && config.terminal.integrated.suggest.runOnEnter != 'ignore' || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible && config.terminal.integrated.suggest.runOnEnter != 'ignore'"
   },
-  // 重命名监视表达式
   {
-    "key": "enter",
     "command": "debug.renameWatchExpression",
+    "key": "enter",
     "when": "watchExpressionsFocused"
   },
-  // 设置变量
   {
-    "key": "enter",
     "command": "debug.setVariable",
+    "key": "enter",
     "when": "variablesFocused"
   },
-  // 标记远程隧道
   {
-    "key": "enter",
     "command": "remote.tunnel.label",
+    "key": "enter",
     "when": "tunnelViewFocus && tunnelType == 'Forwarded' && tunnelViewMultiSelection == 'undefined'"
   },
-  // 选择粘性滚动项
   {
-    "key": "enter",
     "command": "list.stickyScrollselect",
+    "key": "enter",
     "when": "treestickyScrollFocused"
   },
-  // 接受选中的代码操作
   {
-    "key": "enter",
     "command": "acceptSelectedCodeAction",
+    "key": "enter",
     "when": "codeActionMenuVisible"
   },
-  // 退出应用程序(Cmd)
   {
-    "key": "cmd+q",
-    "command": "workbench.action.quit"
+    "command": "workbench.action.quit",
+    "key": "cmd+q"
   },
-  // 退出应用程序(Alt)
   {
-    "key": "alt+q",
-    "command": "workbench.action.quit"
+    "command": "workbench.action.quit",
+    "key": "alt+q"
   },
-  // 向下复制行(Cmd)
   {
-    "key": "cmd+d",
     "command": "editor.action.copyLinesDownAction",
+    "key": "cmd+d",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // 在笔记本中向下复制单元格(Cmd)
   {
+    "command": "notebook.cell.copyDown",
     "key": "cmd+d",
-    "command": "notebook.cell.copyDown",
-    "when": "notebookEditorFocused && !inputFocus"
-  },
-  // 向下复制行(Alt)
-  {
-    "key": "alt+d",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // 在笔记本中向下复制单元格(Alt)
-  {
-    "key": "alt+d",
-    "command": "notebook.cell.copyDown",
     "when": "notebookEditorFocused && !inputFocus"
   },
   {
-    "key": "cmd+n",
-    "command": "workbench.action.files.newUntitledFile"
+    "command": "editor.action.copyLinesDownAction",
+    "key": "alt+d",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+n",
-    "command": "workbench.action.files.newUntitledFile"
+    "command": "notebook.cell.copyDown",
+    "key": "alt+d",
+    "when": "notebookEditorFocused && !inputFocus"
   },
   {
-    "key": "shift+tab",
+    "command": "workbench.action.files.newUntitledFile",
+    "key": "cmd+n"
+  },
+  {
+    "command": "workbench.action.files.newUntitledFile",
+    "key": "alt+n"
+  },
+  {
     "command": "outdent",
+    "key": "shift+tab",
     "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
   },
   {
-    "key": "cmd+p",
-    "command": "workbench.action.showCommands"
+    "command": "workbench.action.showCommands",
+    "key": "cmd+p"
   },
   {
-    "key": "alt+p",
-    "command": "workbench.action.showCommands"
+    "command": "workbench.action.showCommands",
+    "key": "alt+p"
   },
   {
-    "key": "shift shift",
-    "command": "workbench.action.quickOpen"
+    "command": "workbench.action.quickOpen",
+    "key": "shift shift"
   },
   {
+    "command": "filesExplorer.copy",
     "key": "cmd+c",
-    "command": "filesExplorer.copy",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
   },
   {
+    "command": "filesExplorer.cut",
     "key": "cmd+x",
-    "command": "filesExplorer.cut",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
-    "key": "cmd+v",
     "command": "filesExplorer.paste",
+    "key": "cmd+v",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
-    "key": "alt+c",
     "command": "filesExplorer.copy",
+    "key": "alt+c",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !inputFocus"
   },
   {
-    "key": "alt+x",
     "command": "filesExplorer.cut",
+    "key": "alt+x",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
-    "key": "alt+v",
     "command": "filesExplorer.paste",
+    "key": "alt+v",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
+    "command": "filesExplorer.findInFolder",
     "key": "shift+cmd+f",
-    "command": "filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
   {
+    "command": "filesExplorer.findInFolder",
     "key": "shift+alt+f",
-    "command": "filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
   {
+    "command": "moveFileToTrash",
     "key": "delete",
-    "command": "moveFileToTrash",
     "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
+    "command": "moveFileToTrash",
     "key": "cmd+backspace",
-    "command": "moveFileToTrash",
     "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   },
   {
-    "key": "alt+backspace",
     "command": "moveFileToTrash",
+    "key": "alt+backspace",
     "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   }
 ]
