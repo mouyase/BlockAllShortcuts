@@ -2,16 +2,17 @@
   "name": "block-all-shortcuts",
   "displayName": "Block All Shortcuts",
   "description": "Block all shortcut keys.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "mouyase",
   "repository": "https://github.com/mouyase/BlockAllShortcuts",
   "scripts": {
     "show": "node tools/ShowKeySet.js",
     "build": "node tools/MakeKeyMap.js",
-    "package": "npm run build && npx @vscode/vsce package"
+    "package": "npm run build && npx @vscode/vsce package",
+    "publish": "npm run package && npx @vscode/vsce publish"
   },
   "engines": {
-    "vscode": "^1.96.2"
+    "vscode": "^1.22.0"
   },
   "categories": [
     "Keymaps"
