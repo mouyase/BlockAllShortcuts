@@ -163,6 +163,11 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "key": "f2",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "editor.action.triggerSuggest",
     "key": "cmd+/",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
@@ -1147,5 +1152,150 @@
     "command": "moveFileToTrash",
     "key": "alt+backspace",
     "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "shift+up",
+    "command": "cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+down",
+    "command": "cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+left",
+    "command": "cursorLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+right",
+    "command": "cursorRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+left",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+left",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "home",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+left",
+    "command": "cursorHomeSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "cursorHomeSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "shift+home",
+    "command": "cursorHomeSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "cmd+right",
+    "command": "cursorHomeSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "alt+right",
+    "command": "cursorEnd",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "end",
+    "command": "cursorEnd",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "shift+cmd+right",
+    "command": "cursorEndSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "cursorEndSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "shift+end",
+    "command": "cursorEndSelect",
+    "when": "textInputFocus",
+    "args": {
+      "sticky": false
+    }
+  },
+  {
+    "key": "pagedown",
+    "command": "cursorPageDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "pageup",
+    "command": "cursorPageUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+u",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
   }
 ]
