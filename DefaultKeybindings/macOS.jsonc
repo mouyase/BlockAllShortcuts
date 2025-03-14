@@ -4595,16 +4595,6 @@
     "when": "workbench.explorer.openEditorsView.active"
   },
   {
-    "key": "ctrl+cmd+i",
-    "command": "workbench.panel.chat",
-    "when": "workbench.panel.chat.view.copilot.active"
-  },
-  {
-    "key": "shift+cmd+i",
-    "command": "workbench.panel.chatEditing",
-    "when": "workbench.panel.chat.view.edits.active"
-  },
-  {
     "key": "escape",
     "command": "workbench.statusBar.clearFocus",
     "when": "statusBarFocused"
@@ -5446,24 +5436,14 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+tab",
+    "key": "ctrl+tab",
     "command": "composer.selectNextComposer",
-    "when": "view == 'workbench.panel.composerViewPane2.view'"
+    "when": "view =~ /^workbench.panel.aichat.view/"
   },
   {
     "key": "ctrl+shift+tab",
-    "command": "composer.selectNextComposerChat",
-    "when": "view == 'workbench.panel.aichat.view'"
-  },
-  {
-    "key": "ctrl+tab",
     "command": "composer.selectPreviousComposer",
-    "when": "view == 'workbench.panel.composerViewPane2.view'"
-  },
-  {
-    "key": "ctrl+tab",
-    "command": "composer.selectPreviousComposerChat",
-    "when": "view == 'workbench.panel.aichat.view'"
+    "when": "view =~ /^workbench.panel.aichat.view/"
   },
   {
     "key": "cmd+enter",
@@ -5483,7 +5463,7 @@
   {
     "key": "tab",
     "command": "markdown.extension.onTabKey",
-    "when": "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    "when": "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && !tabShouldAcceptInlineEdit && !tabShouldJumpToInlineEdit && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
     "key": "left",
@@ -5830,18 +5810,64 @@
     "command": "aichat.newchataction"
   },
   {
-    "key": "cmd+n",
-    "command": "composer.createNew",
-    "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+    "key": "cmd+backspace",
+    "command": "composer.cancelComposerStep",
+    "when": "composerFocused"
   },
   {
-    "key": "cmd+n",
-    "command": "composer.createNewChat",
-    "when": "focusedView == 'workbench.panel.aichat.view'"
+    "key": "cmd+w",
+    "command": "composer.closeComposerTab",
+    "when": "composerFocused"
   },
   {
-    "key": "alt+cmd+l",
-    "command": "composer.showComposerHistory"
+    "key": "cmd+.",
+    "command": "composer.cycleMode",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+/",
+    "command": "composer.cycleModel",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+t",
+    "command": "composer.newComposerTab",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+]",
+    "command": "composer.nextChatTab",
+    "when": "composerFocused"
+  },
+  {
+    "key": "alt+cmd+p",
+    "command": "composer.openAddContextMenu",
+    "when": "composerFocused"
+  },
+  {
+    "key": "alt+cmd+.",
+    "command": "composer.openModeMenu",
+    "when": "composerFocused"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "composer.openModelToggle",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+[",
+    "command": "composer.previousChatTab",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composer.toggleAllVsSingleChatContext",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+d",
+    "command": "composer.toggleChatAsEditor",
+    "when": "composerFocused"
   },
   {
     "key": "tab",
@@ -5887,6 +5913,11 @@
     "key": "cmd+n",
     "command": "aichat.newChat",
     "when": "focusedView == 'workbench.panel.aichat.view'"
+  },
+  {
+    "key": "cmd+n",
+    "command": "composer.createNew",
+    "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
   },
   {
     "key": "cmd+backspace",
@@ -5987,11 +6018,6 @@
     "key": "up",
     "command": "selectPrevCodeAction",
     "when": "codeActionMenuVisible"
-  },
-  {
-    "key": "shift+cmd+e",
-    "command": "aichat.fixerrormessage",
-    "when": "(arbitrary function)"
   },
   {
     "key": "shift+cmd+d",
@@ -6137,23 +6163,21 @@
 // - compareFiles
 // - compareSelected
 // - composer.addfilestocomposer
-// - composer.addfilestocomposerchat
 // - composer.addfilestonnewcomposer
-// - composer.addfilestonnewcomposerchat
 // - composer.addsymbolstocomposer
 // - composer.addsymbolstonewcomposer
 // - composer.cancelChat
 // - composer.copyRequestId
-// - composer.newcomposeraction
-// - composer.openAsEditor
+// - composer.getComposerHandleById
 // - composer.openAsPane
 // - composer.openChatAsEditor
-// - composer.openComposerFromCurrentChat
+// - composer.openComposer
 // - composer.reapplyCodeblock
 // - composer.reportFeedback
 // - composer.resumeCurrentChat
-// - composer.showComposerChatHistory
-// - composer.startComposerPromptFromSelection
+// - composer.showComposerHistory
+// - composer.updateSummaryIfOutdated
+// - composer.updateTitle
 // - compositionEnd
 // - compositionStart
 // - compositionType
@@ -7925,7 +7949,6 @@
 // - typescript.restartTsServer
 // - typescript.selectTypeScriptVersion
 // - typescript.sortImports
-// - typescript.tsserverRequest
 // - update.check
 // - update.checkForUpdate
 // - update.checking
@@ -8047,6 +8070,8 @@
 // - workbench.action.decreaseViewHeight
 // - workbench.action.decreaseViewSize
 // - workbench.action.decreaseViewWidth
+// - workbench.action.developer.captureAndSendDebuggingData
+// - workbench.action.developer.toggleWatchForCrashes
 // - workbench.action.disableAutocompletes
 // - workbench.action.download
 // - workbench.action.duplicateActiveEditorGroupDown
@@ -8295,6 +8320,13 @@
 // - workbench.action.resetViewLocations
 // - workbench.action.restartExtensionHost
 // - workbench.action.restoreEditorsToMainWindow
+// - workbench.action.revealPathInFinder1
+// - workbench.action.revealPathInFinder2
+// - workbench.action.revealPathInFinder3
+// - workbench.action.revealPathInFinder4
+// - workbench.action.revealPathInFinder5
+// - workbench.action.revealPathInFinder6
+// - workbench.action.revealPathInFinder7
 // - workbench.action.revertAndCloseActiveEditor
 // - workbench.action.saveWorkspaceAs
 // - workbench.action.selectIconTheme
@@ -8409,11 +8441,13 @@
 // - workbench.action.toggleEditorType
 // - workbench.action.toggleEditorVisibility
 // - workbench.action.toggleEditorWidths
+// - workbench.action.toggleGCProfiler
 // - workbench.action.toggleKeepEditors
 // - workbench.action.toggleKeybindingsLog
 // - workbench.action.toggleLightDarkThemes
 // - workbench.action.toggleLockedScrolling
 // - workbench.action.toggleMaximizedPanel
+// - workbench.action.toggleMemoryProfiler
 // - workbench.action.toggleMultiCursorModifier
 // - workbench.action.toggleNotebookClipboardLog
 // - workbench.action.toggleScreencastMode
@@ -8588,19 +8622,11 @@
 // - workbench.panel.aichat.view.removeView
 // - workbench.panel.aichat.view.resetViewLocation
 // - workbench.panel.aichat.view.toggleVisibility
-// - workbench.panel.chat.resetViewContainerLocation
-// - workbench.panel.chat.view.copilot.focus
-// - workbench.panel.chat.view.copilot.resetViewLocation
-// - workbench.panel.chat.view.edits.focus
-// - workbench.panel.chat.view.edits.resetViewLocation
-// - workbench.panel.chatEditing.resetViewContainerLocation
 // - workbench.panel.comments
 // - workbench.panel.comments.removeView
 // - workbench.panel.comments.resetViewContainerLocation
 // - workbench.panel.comments.resetViewLocation
 // - workbench.panel.comments.toggleVisibility
-// - workbench.panel.composerViewPane2
-// - workbench.panel.composerViewPane2.resetViewContainerLocation
 // - workbench.panel.markers.resetViewContainerLocation
 // - workbench.panel.markers.view.focus
 // - workbench.panel.markers.view.removeView

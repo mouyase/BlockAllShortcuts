@@ -8172,6 +8172,11 @@
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
       },
       {
+        "key": "ctrl+alt+p",
+        "command": "",
+        "when": "resourceLangId == 'svg' || resourceLangId == 'xml'"
+      },
+      {
         "key": "alt+.",
         "command": "",
         "when": "gitlens:key:."
@@ -8252,6 +8257,16 @@
         "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
       },
       {
+        "key": "ctrl+tab",
+        "command": "",
+        "when": "view =~ /^workbench.panel.aichat.view/"
+      },
+      {
+        "key": "ctrl+shift+tab",
+        "command": "",
+        "when": "view =~ /^workbench.panel.aichat.view/"
+      },
+      {
         "key": "escape",
         "command": "",
         "when": "editorTextFocus && gitlens:key:escape && !codeActionMenuVisible && !findWidgetVisible && !isInEmbeddedEditor && !parameterHintsVisible && !quickFixWidgetVisible && !referenceSearchVisible && !renameInputVisible && !suggestWidgetVisible"
@@ -8259,7 +8274,7 @@
       {
         "key": "tab",
         "command": "",
-        "when": "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+        "when": "editorTextFocus && markdown.extension.editor.cursor.inList && !editorHasMultipleSelections && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !inlineSuggestionVisible && !markdown.extension.editor.cursor.inFencedCodeBlock && !markdown.extension.editor.cursor.inMathEnv && !suggestWidgetVisible && !tabShouldAcceptInlineEdit && !tabShouldJumpToInlineEdit && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
       },
       {
         "key": "left",
@@ -8602,9 +8617,74 @@
         "when": "focusedView == 'gitlens.views.worktrees'"
       },
       {
+        "key": "cmd+backspace",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+w",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+.",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+/",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+t",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+]",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "alt+cmd+p",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "alt+cmd+.",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "alt+cmd+/",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+[",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+i",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+d",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
         "key": "tab",
         "command": "",
         "when": "cpp.shouldAcceptTab"
+      },
+      {
+        "key": "cmd+n",
+        "command": "",
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
       },
       {
         "key": "shift+cmd+i",

@@ -251,343 +251,348 @@
     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
   {
-    "command": "closeReferenceSearch",
     "key": "escape",
+    "command": "closeReferenceSearch",
     "when": "inReferenceSearchEditor && !config.editor.stablePeek"
   },
   {
-    "command": "editor.closeTestPeek",
     "key": "escape",
+    "command": "editor.closeTestPeek",
     "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
   },
   {
-    "command": "cancelSelection",
     "key": "escape",
+    "command": "cancelSelection",
     "when": "editorHasSelection && textInputFocus"
   },
   {
-    "command": "removeSecondaryCursors",
     "key": "escape",
+    "command": "removeSecondaryCursors",
     "when": "editorHasMultipleSelections && textInputFocus"
   },
   {
-    "command": "notebook.cell.chat.acceptChanges",
     "key": "escape",
+    "command": "notebook.cell.chat.acceptChanges",
     "when": "inlineChatFocused && notebookCellChatFocused && notebookChatUserDidEdit && !notebookCellEditorFocused"
   },
   {
-    "command": "notebook.cell.quitEdit",
     "key": "escape",
+    "command": "notebook.cell.quitEdit",
     "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible && !inlineChatFocused"
   },
   {
-    "command": "closeBreakpointWidget",
     "key": "escape",
+    "command": "closeBreakpointWidget",
     "when": "breakpointWidgetVisible && textInputFocus"
   },
   {
-    "command": "editor.action.cancelSelectionAnchor",
     "key": "escape",
+    "command": "editor.action.cancelSelectionAnchor",
     "when": "editorTextFocus && selectionAnchorSet"
   },
   {
-    "command": "editor.action.hideColorPicker",
     "key": "escape",
+    "command": "editor.action.hideColorPicker",
     "when": "standaloneColorPickerVisible"
   },
   {
-    "command": "editor.action.inlineSuggest.hide",
     "key": "escape",
+    "command": "editor.action.inlineSuggest.hide",
     "when": "inlineEditIsVisible || inlineSuggestionVisible"
   },
   {
-    "command": "editor.action.selectEditor",
     "key": "escape",
+    "command": "editor.action.selectEditor",
     "when": "stickyScrollFocused"
   },
   {
-    "command": "editor.action.webvieweditor.hideFind",
     "key": "escape",
+    "command": "editor.action.webvieweditor.hideFind",
     "when": "webviewFindWidgetVisible && !editorFocus && activeEditor == 'WebviewEditor'"
   },
   {
-    "command": "editor.cancelOperation",
     "key": "escape",
+    "command": "editor.cancelOperation",
     "when": "cancellableOperation"
   },
   {
-    "command": "editor.debug.action.closeExceptionWidget",
     "key": "escape",
+    "command": "editor.debug.action.closeExceptionWidget",
     "when": "exceptionWidgetVisible"
   },
   {
-    "command": "editor.gotoNextSymbolFromResult.cancel",
     "key": "escape",
+    "command": "editor.gotoNextSymbolFromResult.cancel",
     "when": "hasSymbols"
   },
   {
-    "command": "editor.hideDropWidget",
     "key": "escape",
+    "command": "editor.hideDropWidget",
     "when": "dropWidgetVisible"
   },
   {
-    "command": "editor.hidePasteWidget",
     "key": "escape",
+    "command": "editor.hidePasteWidget",
     "when": "pasteWidgetVisible"
   },
   {
-    "command": "inlayHints.stopReadingLineWithHint",
     "key": "escape",
+    "command": "inlayHints.stopReadingLineWithHint",
     "when": "isReadingLineWithInlayHints"
   },
   {
-    "command": "notebook.cell.chat.discard",
     "key": "escape",
+    "command": "notebook.cell.chat.discard",
     "when": "inlineChatFocused && notebookCellChatFocused && !notebookCellEditorFocused && !notebookChatUserDidEdit"
   },
   {
-    "command": "search.action.focusQueryEditorWidget",
     "key": "escape",
+    "command": "search.action.focusQueryEditorWidget",
     "when": "inSearchEditor"
   },
   {
-    "command": "settings.action.clearSearchResults",
     "key": "escape",
+    "command": "settings.action.clearSearchResults",
     "when": "inSettingsEditor && inSettingsSearch"
   },
   {
-    "command": "workbench.action.hideComment",
     "key": "escape",
+    "command": "workbench.action.hideComment",
     "when": "commentEditorFocused || commentFocused"
   },
   {
-    "command": "closeFindWidget",
     "key": "escape",
+    "command": "closeFindWidget",
     "when": "editorFocus && findWidgetVisible && !isComposing"
   },
   {
-    "command": "leaveEditorMessage",
     "key": "escape",
+    "command": "leaveEditorMessage",
     "when": "messageVisible"
   },
   {
-    "command": "leaveSnippet",
     "key": "escape",
+    "command": "leaveSnippet",
     "when": "inSnippetMode && textInputFocus"
   },
   {
-    "command": "closeDirtyDiff",
     "key": "escape",
+    "command": "closeDirtyDiff",
     "when": "dirtyDiffVisible"
   },
   {
-    "command": "closeMarkersNavigation",
     "key": "escape",
+    "command": "closeMarkersNavigation",
     "when": "editorFocus && markersNavigationVisible"
   },
   {
-    "command": "notifications.hideToasts",
     "key": "escape",
+    "command": "notifications.hideToasts",
     "when": "notificationToastsVisible"
   },
   {
-    "command": "closeParameterHints",
     "key": "escape",
+    "command": "closeParameterHints",
     "when": "editorFocus && parameterHintsVisible"
   },
   {
-    "command": "hideSuggestWidget",
     "key": "escape",
+    "command": "hideSuggestWidget",
     "when": "suggestWidgetVisible && textInputFocus"
   },
   {
-    "command": "cancelLinkedEditingInput",
     "key": "escape",
+    "command": "cancelLinkedEditingInput",
     "when": "LinkedEditingInputVisible && editorTextFocus"
   },
   {
-    "command": "cancelRenameInput",
     "key": "escape",
+    "command": "cancelRenameInput",
     "when": "editorFocus && renameInputVisible"
   },
   {
-    "command": "closeReplaceInFilesWidget",
     "key": "escape",
+    "command": "closeReplaceInFilesWidget",
     "when": "replaceInputBoxFocus && searchViewletVisible"
   },
   {
-    "command": "commentsClearFilterText",
     "key": "escape",
+    "command": "commentsClearFilterText",
     "when": "commentsFilterFocus"
   },
   {
-    "command": "keybindings.editor.clearSearchResults",
     "key": "escape",
+    "command": "keybindings.editor.clearSearchResults",
     "when": "inKeybindings && inKeybindingsSearch"
   },
   {
-    "command": "keybindings.editor.rejectWhenExpression",
     "key": "escape",
+    "command": "keybindings.editor.rejectWhenExpression",
     "when": "inKeybindings && whenFocus && !suggestWidgetVisible"
   },
   {
-    "command": "list.clear",
     "key": "escape",
+    "command": "list.clear",
     "when": "listFocus && listHasSelectionOrFocus && !inputFocus && !treestickyScrollFocused"
   },
   {
-    "command": "list.closeFind",
     "key": "escape",
+    "command": "list.closeFind",
     "when": "listFocus && treeFindOpen"
   },
   {
-    "command": "noteMultiCursor.exit",
     "key": "escape",
+    "command": "noteMultiCursor.exit",
     "when": "config.notebook.multiCursor.enabled && isNotebookMultiSelect && activeEditor == 'workbench.editor.notebook'"
   },
   {
-    "command": "notebook.hideFind",
     "key": "escape",
+    "command": "notebook.hideFind",
     "when": "notebookEditorFocused && notebookFindWidgetFocused"
   },
   {
-    "command": "problems.action.clearFilterText",
     "key": "escape",
+    "command": "problems.action.clearFilterText",
     "when": "problemsFilterFocus"
   },
   {
-    "command": "scm.clearInput",
     "key": "escape",
+    "command": "scm.clearInput",
     "when": "scmRepository && !suggestWidgetVisible"
   },
   {
-    "command": "search.action.cancel",
     "key": "escape",
+    "command": "search.action.cancel",
     "when": "listFocus && searchViewletVisible && !inputFocus && !treestickyScrollFocused && searchState != '0'"
   },
   {
-    "command": "settings.action.focusLevelUp",
     "key": "escape",
+    "command": "settings.action.focusLevelUp",
     "when": "inSettingsEditor && !inSettingsJSONEditor && !inSettingsSearch"
   },
   {
-    "command": "workbench.action.closeQuickOpen",
     "key": "escape",
+    "command": "workbench.action.closeQuickOpen",
     "when": "inQuickOpen"
   },
   {
-    "command": "workbench.action.terminal.chat.close",
     "key": "escape",
+    "command": "workbench.action.terminal.chat.close",
     "when": "terminalChatFocus && terminalChatVisible || terminalChatVisible && terminalFocus"
   },
   {
-    "command": "workbench.action.terminal.clearSelection",
     "key": "escape",
+    "command": "workbench.action.terminal.clearSelection",
     "when": "terminalFocusInAny && terminalHasBeenCreated && terminalTextSelected && !terminalFindVisible || terminalFocusInAny && terminalProcessSupported && terminalTextSelected && !terminalFindVisible"
   },
   {
-    "command": "workbench.action.terminal.hideFind",
     "key": "escape",
+    "command": "workbench.action.terminal.hideFind",
     "when": "terminalFindVisible && terminalFocusInAny && terminalHasBeenCreated || terminalFindVisible && terminalFocusInAny && terminalProcessSupported"
   },
   {
-    "command": "workbench.banner.focusBanner",
     "key": "escape",
+    "command": "workbench.banner.focusBanner",
     "when": "bannerFocused"
   },
   {
-    "command": "workbench.statusBar.clearFocus",
     "key": "escape",
+    "command": "workbench.statusBar.clearFocus",
     "when": "statusBarFocused"
   },
   {
-    "command": "breadcrumbs.selectEditor",
     "key": "escape",
+    "command": "breadcrumbs.selectEditor",
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
   {
-    "command": "workbench.action.terminal.hideSuggestWidget",
     "key": "escape",
+    "command": "workbench.action.terminal.hideSuggestWidget",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
   {
-    "command": "notebook.cell.quitEdit",
     "key": "escape",
+    "command": "notebook.cell.quitEdit",
     "when": "notebookEditorFocused && notebookOutputFocused"
   },
   {
-    "command": "editor.closeCallHierarchy",
     "key": "escape",
+    "command": "editor.closeCallHierarchy",
     "when": "callHierarchyVisible && !config.editor.stablePeek"
   },
   {
-    "command": "editor.closeTypeHierarchy",
     "key": "escape",
+    "command": "editor.closeTypeHierarchy",
     "when": "typeHierarchyVisible && !config.editor.stablePeek"
   },
   {
-    "command": "filesExplorer.cancelCut",
     "key": "escape",
+    "command": "filesExplorer.cancelCut",
     "when": "explorerResourceCut && filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
   {
-    "command": "closeReferenceSearch",
     "key": "escape",
+    "command": "closeReferenceSearch",
     "when": "editorTextFocus && referenceSearchVisible && !config.editor.stablePeek || referenceSearchVisible && !config.editor.stablePeek && !inputFocus"
   },
   {
-    "command": "notifications.hideList",
     "key": "escape",
+    "command": "notifications.hideList",
     "when": "notificationCenterVisible"
   },
   {
-    "command": "notifications.hideToasts",
     "key": "escape",
+    "command": "notifications.hideToasts",
     "when": "notificationFocus && notificationToastsVisible"
   },
   {
-    "command": "workbench.action.chat.stopListening",
     "key": "escape",
+    "command": "workbench.action.chat.stopListening",
     "when": "voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
   },
   {
-    "command": "workbench.action.chat.stopReadChatItemAloud",
     "key": "escape",
+    "command": "workbench.action.chat.stopReadChatItemAloud",
     "when": "scopedChatSynthesisInProgress"
   },
   {
-    "command": "workbench.action.editorDictation.stop",
     "key": "escape",
+    "command": "workbench.action.editorDictation.stop",
     "when": "editorDictation.inProgress"
   },
   {
-    "command": "workbench.action.speech.stopReadAloud",
     "key": "escape",
+    "command": "workbench.action.speech.stopReadAloud",
     "when": "scopedChatSynthesisInProgress && textToSpeechInProgress"
   },
   {
-    "command": "editor.action.cancelGPT4WithCmdDelete",
     "key": "escape",
+    "command": "gitlens.key.escape",
+    "when": "editorTextFocus && gitlens:key:escape && !codeActionMenuVisible && !findWidgetVisible && !isInEmbeddedEditor && !parameterHintsVisible && !quickFixWidgetVisible && !referenceSearchVisible && !renameInputVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "escape",
+    "command": "editor.action.cancelGPT4WithCmdDelete",
     "when": "hadGPT4InlineCompletionRunning"
   },
   {
-    "command": "hideCodeActionWidget",
     "key": "escape",
+    "command": "hideCodeActionWidget",
     "when": "codeActionMenuVisible"
   },
   {
-    "command": "aipopup.action.closePromptBar",
     "key": "escape",
+    "command": "aipopup.action.closePromptBar",
     "when": "editorHasPromptBar && editorPromptBarFocused && editorTextFocus"
   },
   {
-    "command": "diffEditor.exitCompareMove",
     "key": "escape",
+    "command": "diffEditor.exitCompareMove",
     "when": "comparingMovedCode"
   },
   {
-    "command": "cursorai.action.hideGenerateInTerminal",
     "key": "escape",
+    "command": "cursorai.action.hideGenerateInTerminal",
     "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
   },
   {
