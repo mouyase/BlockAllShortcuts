@@ -1,0 +1,186 @@
+{
+  // ==================== 编辑器设置 ====================
+  // 设置编辑器字体
+  "editor.fontFamily": "'LXGW Wenkai Mono'",
+  // 设置字体大小
+  "editor.fontSize": 16,
+  // 保存时自动格式化
+  "editor.formatOnSave": true,
+  // 保存时自动修复 ESLint 问题
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  // 设置默认格式化工具
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // 关闭内联提示
+  "editor.inlayHints.enabled": "off",
+  // 启用小地图
+  "editor.minimap.enabled": true,
+  // 禁用粘性滚动
+  "editor.stickyScroll.enabled": false,
+  // 设置制表符大小为2个空格
+  "editor.tabSize": 2,
+  // ==================== 文件设置 ====================
+  // 在文件末尾插入新行
+  "files.insertFinalNewline": true,
+  // ==================== 文件类型特定设置 ====================
+  // JavaScript 文件的特定设置
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // JSON 文件的特定设置
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // JSONC 文件的特定设置
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // TypeScript 文件的特定设置
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // ==================== 工作区设置 ====================
+  // 设置工作区颜色主题为 Dracula
+  "workbench.colorTheme": "Dracula Theme",
+  // 禁用编辑器预览模式
+  "workbench.editor.enablePreview": false,
+  // 设置工作区图标主题为 Material Icon
+  "workbench.iconTheme": "material-icon-theme",
+  // 禁用工作区树视图粘性滚动
+  "workbench.tree.enableStickyScroll": false,
+  // 设置工作区树缩进为22像素
+  "workbench.tree.indent": 22,
+  // ==================== 窗口设置 ====================
+  // 禁用窗口命令中心
+  "window.commandCenter": false,
+  // ==================== 资源管理器设置 ====================
+  // 禁用文件夹压缩显示
+  "explorer.compactFolders": false,
+  // 设置文件资源管理器排序顺序：文件夹优先
+  "explorer.sortOrder": "foldersNestsFiles",
+  // 设置文件排序使用 Unicode 规则
+  "explorer.sortOrderLexicographicOptions": "unicode",
+  // ==================== 搜索设置 ====================
+  // 设置搜索默认视图模式为树形
+  "search.defaultViewMode": "tree",
+  // 禁用搜索替换预览
+  "search.useReplacePreview": false,
+  // ==================== 源代码管理设置 ====================
+  // 禁用源代码管理视图中的文件夹压缩
+  "scm.compactFolders": false,
+  // ==================== JavaScript/TypeScript 设置 ====================
+  // 启用 JavaScript 自动导入建议
+  "javascript.suggest.autoImports": true,
+  // 设置 JavaScript 导入模块说明符为非相对路径
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  // 设置 JavaScript 导入模块说明符结尾为最小化
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  // 设置 JavaScript 文件移动时自动更新导入
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // 设置 JavaScript 粘贴时自动更新导入
+  "javascript.updateImportsOnPaste.enabled": true,
+  // 启用 TypeScript 自动导入建议
+  "typescript.suggest.autoImports": true,
+  // 设置 TypeScript 导入模块说明符为非相对路径
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // 设置 TypeScript 导入模块说明符结尾为最小化
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  // 设置 TypeScript 文件移动时自动更新导入
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 设置 TypeScript 粘贴时自动更新导入
+  "typescript.updateImportsOnPaste.enabled": true,
+  // ==================== ESLint 设置 ====================
+  // 启用 ESLint 格式化
+  "eslint.format.enable": true,
+  // 设置 ESLint 验证的文件类型
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // ==================== Cursor 设置 ====================
+  // 禁用命令中心聊天功能
+  "chat.commandCenter.enabled": false,
+  // 禁用终端悬停提示
+  "cursor.chat.terminalShowHoverHint": false,
+  // 禁用命令面板自动选择
+  "cursor.cmdk.autoSelect": false,
+  // 折叠面板输入框药丸
+  "cursor.composer.collapsePaneInputBoxPills": true,
+  // 禁用主题化差异背景
+  "cursor.cmdk.useThemedDiffBackground": false,
+  // ==================== 扩展设置 ====================
+  // 忽略扩展推荐
+  "extensions.ignoreRecommendations": true,
+  // ==================== GitLens 设置 ====================
+  // 设置 GitLens 日期格式
+  "gitlens.defaultDateFormat": "YYYY年MM月DD日 HH:mm:ss",
+  // 设置 GitLens 日期样式为绝对时间
+  "gitlens.defaultDateStyle": "absolute",
+  // 禁用 GitLens 悬停提示
+  "gitlens.hovers.enabled": false,
+  // ==================== i18n-ally 设置 ====================
+  // 启用 i18n-ally 注释
+  "i18n-ally.annotations": true,
+  // 设置 i18n-ally 显示语言为中文
+  "i18n-ally.displayLanguage": "zh",
+  // 设置 i18n-ally 启用的解析器
+  "i18n-ally.enabledParsers": [
+    "json",
+    "js",
+    "ts"
+  ],
+  // 设置 i18n-ally 提取键生成样式为驼峰式
+  "i18n-ally.extract.keygenStyle": "camelCase",
+  // 设置 i18n-ally 键样式为嵌套式
+  "i18n-ally.keystyle": "nested",
+  // 设置 i18n-ally 本地化文件路径
+  "i18n-ally.localesPaths": [
+    "i18n"
+  ],
+  // 禁用 i18n-ally 命名空间
+  "i18n-ally.namespace": false,
+  // 启用 i18n-ally 键排序
+  "i18n-ally.sortKeys": true,
+  // 设置 i18n-ally 源语言为中文
+  "i18n-ally.sourceLanguage": "zh",
+  // 设置 i18n-ally 注释主题颜色
+  "i18n-ally.theme.annotation": "#FFB86C",
+  // 设置 i18n-ally 注释边框颜色
+  "i18n-ally.theme.annotationBorder": "#8BE9FD",
+  // 设置 i18n-ally 缺失注释颜色
+  "i18n-ally.theme.annotationMissing": "#FF5555",
+  // 设置 i18n-ally 缺失注释边框颜色
+  "i18n-ally.theme.annotationMissingBorder": "#FF79C6",
+  // ==================== 其他插件设置 ====================
+  // 设置缩进彩虹插件的颜色
+  "indentRainbow.colors": [
+    "rgba(255,200,200,0.1)", // 柔和红色
+    "rgba(255,220,180,0.1)", // 柔和橙色  
+    "rgba(255,255,200,0.1)", // 柔和黄色
+    "rgba(200,255,200,0.1)", // 柔和绿色
+    "rgba(200,220,255,0.1)", // 柔和蓝色
+    "rgba(220,200,255,0.1)", // 柔和靛色
+    "rgba(255,200,255,0.1)" // 柔和紫色
+  ],
+  // SVG不自动打开预览
+  "svgPreview.autoOpen": false,
+  // 设置 TailwindCSS 识别的类属性名称
+  "tailwindCSS.classAttributes": [
+    "style"
+  ],
+  // 设置 TailwindCSS 实验性正则表达式匹配模式
+  "tailwindCSS.experimental.classRegex": [
+    // 匹配 tw`...` 模板字符串语法
+    "tw`([^`]*)",
+    // 匹配 tw('...') 模板字符串语法
+    "tw\\('([^']*)'\\)",
+    // 匹配 tw.style(...) 函数调用语法中的字符串
+    [
+      "tw.style\\(([^)]*)\\)",
+      "'([^']*)'"
+    ]
+  ]
+}

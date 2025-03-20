@@ -5911,11 +5911,6 @@
   },
   {
     "key": "cmd+n",
-    "command": "aichat.newChat",
-    "when": "focusedView == 'workbench.panel.aichat.view'"
-  },
-  {
-    "key": "cmd+n",
     "command": "composer.createNew",
     "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
   },
@@ -6113,6 +6108,7 @@
 // - aichat.fixspecificerrormessage
 // - aichat.focuschatpaneaction
 // - aichat.internal.submitUnifiedChatAction
+// - aichat.newChat
 // - aichat.setcodeblockaction
 // - aichat.sladsheditsubmitfrombutton
 // - aichat.warmfastapply
@@ -6137,7 +6133,7 @@
 // - bugbot.runNewBugBot
 // - callStack.collapse
 // - callStackWidget.goToFile
-// - changeEditorIndentation2
+// - changeEditorIndentation14
 // - chat.inlineResourceAnchor.addFileToChat
 // - chat.inlineSymbolAnchor.goToDefinition
 // - chat.inlineSymbolAnchor.goToImplementations
@@ -7949,6 +7945,7 @@
 // - typescript.restartTsServer
 // - typescript.selectTypeScriptVersion
 // - typescript.sortImports
+// - typescript.tsserverRequest
 // - update.check
 // - update.checkForUpdate
 // - update.checking
@@ -7962,6 +7959,32 @@
 // - update.showCurrentReleaseNotes
 // - update.showUpdateReleaseNotes
 // - update.updating
+// - v2ex-collection.focus
+// - v2ex-collection.refreshAll
+// - v2ex-collection.refreshNode
+// - v2ex-collection.removeView
+// - v2ex-collection.resetViewLocation
+// - v2ex-collection.toggleVisibility
+// - v2ex-custom.focus
+// - v2ex-custom.refreshAll
+// - v2ex-custom.refreshNode
+// - v2ex-custom.removeNode
+// - v2ex-custom.removeView
+// - v2ex-custom.resetViewLocation
+// - v2ex-custom.toggleVisibility
+// - v2ex-explore.addNode
+// - v2ex-explore.focus
+// - v2ex-explore.refreshAll
+// - v2ex-explore.refreshNode
+// - v2ex-explore.removeView
+// - v2ex-explore.resetViewLocation
+// - v2ex-explore.search
+// - v2ex-explore.settings
+// - v2ex-explore.toggleVisibility
+// - v2ex.copyLink
+// - v2ex.copyTitleLink
+// - v2ex.login
+// - v2ex.viewInBrowser
 // - variables.collapse
 // - watch.collapse
 // - workbench.action.acceptSelectedQuickOpenItem
@@ -8320,13 +8343,6 @@
 // - workbench.action.resetViewLocations
 // - workbench.action.restartExtensionHost
 // - workbench.action.restoreEditorsToMainWindow
-// - workbench.action.revealPathInFinder1
-// - workbench.action.revealPathInFinder2
-// - workbench.action.revealPathInFinder3
-// - workbench.action.revealPathInFinder4
-// - workbench.action.revealPathInFinder5
-// - workbench.action.revealPathInFinder6
-// - workbench.action.revealPathInFinder7
 // - workbench.action.revertAndCloseActiveEditor
 // - workbench.action.saveWorkspaceAs
 // - workbench.action.selectIconTheme
@@ -8712,6 +8728,8 @@
 // - workbench.view.extension.references-view.resetViewContainerLocation
 // - workbench.view.extension.test
 // - workbench.view.extension.test.resetViewContainerLocation
+// - workbench.view.extension.v2ex
+// - workbench.view.extension.v2ex.resetViewContainerLocation
 // - workbench.view.extensions.resetViewContainerLocation
 // - workbench.view.remote
 // - workbench.view.remote.resetViewContainerLocation
