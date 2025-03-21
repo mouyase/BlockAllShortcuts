@@ -1390,5 +1390,17 @@
   {
     "key": "alt+l",
     "command": "aichat.newchataction"
-  }
+  },
+  {
+    "key": "cmd+c",
+    "command": "editor.action.clipboardCopyAction"
+  },
+  {
+    "key": "cmd+x",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "key": "cmd+v",
+    "command": "editor.action.clipboardPasteAction"
+  },
 ]
