@@ -1,0 +1,286 @@
+{
+  // 背景设置
+  "background.fullscreen": {
+    "images": [
+      "file:///D:/Arthur/Pictures/VSCode.jpg"
+    ],
+    // 切换间隔时间（秒）
+    "interval": 10,
+    // 是否随机显示图片
+    "random": false,
+    "style": {
+      // 背景位置
+      "background-position": "100% 100%",
+      // 背景大小
+      "background-size": "auto",
+      // 背景透明度
+      "opacity": 1,
+      // 背景定位
+      "position": "center",
+      // 背景覆盖方式
+      "size": "cover"
+    },
+    // 是否在前景显示
+    "useFront": false
+  },
+  // 面包屑设置
+  // 关闭符号路径显示
+  "breadcrumbs.symbolPath": "off",
+  // 聊天命令中心设置
+  // 禁用聊天命令中心
+  "chat.commandCenter.enabled": false,
+  // Cursor 设置
+  // 禁用终端悬停提示
+  "cursor.chat.terminalShowHoverHint": false,
+  // 禁用命令自动选择
+  "cursor.cmdk.autoSelect": false,
+  // 禁用主题差异背景
+  "cursor.cmdk.useThemedDiffBackground": false,
+  // 启用输入框药丸折叠
+  "cursor.composer.collapsePaneInputBoxPills": true,
+  // 编辑器设置
+  // 禁用提交字符时接受建议
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.codeActionsOnSave": {
+    // 保存时显式修复 ESLint 问题
+    "source.fixAll.eslint": "explicit"
+  },
+  // 禁用代码镜头
+  "editor.codeLens": false,
+  // 禁用复制时带语法高亮
+  "editor.copyWithSyntaxHighlighting": false,
+  // 默认格式化工具
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // 禁用拖放功能
+  "editor.dragAndDrop": false,
+  // 设置字体
+  "editor.fontFamily": "'LXGW Wenkai Mono'",
+  // 设置字体大小
+  "editor.fontSize": 16,
+  // 保存时格式化
+  "editor.formatOnSave": true,
+  // 禁用内联提示
+  "editor.inlayHints.enabled": "off",
+  // 始终显示内联建议工具栏
+  "editor.inlineSuggest.showToolbar": "always",
+  // 启用小地图
+  "editor.minimap.enabled": true,
+  // 显示所有空白字符
+  "editor.renderWhitespace": "all",
+  // 禁用粘性滚动
+  "editor.stickyScroll.enabled": false,
+  // 设置制表符大小
+  "editor.tabSize": 2,
+  // 资源管理器设置
+  // 禁用自动打开拖放文件
+  "explorer.autoOpenDroppedFile": false,
+  // 禁用紧凑文件夹
+  "explorer.compactFolders": false,
+  // 设置排序顺序
+  "explorer.sortOrder": "foldersNestsFiles",
+  // 设置词典排序选项
+  "explorer.sortOrderLexicographicOptions": "unicode",
+  // ESLint 设置
+  // 启用 ESLint 格式化
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    // 验证 JavaScript 文件
+    "javascript",
+    // 验证 JSX 文件
+    "javascriptreact",
+    // 验证 TypeScript 文件
+    "typescript",
+    // 验证 TSX 文件
+    "typescriptreact"
+  ],
+  // 扩展设置
+  // 忽略扩展推荐
+  "extensions.ignoreRecommendations": true,
+  // 文件设置
+  // 在文件末尾插入新行
+  "files.insertFinalNewline": true,
+  // GitLens 设置
+  // 设置日期格式
+  "gitlens.defaultDateFormat": "YYYY年MM月DD日 HH:mm:ss",
+  // 设置日期样式
+  "gitlens.defaultDateStyle": "absolute",
+  // 禁用悬停提示
+  "gitlens.hovers.enabled": false,
+  // i18n-ally 设置
+  // 启用注释
+  "i18n-ally.annotations": true,
+  // 设置显示语言
+  "i18n-ally.displayLanguage": "zh",
+  "i18n-ally.enabledParsers": [
+    // 启用 JSON 解析器
+    "json",
+    // 启用 JS 解析器
+    "js",
+    // 启用 TS 解析器
+    "ts"
+  ],
+  // 设置键生成样式
+  "i18n-ally.extract.keygenStyle": "camelCase",
+  // 设置键样式
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": [
+    // 设置本地化路径
+    "i18n"
+  ],
+  // 禁用命名空间
+  "i18n-ally.namespace": false,
+  // 启用键排序
+  "i18n-ally.sortKeys": true,
+  // 设置源语言
+  "i18n-ally.sourceLanguage": "zh",
+  // 设置注释主题颜色
+  "i18n-ally.theme.annotation": "#FFB86C",
+  // 设置注释边框主题颜色
+  "i18n-ally.theme.annotationBorder": "#8BE9FD",
+  // 设置缺失注释主题颜色
+  "i18n-ally.theme.annotationMissing": "#FF5555",
+  // 设置缺失注释边框主题颜色
+  "i18n-ally.theme.annotationMissingBorder": "#FF79C6",
+  // 缩进彩虹设置
+  "indentRainbow.colors": [
+    // 柔和红色
+    "rgba(255,200,200,0.1)",
+    // 柔和橙色  
+    "rgba(255,220,180,0.1)",
+    // 柔和黄色
+    "rgba(255,255,200,0.1)",
+    // 柔和绿色
+    "rgba(200,255,200,0.1)",
+    // 柔和蓝色
+    "rgba(200,220,255,0.1)",
+    // 柔和靛色
+    "rgba(220,200,255,0.1)",
+    // 柔和紫色
+    "rgba(255,200,255,0.1)"
+  ],
+  // JavaScript 设置
+  // 优先跳转到源定义
+  "javascript.preferGoToSourceDefinition": true,
+  // 使用非相对导入
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  // 使用最小导入结尾
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  // 使用大括号完成 JSX 属性
+  "javascript.preferences.jsxAttributeCompletionStyle": "braces",
+  // 使用单引号
+  "javascript.preferences.quoteStyle": "single",
+  // 启用自动导入建议
+  "javascript.suggest.autoImports": true,
+  // 文件移动时更新导入
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // 粘贴时更新导入
+  "javascript.updateImportsOnPaste.enabled": true,
+  // 搜索设置
+  // 默认树形视图模式
+  "search.defaultViewMode": "tree",
+  // 禁用替换预览
+  "search.useReplacePreview": false,
+  // 安全设置
+  // 禁用工作区信任
+  "security.workspace.trust.enabled": false,
+  // 源代码管理设置
+  // 禁用紧凑文件夹
+  "scm.compactFolders": false,
+  // SVG 预览设置
+  // 禁用自动打开 SVG 预览
+  "svgPreview.autoOpen": false,
+  // TailwindCSS 设置
+  "tailwindCSS.classAttributes": [
+    // 类名属性
+    "className",
+    // 样式属性
+    "style"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    // 匹配 tw`...` 模板字符串语法
+    "tw`([^`]*)",
+    // 匹配 tw('...') 模板字符串语法
+    "tw\\('([^']*)'\\)",
+    // 匹配 tw.style(...) 函数调用语法中的字符串
+    [
+      "tw.style\\(([^)]*)\\)",
+      "'([^']*)'"
+    ]
+  ],
+  // TypeScript 设置
+  // 设置本地化语言
+  "typescript.locale": "zh-CN",
+  // 使用非相对导入
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // 使用最小导入结尾
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  // 使用单引号
+  "typescript.preferences.quoteStyle": "single",
+  // 启用自动导入建议
+  "typescript.suggest.autoImports": true,
+  // 文件移动时更新导入
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 粘贴时更新导入
+  "typescript.updateImportsOnPaste.enabled": true,
+  // 窗口设置
+  // 禁用命令中心
+  "window.commandCenter": false,
+  // 使用自定义对话框样式
+  "window.dialogStyle": "custom",
+  // 工作台设置
+  // 活动栏位置设为顶部
+  "workbench.activityBar.location": "top",
+  // 设置颜色主题
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.editor.autoLockGroups": {
+    // 禁用浏览器预览自动锁定
+    "mainThreadWebview-browserPreview": false,
+    // 禁用简单浏览器视图自动锁定
+    "mainThreadWebview-simpleBrowser.view": false
+  },
+  // 禁用编辑器预览
+  "workbench.editor.enablePreview": false,
+  // 禁用树视图粘性滚动
+  "workbench.tree.enableStickyScroll": false,
+  // 设置树视图缩进
+  "workbench.tree.indent": 22,
+  // 文件类型特定设置
+  "[html]": {
+    // HTML 文件默认格式化工具
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    // JavaScript 文件默认格式化工具
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    // JSON 文件默认格式化工具
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    // JSONC 文件默认格式化工具
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    // TypeScript 文件默认格式化工具
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  // ===== Git设置 =====
+  "git.path": "D:\\Git\\bin\\git.exe",
+  // ===== ESLint设置 =====
+  "eslint.useFlatConfig": true,
+  // ===== CSS设置 =====
+  "css.lint.unknownAtRules": "ignore",
+  // ===== 特定文件类型设置 =====
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "git.autofetch": true
+}
