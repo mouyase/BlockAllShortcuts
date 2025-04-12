@@ -2,7 +2,7 @@
   "name": "block-all-shortcuts",
   "displayName": "Block All Shortcuts",
   "description": "Block all shortcut keys.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "mouyase",
   "repository": "https://github.com/mouyase/BlockAllShortcuts",
   "scripts": {
@@ -8173,6 +8173,16 @@
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
       },
       {
+        "key": "alt+j",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.nextChange.isActiveEditorWithDiffs"
+      },
+      {
+        "key": "alt+k",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.previousChange.isActiveEditorWithDiffs"
+      },
+      {
         "key": "alt+,",
         "command": "",
         "when": "gitlens:key:,"
@@ -8628,29 +8638,14 @@
         "when": "focusedView == 'gitlens.views.worktrees'"
       },
       {
-        "key": "cmd+backspace",
+        "key": "shift+cmd+backspace",
         "command": "",
         "when": "composerFocused"
       },
       {
         "key": "cmd+w",
         "command": "",
-        "when": "composerFocused"
-      },
-      {
-        "key": "cmd+.",
-        "command": "",
-        "when": "composerFocused"
-      },
-      {
-        "key": "cmd+/",
-        "command": "",
-        "when": "composerFocused"
-      },
-      {
-        "key": "cmd+t",
-        "command": "",
-        "when": "composerFocused"
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
       },
       {
         "key": "cmd+]",
@@ -8668,7 +8663,17 @@
         "when": "composerFocused"
       },
       {
+        "key": "cmd+.",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
         "key": "alt+cmd+/",
+        "command": "",
+        "when": "composerFocused"
+      },
+      {
+        "key": "cmd+/",
         "command": "",
         "when": "composerFocused"
       },
@@ -8688,9 +8693,54 @@
         "when": "composerFocused"
       },
       {
+        "key": "cmd+enter",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.acceptAllEdits.isActiveEditorWithDiffs"
+      },
+      {
+        "key": "cmd+y",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
+      },
+      {
+        "key": "shift+cmd+backspace",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.rejectAllEdits.isActiveEditorWithDiffs"
+      },
+      {
+        "key": "cmd+n",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.rejectPartialEdit.isActiveEditorWithDiffs"
+      },
+      {
         "key": "cmd+n",
         "command": "",
         "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
+      },
+      {
+        "key": "cmd+backspace",
+        "command": "",
+        "when": "editorTextFocus && @bugbotLinter.isBugLintActive"
+      },
+      {
+        "key": "shift+cmd+backspace",
+        "command": "",
+        "when": "editorTextFocus && hasActivelyGeneratingDiff"
+      },
+      {
+        "key": "alt+l",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
+      },
+      {
+        "key": "alt+h",
+        "command": "",
+        "when": "editorTextFocus && @inlineDiffs.previousDiffFile.hasInlineDiffsInAnyEditor"
+      },
+      {
+        "key": "shift+cmd+d",
+        "command": "",
+        "when": "@composer.isCursorOnLint"
       },
       {
         "key": "shift+cmd+i",
@@ -8699,6 +8749,31 @@
       {
         "key": "cmd+i",
         "command": ""
+      },
+      {
+        "key": "cmd+enter",
+        "command": "",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.acceptPromptBarEnabled"
+      },
+      {
+        "key": "cmd+backspace",
+        "command": "",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.canCancelGeneration"
+      },
+      {
+        "key": "escape",
+        "command": "",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.promptBarVisible"
+      },
+      {
+        "key": "cmd+enter",
+        "command": "",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.acceptAndRunPromptBarEnabled"
+      },
+      {
+        "key": "cmd+backspace",
+        "command": "",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.canRejectGeneration"
       }
     ]
   }

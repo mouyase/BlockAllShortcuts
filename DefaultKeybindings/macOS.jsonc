@@ -750,12 +750,12 @@
   {
     "key": "alt+j",
     "command": "editor.action.inlineDiffs.nextChange",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.nextChange.isActiveEditorWithDiffs"
   },
   {
     "key": "alt+k",
     "command": "editor.action.inlineDiffs.previousChange",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.previousChange.isActiveEditorWithDiffs"
   },
   {
     "key": "escape",
@@ -5299,6 +5299,11 @@
     "when": "notebookCellListFocused && notebookCellType == 'code' || editorTextFocus && inputFocus && notebookEditorFocused"
   },
   {
+    "key": "ctrl+f5",
+    "command": "ahk2.run",
+    "when": "shellExecutionSupported && !editorHasSelection && editorLangId == 'ahk2'"
+  },
+  {
     "key": "shift+cmd+j",
     "command": "aiSettings.action.open",
     "when": "!isSettingsPaneOpen"
@@ -5338,6 +5343,11 @@
     "when": "terminalChatAgentRegistered && terminalFocusInAny && terminalHasBeenCreated || terminalChatAgentRegistered && terminalFocusInAny && terminalProcessSupported"
   },
   {
+    "key": "ctrl+f5",
+    "command": "ahk2.run.selection",
+    "when": "editorHasSelection && editorLangId == 'ahk2'"
+  },
+  {
     "key": "ctrl+enter",
     "command": "chat.inlineResourceAnchor.openToSide",
     "when": "chatAttachmentResource"
@@ -5353,6 +5363,11 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
+    "key": "ctrl+shift+f5",
+    "command": "ahk2.compile",
+    "when": "shellExecutionSupported && editorLangId == 'ahk2'"
+  },
+  {
     "key": "alt+enter",
     "command": "gitlens.key.alt+enter",
     "when": "gitlens:key:alt+enter"
@@ -5361,6 +5376,11 @@
     "key": "alt+s",
     "command": "markdown.extension.editing.toggleStrikethrough",
     "when": "false"
+  },
+  {
+    "key": "f5",
+    "command": "ahk2.debug.file",
+    "when": "debuggersAvailable && shellExecutionSupported && debugState == 'inactive' && editorLangId == 'ahk2'"
   },
   {
     "key": "alt+left",
@@ -5373,6 +5393,11 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
+    "key": "shift+f5",
+    "command": "ahk2.debug.params",
+    "when": "debuggersAvailable && shellExecutionSupported && debugState == 'inactive' && editorLangId == 'ahk2'"
+  },
+  {
     "key": "alt+right",
     "command": "gitlens.key.alt+right",
     "when": "gitlens:key:alt+right"
@@ -5383,6 +5408,11 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
+    "key": "ctrl+f1",
+    "command": "ahk2.help",
+    "when": "editorLangId == 'ahk2'"
+  },
+  {
     "key": "ctrl+enter",
     "command": "gitlens.key.ctrl+enter",
     "when": "gitlens:key:ctrl+enter"
@@ -5391,6 +5421,11 @@
     "key": "cmd+m",
     "command": "markdown.extension.editing.toggleMath",
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+f6",
+    "command": "ahk2.stop",
+    "when": "ahk2:isRunning && editorLangId == 'ahk2'"
   },
   {
     "key": "cmd+left",
@@ -5444,16 +5479,6 @@
     "key": "ctrl+shift+tab",
     "command": "composer.selectPreviousComposer",
     "when": "view =~ /^workbench.panel.aichat.view/"
-  },
-  {
-    "key": "cmd+enter",
-    "command": "cursorai.action.executeInterpreterAction",
-    "when": "(arbitrary function)"
-  },
-  {
-    "key": "cmd+u",
-    "command": "cursorai.action.retryInterpreterAction",
-    "when": "activeAIChatEditor || view == 'workbench.panel.aichat.view' || (arbitrary function) && (arbitrary function)"
   },
   {
     "key": "escape",
@@ -5810,29 +5835,14 @@
     "command": "aichat.newchataction"
   },
   {
-    "key": "cmd+backspace",
+    "key": "shift+cmd+backspace",
     "command": "composer.cancelComposerStep",
     "when": "composerFocused"
   },
   {
     "key": "cmd+w",
     "command": "composer.closeComposerTab",
-    "when": "composerFocused"
-  },
-  {
-    "key": "cmd+.",
-    "command": "composer.cycleMode",
-    "when": "composerFocused"
-  },
-  {
-    "key": "cmd+/",
-    "command": "composer.cycleModel",
-    "when": "composerFocused"
-  },
-  {
-    "key": "cmd+t",
-    "command": "composer.newComposerTab",
-    "when": "composerFocused"
+    "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
   },
   {
     "key": "cmd+]",
@@ -5850,7 +5860,17 @@
     "when": "composerFocused"
   },
   {
+    "key": "cmd+.",
+    "command": "composer.openModeMenu",
+    "when": "composerFocused"
+  },
+  {
     "key": "alt+cmd+/",
+    "command": "composer.openModelToggle",
+    "when": "composerFocused"
+  },
+  {
+    "key": "cmd+/",
     "command": "composer.openModelToggle",
     "when": "composerFocused"
   },
@@ -5877,7 +5897,7 @@
   {
     "key": "cmd+enter",
     "command": "editor.action.inlineDiffs.acceptAll",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.acceptAllEdits.isActiveEditorWithDiffs"
   },
   {
     "key": "cmd+pausebreak",
@@ -5887,12 +5907,12 @@
   {
     "key": "cmd+y",
     "command": "editor.action.inlineDiffs.acceptPartialEdit",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.acceptPartialEdit.isActiveEditorWithDiffs"
   },
   {
-    "key": "cmd+backspace",
+    "key": "shift+cmd+backspace",
     "command": "editor.action.inlineDiffs.rejectAll",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.rejectAllEdits.isActiveEditorWithDiffs"
   },
   {
     "key": "cmd+ctrl",
@@ -5907,7 +5927,7 @@
   {
     "key": "cmd+n",
     "command": "editor.action.inlineDiffs.rejectPartialEdit",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.rejectPartialEdit.isActiveEditorWithDiffs"
   },
   {
     "key": "cmd+n",
@@ -5917,10 +5937,10 @@
   {
     "key": "cmd+backspace",
     "command": "cursorai.action.dismissBugBotLint",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @bugbotLinter.isBugLintActive"
   },
   {
-    "key": "cmd+backspace",
+    "key": "shift+cmd+backspace",
     "command": "editor.action.inlineDiffs.cancelEdits",
     "when": "editorTextFocus && hasActivelyGeneratingDiff"
   },
@@ -5947,12 +5967,12 @@
   {
     "key": "alt+l",
     "command": "editor.action.inlineDiffs.nextDiffFile",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
   },
   {
     "key": "alt+h",
     "command": "editor.action.inlineDiffs.previousDiffFile",
-    "when": "editorTextFocus && (arbitrary function)"
+    "when": "editorTextFocus && @inlineDiffs.previousDiffFile.hasInlineDiffsInAnyEditor"
   },
   {
     "key": "cmd+n",
@@ -6017,7 +6037,7 @@
   {
     "key": "shift+cmd+d",
     "command": "composer.fixerrormessage",
-    "when": "(arbitrary function)"
+    "when": "@composer.isCursorOnLint"
   },
   {
     "key": "shift+cmd+k",
@@ -6061,12 +6081,12 @@
   {
     "key": "cmd+enter",
     "command": "cursorai.action.acceptGenerateInTerminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.acceptPromptBarEnabled"
   },
   {
     "key": "cmd+backspace",
     "command": "cursorai.action.cancelGenerateInTerminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.canCancelGeneration"
   },
   {
     "key": "cmd+k",
@@ -6076,17 +6096,17 @@
   {
     "key": "escape",
     "command": "cursorai.action.hideGenerateInTerminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.promptBarVisible"
   },
   {
     "key": "cmd+enter",
     "command": "cursorai.action.acceptAndRunGenerateInTerminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.acceptAndRunPromptBarEnabled"
   },
   {
     "key": "cmd+backspace",
     "command": "cursorai.action.rejectGenerateInTerminal",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && (arbitrary function)"
+    "when": "terminalFocus && terminalHasBeenCreated || terminalProcessSupported && @terminal.canRejectGeneration"
   }
 ]
 // Here are other available commands: 
@@ -6094,6 +6114,16 @@
 // - acceptSnippet
 // - accessibility.announcement.help
 // - addRootFolder
+// - ahk2.debug.attach
+// - ahk2.debug.configs
+// - ahk2.diagnose.all
+// - ahk2.extract.symbols
+// - ahk2.generate.comment
+// - ahk2.select.syntaxes
+// - ahk2.set.interpreter
+// - ahk2.set.scriptdir
+// - ahk2.switch
+// - ahk2.update.versioninfo
 // - aiEditorBox.goToDefinition
 // - aiFeedback.action.reportBugs
 // - aiFeedback.action.reportFeedback
@@ -6101,17 +6131,7 @@
 // - aiServerConfigService.getCachedServerConfig
 // - aiSettings.action.toggleModel
 // - aichat.action.goToDefinitionFromChatResponse
-// - aichat.addEverythingAboutSymbolToCurrentChatAction
-// - aichat.addfilestochataction
-// - aichat.addfilestonewchataction
 // - aichat.close-sidebar
-// - aichat.fixspecificerrormessage
-// - aichat.focuschatpaneaction
-// - aichat.internal.submitUnifiedChatAction
-// - aichat.newChat
-// - aichat.setcodeblockaction
-// - aichat.sladsheditsubmitfrombutton
-// - aichat.warmfastapply
 // - aipopup.action.acceptPromptBar
 // - aipopup.action.addContextToBackgroundForCmdK
 // - aipopup.action.cancelPromptBar
@@ -6126,6 +6146,8 @@
 // - aiproject.action.showModal
 // - aiproject.action.startProjectPane
 // - authentication.command.anysphere.signOut
+// - backgroundComposer.focus
+// - backgroundComposerExplorer.resetViewLocation
 // - breadcrumbs.toggle
 // - breadcrumbs.toggleFromEditorTitle
 // - bugBotLinter.triggerDummyLint
@@ -6133,7 +6155,7 @@
 // - bugbot.runNewBugBot
 // - callStack.collapse
 // - callStackWidget.goToFile
-// - changeEditorIndentation14
+// - changeEditorIndentation3
 // - chat.inlineResourceAnchor.addFileToChat
 // - chat.inlineSymbolAnchor.goToDefinition
 // - chat.inlineSymbolAnchor.goToImplementations
@@ -6164,21 +6186,30 @@
 // - composer.addsymbolstonewcomposer
 // - composer.cancelChat
 // - composer.copyRequestId
+// - composer.cycleMode
+// - composer.cycleModel
 // - composer.getComposerHandleById
+// - composer.getOrderedSelectedComposerIds
 // - composer.openAsPane
 // - composer.openChatAsEditor
 // - composer.openComposer
 // - composer.reapplyCodeblock
 // - composer.reportFeedback
+// - composer.resetMode
 // - composer.resumeCurrentChat
 // - composer.showComposerHistory
+// - composer.showComposerHistoryEditor
+// - composer.startComposerPrompt2
+// - composer.updateStatus
 // - composer.updateSummaryIfOutdated
 // - composer.updateTitle
+// - composerMode.agent
+// - composerMode.chat
+// - composerMode.edit
 // - compositionEnd
 // - compositionStart
 // - compositionType
 // - createCursor
-// - cursor.ai.reportBadChat
 // - cursor.checkOkToIndexLink
 // - cursor.checkonupdate
 // - cursor.doupdate
@@ -6190,7 +6221,7 @@
 // - cursor.publicLogCapture
 // - cursor.removevim
 // - cursor.showTooltipActionId
-// - cursor.submitdocs
+// - cursor.startOnboarding
 // - cursorAuth.triggerTokenRefresh
 // - cursorRedo
 // - cursorWordEndLeft
@@ -6209,7 +6240,6 @@
 // - cursorai.action.hideNotificationsForMs
 // - cursorai.action.importvscode
 // - cursorai.action.incrementShownModelFallbacksWarningCount
-// - cursorai.action.interpreterChangeKernelAction
 // - cursorai.action.openAccountSettings
 // - cursorai.action.repo.indexMainRepository
 // - cursorai.action.reportBadAIAction
@@ -6218,11 +6248,9 @@
 // - cursorai.action.reportGoodCmdK
 // - cursorai.action.showAddFastRequestsModal
 // - cursorai.action.showUsagePricingModal
-// - cursorai.action.startIndexingListener
 // - cursorai.action.switchToModel
 // - cursorai.action.switchToModel.gpt3
 // - cursorai.action.switchToModel.gpt4
-// - cursorai.action.takeInterpreterAction
 // - cut
 // - debug.action.openDisassemblyView
 // - debug.action.toggleDisassemblyViewSourceCode
@@ -6285,7 +6313,6 @@
 // - editor.action.diffReview.prev
 // - editor.action.duplicateSelection
 // - editor.action.enableCppGlobally
-// - editor.action.enterReaderModeFromSymbol
 // - editor.action.findReferences
 // - editor.action.fixAll
 // - editor.action.focusNextCursor
@@ -6299,7 +6326,6 @@
 // - editor.action.formatChanges
 // - editor.action.formatDocument.multiple
 // - editor.action.formatSelection.multiple
-// - editor.action.getDiffHistory
 // - editor.action.goToDeclaration
 // - editor.action.goToMatchFindAction
 // - editor.action.goToSelectionAnchor
@@ -6343,7 +6369,6 @@
 // - editor.action.selectToBracket
 // - editor.action.setCppDiffPeekView
 // - editor.action.showDefinitionPreviewHover
-// - editor.action.showDiffHistory
 // - editor.action.showOrFocusStandaloneColorPicker
 // - editor.action.showReferences
 // - editor.action.showSnippets
@@ -8634,10 +8659,10 @@
 // - workbench.output.action.toggleAutoScroll
 // - workbench.panel.aichat
 // - workbench.panel.aichat.resetViewContainerLocation
-// - workbench.panel.aichat.view.focus
-// - workbench.panel.aichat.view.removeView
-// - workbench.panel.aichat.view.resetViewLocation
-// - workbench.panel.aichat.view.toggleVisibility
+// - workbench.panel.aichat.view.3465ef9f-5cee-4f8c-a919-5484dcc2bc04.focus
+// - workbench.panel.aichat.view.3465ef9f-5cee-4f8c-a919-5484dcc2bc04.removeView
+// - workbench.panel.aichat.view.3465ef9f-5cee-4f8c-a919-5484dcc2bc04.resetViewLocation
+// - workbench.panel.aichat.view.3465ef9f-5cee-4f8c-a919-5484dcc2bc04.toggleVisibility
 // - workbench.panel.comments
 // - workbench.panel.comments.removeView
 // - workbench.panel.comments.resetViewContainerLocation
