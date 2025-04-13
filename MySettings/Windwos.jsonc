@@ -282,5 +282,6 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.iconTheme": "material-icon-theme"
 }
